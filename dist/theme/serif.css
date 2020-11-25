@@ -4,6 +4,7 @@
  *
  * This theme is Copyright (C) 2012-2013 Owen Versteeg, http://owenversteeg.com - it is MIT licensed.
  */
+@import url(../index.css);
 .reveal a {
   line-height: 1.3em; }
 
@@ -251,7 +252,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal a {
   color: #51483D;
   text-decoration: none;
-  transition: color .15s ease; }
+  transition: color 0.15s ease; }
 
 .reveal a:hover {
   color: #8b7c69;
@@ -260,7 +261,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .reveal .roll span:after {
   color: #fff;
-  background: #25211c; }
+  background: #51483D; }
 
 /*********************************************
  * Frame helper
@@ -270,7 +271,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a .r-frame {
-  transition: all .15s linear; }
+  transition: all 0.15s linear; }
 
 .reveal a:hover .r-frame {
   border-color: #51483D;

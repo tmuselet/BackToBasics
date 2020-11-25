@@ -1,25 +1,27 @@
 /**
- * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ * Decathlon theme for presentation
+ * Based on Hakim El Hattab, http://hakim.se reveal.js theme.
  *
- * By Hakim El Hattab, http://hakim.se
+ * Customized with Decathlon Vitamin
  */
+@import url(../index.css);
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
 @import url(../index.css);
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
-  color: #222; }
+  color: var(--vtmn-color_grey-dark-3); }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --background-color: #191919;
+  --background-color: var(--vtmn-color_white);
   --main-font: Source Sans Pro, Helvetica, sans-serif;
   --main-font-size: 42px;
-  --main-color: #fff;
+  --main-color: var(--vtmn-color_brand-digital);
   --block-margin: 20px;
   --heading-margin: 0 0 20px 0;
   --heading-font: Source Sans Pro, Helvetica, sans-serif;
-  --heading-color: #fff;
+  --heading-color: var(--vtmn-color_brand-digital);
   --heading-line-height: 1.2;
   --heading-letter-spacing: normal;
   --heading-text-transform: uppercase;
@@ -31,29 +33,29 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --heading3-size: 1.3em;
   --heading4-size: 1em;
   --code-font: monospace;
-  --link-color: #42affa;
-  --link-color-hover: #8dcffc;
-  --selection-background-color: #bee4fd;
+  --link-color: var(--vtmn-color_orange);
+  --link-color-hover: var(--vtmn-color_orange-light-1);
+  --selection-background-color: var(--vtmn-color_orange-light-2);
   --selection-color: #fff; }
 
 .reveal-viewport {
-  background: #191919;
-  background-color: #191919; }
+  background: var(--vtmn-color_white);
+  background-color: var(--vtmn-color_white); }
 
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 42px;
   font-weight: normal;
-  color: #fff; }
+  color: var(--vtmn-color_brand-digital); }
 
 .reveal ::selection {
   color: #fff;
-  background: #bee4fd;
+  background: var(--vtmn-color_orange-light-2);
   text-shadow: none; }
 
 .reveal ::-moz-selection {
   color: #fff;
-  background: #bee4fd;
+  background: var(--vtmn-color_orange-light-2);
   text-shadow: none; }
 
 .reveal .slides section,
@@ -71,7 +73,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #fff;
+  color: var(--vtmn-color_brand-digital);
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
@@ -247,49 +249,49 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * LINKS
  *********************************************/
 .reveal a {
-  color: #42affa;
+  color: var(--vtmn-color_orange);
   text-decoration: none;
   transition: color 0.15s ease; }
 
 .reveal a:hover {
-  color: #8dcffc;
+  color: var(--vtmn-color_orange-light-1);
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #42affa; }
+  background: var(--vtmn-color_orange); }
 
 /*********************************************
  * Frame helper
  *********************************************/
 .reveal .r-frame {
-  border: 4px solid #fff;
+  border: 4px solid var(--vtmn-color_brand-digital);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a .r-frame {
   transition: all 0.15s linear; }
 
 .reveal a:hover .r-frame {
-  border-color: #42affa;
+  border-color: var(--vtmn-color_orange);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #42affa; }
+  color: var(--vtmn-color_orange); }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #42affa; }
+  color: var(--vtmn-color_orange); }
 
 /*********************************************
  * PRINT BACKGROUND
  *********************************************/
 @media print {
   .backgrounds {
-    background-color: #191919; } }
+    background-color: var(--vtmn-color_white); } }

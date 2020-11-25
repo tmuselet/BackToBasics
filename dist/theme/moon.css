@@ -7,6 +7,7 @@
 /**
  * Solarized colors by Ethan Schoonover
  */
+@import url(../index.css);
 html * {
   color-profile: sRGB;
   rendering-intent: auto; }
@@ -255,7 +256,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal a {
   color: #268bd2;
   text-decoration: none;
-  transition: color .15s ease; }
+  transition: color 0.15s ease; }
 
 .reveal a:hover {
   color: #78b9e6;
@@ -264,7 +265,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
 .reveal .roll span:after {
   color: #fff;
-  background: #1a6091; }
+  background: #268bd2; }
 
 /*********************************************
  * Frame helper
@@ -274,7 +275,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a .r-frame {
-  transition: all .15s linear; }
+  transition: all 0.15s linear; }
 
 .reveal a:hover .r-frame {
   border-color: #268bd2;

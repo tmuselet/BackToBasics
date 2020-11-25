@@ -15,6 +15,7 @@ const gulp = require('gulp')
 const tap = require('gulp-tap')
 const zip = require('gulp-zip')
 const sass = require('gulp-sass')
+const cssimport = require("gulp-cssimport");
 const header = require('gulp-header')
 const eslint = require('gulp-eslint')
 const minify = require('gulp-clean-css')
@@ -155,6 +156,10 @@ gulp.task('plugins', () => {
     } ));
 })
 
+gulp.task('css-vitamin', () => gulp.src(['./node_modules/@decathlon/vitamin/dist/index.css'])
+        .pipe(sass())
+        .pipe(gulp.dest('./dist')))
+
 gulp.task('css-themes', () => gulp.src(['./css/theme/source/*.{sass,scss}'])
         .pipe(sass())
         .pipe(gulp.dest('./dist/theme')))
@@ -166,7 +171,7 @@ gulp.task('css-core', () => gulp.src(['css/reveal.scss'])
     .pipe(header(banner))
     .pipe(gulp.dest('./dist')))
 
-gulp.task('css', gulp.parallel('css-themes', 'css-core'))
+gulp.task('css', gulp.parallel('css-themes', 'css-vitamin', 'css-core'))
 
 gulp.task('qunit', () => {
 
