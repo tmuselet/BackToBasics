@@ -7,6 +7,30 @@
 @import url(../index.css);
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
 @import url(../index.css);
+.authors {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em; }
+  .authors > * {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 0.7em; }
+  .authors img.authors__avatar {
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin: 10px; }
+  .authors a {
+    display: flex; }
+    .authors a > * {
+      -webkit-align-self: center;
+      -moz-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center; }
+
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: var(--vtmn-color_grey-dark-3); }
 

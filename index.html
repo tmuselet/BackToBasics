@@ -4,10 +4,10 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>reveal.js – The HTML Presentation Framework</title>
+	<title>Back To Basics - CSS #1</title>
 
-	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-	<meta name="author" content="Hakim El Hattab">
+	<meta name="description" content="A presentation to get back to the basics of CSS">
+	<meta name="author" content="Samuel Delaporte & Tanguy Muselet">
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -29,23 +29,65 @@
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
 			<section>
-				<a href="https://revealjs.com">
-					<img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo"
-						style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
-				</a>
-				<h3>The HTML Presentation Framework</h3>
-				<p>
-					<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> and <a
-							href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
-				</p>
+				
+				<img src="./public/decathlon-logo.png" alt="decathlon logo"
+					style="height: 180px; margin: 0 auto 1rem auto; background: transparent;" class="demo-logo">
+				
+				<h4>Back To Basics Series</h4>
+				<h3>CSS #1</h3>
+				<div class="authors">
+					<span>By&nbsp;</span>
+					<a href="https://github.com/samueldelaporte">
+						<img class="authors__avatar" alt="" src="https://avatars3.githubusercontent.com/u/10155958?v=4">
+						<span>Samuel Delaporte</span>
+					</a>
+					<span>&nbsp;and&nbsp;</span>
+					<a href="https://github.com/tmuselet">
+						<img class="authors__avatar" alt="" src="https://avatars3.githubusercontent.com/u/9084993?v=4" />
+						<span>Tanguy Muselet</span>
+					</a>
+				</div>
 			</section>
 
 			<section>
-				<h2>Hello There</h2>
-				<p>
-					reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will
-					show you examples of what it can do.
-				</p>
+				<section>
+					<h2>Histoire du CSS</h2>
+					<p>
+						Il faut savoir qu'aux débuts du Web, CSS n'existait pas. Le HTML est né en 1991, et CSS en 1996. Durant ce laps de temps, les styles disponibles étaient très limités. On utilisait des styles via des balises HTML dédiées à la mise en forme, telles que 
+						&lt;font color="#aab1c3"&gt; , par exemple, qui permettait de définir la couleur du texte.
+					</p>
+				</section>
+				<section>
+					<h2>Histoire du CSS</h2>
+					<p>
+						Cependant, les contenus HTML commençant à devenir plus complexes, internet est rapidement devenu un joyeux mélange entre le fond et la forme, rendant la mise à jour des pages web de plus en plus compliquées. C'est suite à ce constat qu’ont été créées les CSS, permettant de séparer la forme du fond et rendre ainsi le HTML plus clair.
+					</p>
+				</section>
+			</section>
+			
+			<section>
+				<section>
+					<h2>Principe de cascade et d’héritage</h2>
+					<p>
+						Comme son nom l’indique (Cascading Style Sheet), une CSS est une fiche listant des règles de styles appliquées “en cascade” à des éléments HTML.
+						C’est à dire que certains styles appliqués à un élément seront appliqués à sa descendance par héritage. Cela concerne notamment la taille de police, la couleur de texte, l’interlignage, etc.
+
+					</p>
+				</section>
+				<section>
+					<h2>Principe de cascade et d’héritage</h2>
+					<p>
+						L’avantage évident est qu’il n’est pas nécessaire d’appliquer des styles à chaque élément d’une page web, mais d’appliquer les styles les plus génériques aux éléments les plus haut de la hiérarchie html.
+						C’est d’ailleurs généralement sur la balise &lt;html&gt; et/ou &lt;body&gt; que l’on applique généralement les styles plus courants.
+					</p>
+				</section>
+				<section>
+					<h2>Principe de cascade et d’héritage</h2>
+					<p>
+						Chaque élément peut ensuite être doté de styles plus spécifiques, qui remplacent ou complètent ceux dont il hérite.<br/><br/>
+						<a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS ">Ressources</a>
+					</p>
+				</section>
 			</section>
 
 			<!-- Example of nested vertical slides -->
