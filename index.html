@@ -37,12 +37,12 @@
 				<h3>CSS #1</h3>
 				<div class="authors">
 					<span>By&nbsp;</span>
-					<a href="https://github.com/samueldelaporte">
+					<a rel="noopener noreferrer" target="_blank" href="https://github.com/samueldelaporte">
 						<img class="authors__avatar" alt="" src="https://avatars3.githubusercontent.com/u/10155958?v=4">
 						<span>Samuel Delaporte</span>
 					</a>
 					<span>&nbsp;and&nbsp;</span>
-					<a href="https://github.com/tmuselet">
+					<a rel="noopener noreferrer" target="_blank" href="https://github.com/tmuselet">
 						<img class="authors__avatar" alt="" src="https://avatars3.githubusercontent.com/u/9084993?v=4" />
 						<span>Tanguy Muselet</span>
 					</a>
@@ -85,37 +85,243 @@
 					<h2>Principe de cascade et d’héritage</h2>
 					<p>
 						Chaque élément peut ensuite être doté de styles plus spécifiques, qui remplacent ou complètent ceux dont il hérite.<br/><br/>
-						<a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS ">Ressources</a>
+						<a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS ">Ressources</a>
+					</p>
+				</section>
+			</section>
+			
+			<section>
+				<section>
+					<h2>Compatibilité des Navigateurs</h2>
+					<p>
+						L’évolution des CSS est régie par un consortium international (W3C), via lequel chaque règle et version de CSS y est rendue officielle.
+						CSS en est actuellement à sa version 3, sortie en 2005.
+					</p>
+				</section>
+				<section>
+					<h2>Compatibilité des Navigateurs</h2>
+					<p>
+						Quand une fonctionnalité n’est pas officielle, celle-ci reste un certain temps à l’état de brouillon, mais peut être implémentée de différentes façon par les différents navigateurs (préfixe propriétaire, affichage/comportement propre, valeurs propres). Ce n’est que quand elle est suffisamment mature et adoptée consensuellement qu’elle est rendue officielle.
+					</p>
+				</section>
+				<section>
+					<h2>Compatibilité des Navigateurs</h2>
+					<p>
+						Par exemple, le système de “Grid Layout” permettant de gérer la mise en page web, n’a été officialisée qu’au bout de 14 ans de travail commun et de validations diverses. Pendant tout ce temps, la syntaxe a évolué, et les développeurs impatients ont certainement dû suivre ces changements.
+					</p>
+				</section>
+				<section>
+					<h2>Compatibilité des Navigateurs</h2>
+					<p>
+						Les CSS sont en évolution permanente et il est difficile de profiter des dernières fonctionnalités tout en restant compatible avec les navigateurs plus anciens. Il est donc bon de les utiliser en fonction de leur compatibilité, et en connaissance de cause.
+						Si vous avez besoin de vérifier la compatibilité de propriétés, utilisez <a rel="noopener noreferrer" target="_blank" href="http://www.caniuse.com">www.caniuse.com</a> 
 					</p>
 				</section>
 			</section>
 
+			<section>
+				<section data-auto-animate>
+					<h2>Anatomie d'une règle CSS</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						sélecteur{
+							déclaration;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Anatomie d'une règle CSS</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1">
+						sélecteur{
+							déclaration;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Anatomie d'une règle CSS</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1">
+						p{
+							déclaration;
+						}
+					</code></pre>
+
+				</section>
+				<section data-auto-animate>
+					<h2>Anatomie d'une règle CSS</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						p{
+							déclaration;
+						}
+					</code></pre>
+
+				</section>
+				<section data-auto-animate>
+					<h2>Anatomie d'une règle CSS</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						p{
+							propriété: valeur;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Anatomie d'une règle CSS</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
+						p{
+							propriété: valeur;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Anatomie d'une règle CSS</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
+						p{
+							color: red;
+						}
+					</code></pre>
+
+				</section>
+				<section data-auto-animate>
+					<h2>Anatomie d'une règle CSS</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						p{
+							color: red;
+						}
+					</code></pre>
+
+				</section>
+			</section>
+
+
 			<!-- Example of nested vertical slides -->
 			<section>
-				<section>
-					<h2>Vertical Slides</h2>
-					<p>Slides can be nested inside of each other.</p>
-					<p>Use the <em>Space</em> key to navigate through all slides.</p>
-					<br>
-					<a href="#" class="navigate-down">
-						<img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238"
-							data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
-					</a>
+				<section data-auto-animate>
+					<h2>Quelques exemples</h2>
+
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						body {
+							font-size: 16px;
+							font-family: "Times", serif;
+						}
+						
+					</code></pre>
 				</section>
-				<section>
-					<h2>Basement Level 1</h2>
-					<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.
-					</p>
+				<section data-auto-animate>
+					<h2>Quelques exemples</h2>
+
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						body {
+							font-size: 16px;
+							font-family: "Times", serif;
+						}
+						
+						.main-section {
+							position: relative;
+							padding: 1rem 0;
+							border-top: 1px solid #ccc;
+						}
+					</code></pre>
 				</section>
-				<section>
-					<h2>Basement Level 2</h2>
-					<p>That's it, time to go back up.</p>
-					<br>
-					<a href="#/2">
-						<img class="r-frame" style="background: rgba(255,255,255,0.1); transform: rotate(180deg);"
-							width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Up arrow">
-					</a>
+				<section data-auto-animate>
+					<h2>Quelques exemples</h2>
+
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						body {
+							font-size: 16px;
+							font-family: "Times", serif;
+						}
+						
+						.main-section {
+							position: relative;
+							padding: 1rem 0;
+							border-top: 1px solid #ccc;
+						}
+						
+						.main-section > p {
+							/* marge externe de 16px en haut et en bas, et centrage horizontal */
+							margin: 1rem auto; 
+							width: 600px;
+							/* 100% largeur du viewport - 24px (16px de chaque côté) */
+							max-width: calc(100vw - 2rem); 
+							font-style: italic;
+							font-size: 1.25rem; /* 20px */
+						}
+						
+					</code></pre>
 				</section>
+				<section data-auto-animate>
+					<h2>Quelques exemples</h2>
+
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						body {
+							font-size: 16px;
+							font-family: "Times", serif;
+						}
+						
+						.main-section {
+							position: relative;
+							padding: 1rem 0;
+							border-top: 1px solid #ccc;
+						}
+						
+						.main-section > p {
+							/* marge externe de 16px en haut et en bas, et centrage horizontal */
+							margin: 1rem auto; 
+							width: 600px;
+							/* 100% largeur du viewport - 24px (16px de chaque côté) */
+							max-width: calc(100vw - 2rem); 
+							font-style: italic;
+							font-size: 1.25rem; /* 20px */
+						}
+						
+						/* ne cible que la première lettre de chaque paragraphe de la section */
+						.main-section > p::first-letter {
+							/* interlettrage réduit de 8% de 20px */
+							letter-spacing: -0.08em;
+							/* en majuscule */
+							text-transform: uppercase; 
+							font-size: 3em; /* 3 x 20px = 60px */
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Quelques exemples</h2>
+
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						body {
+							font-size: 16px;
+							font-family: "Times", serif;
+						}
+						
+						.main-section {
+							position: relative;
+							padding: 1rem 0;
+							border-top: 1px solid #ccc;
+						}
+						
+						.main-section > p {
+							/* marge externe de 16px en haut et en bas, et centrage horizontal */
+							margin: 1rem auto; 
+							width: 600px;
+							/* 100% largeur du viewport - 24px (16px de chaque côté) */
+							max-width: calc(100vw - 2rem); 
+							font-style: italic;
+							font-size: 1.25rem; /* 20px */
+						}
+						
+						/* ne cible que la première lettre de chaque paragraphe de la section */
+						.main-section > p::first-letter {
+							/* interlettrage réduit de 8% de 20px */
+							letter-spacing: -0.08em;
+							/* en majuscule */
+							text-transform: uppercase; 
+							font-size: 3em; /* 3 x 20px = 60px */
+						}
+						
+						.main-section > p strong {
+							color: #007dbc;
+						}
+					</code></pre>
+				</section>
+				
 			</section>
 
 			<section>
