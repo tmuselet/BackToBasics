@@ -325,6 +325,257 @@
 			</section>
 
 			<section>
+				<section data-auto-animate>
+					<h2>Unités et valeurs</h2>
+					<p>Certaines propriété attendent des valeurs avec unités, absolues ou relatives.
+						Pour ne citer que les plus courantes :
+						
+						Unités absolues : cm, mm in, pc, pt, px.
+						</p>
+				</section>
+				<section data-auto-animate>
+					<h2>Unités et valeurs</h2>
+					<p>
+						Pour ne citer que la plus usitée : px pour pixels. 
+Comme elle le laisse entendre, cette unité permet d’appliquer des valeurs en pixels.
+Pour des raisons d’accessibilité et d’adaptativité de l’interface (responsive), cette unité doit être utilisée avec parcimonie, et est donc de moins en moins utilisée dans les interfaces web récentes.
+					</p>
+				</section>
+				<section data-auto-animate>
+					<h2>Unités relatives</h2>
+					<p>% : le pourcentage. Même si elle est évidente, il faut toujours savoir sur quoi elle se base et sur quelle propriété l’appliquer.</p>
+				</section>
+				
+				<section data-auto-animate>
+					<h2>Unités relatives</h2>
+					<p>vw et vh : respectivement viewport width et viewport height. Chacune de ces unités correspond à 1% du viewport (portion visible de la page).
+					</p>
+				</section>
+				<section data-auto-animate>
+					<h2>Unités relatives</h2>
+					<p>em : correspond à la font-size appliquée au parent d’un un élément, ou l’élément lui-même pour d’autres propriétés. 
+						Ex, pour un élément ayant une font-size de 12px, si un élément enfant a une font-size de 2em, il fera 24px.
+						</p>
+				</section>
+				<section data-auto-animate>
+					<h2>Unités relatives</h2>
+					<p>rem (root em) : correspond à la font-size de l’élément “root”, généralement appliqué sur la balise html ou body.
+						C’est l’unité par excellence à appliquer aux font-size
+						</p>
+				</section>
+				<section data-auto-animate>
+					<h2>Autres unités</h2>
+					<p>Il en existe d’autres, plus marginales, telles que ex, ch, lh, vmin, vmax
+					</p>
+					<a href="https://developer.mozilla.org/fr/docs/Apprendre/CSS/Building_blocks/Values_and_units " target="_blank" rel="noopener noreferrer">Ressources</a>
+				</section>
+			</section>
+
+			<section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Certaines propriétés, telles que font, padding, margin, background, entre autres, peuvent être raccourcies :
+					</p>
+				</section>
+				
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Par exemple :
+						Pour ajouter des marges à un élément, la règle :						
+					</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						.element {
+							margin-top: 1rem;
+							margin-right: 0;
+							margin-bottom: 1rem;
+							margin-left: 0;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Peut être simplifiée comme suit :</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						.element {
+							/* suivant l’ordre top > right > bottom > left */
+							margin: 1rem 0 1rem 0; 
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Ou bien :</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						.element {
+							/* suivant l’ordre top > right/left > bottom */
+							margin: 1rem 0 1rem; 
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Ou encore :</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						.element {
+							/* suivant l’ordre top/bottom > right/left */
+							margin: 1rem 0; 
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Rien n’empêche aussi d’appliquer une marge globale :</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						.element {
+							/* s'applique à top, right, bottom et left */
+							margin: 1rem; 
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Pour la propriété font, les propriétés :</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							font-style: italic;
+							font-weight: bold;
+							font-size: 1.2em;
+							line-height: 1.5;
+							font-family: Arial, sans-serif;
+						}						  
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>peuvent être raccourcie comme suit :</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							font: italic bold 1.2em/1.5 Arial, sans-serif;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Une autre propriété souvent utilisée sous forme raccourcie est “border” :</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							border-width: 1px;
+							border-style: solid;
+							border-color: #000;
+						}						  
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Une autre propriété souvent utilisée sous forme raccourcie est “border” :</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							border: 1px solid #000;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<div class="r-hstack">
+						<div>
+							<img src="./public/margin.png" alt="margin scheme"
+							style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
+							<p>&nbsp;&nbsp;Margin/Padding&nbsp;&nbsp;&nbsp;</p> 
+						</div>
+						<div>
+							<img src="./public/border.png" alt="border scheme" 
+							style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
+							<p>&nbsp;&nbsp;&nbsp;Border radius&nbsp;&nbsp;</p> 
+						</div>
+					</div>
+					<a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies" rel="noopener noreferrer">Ressources</a>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
+					</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							background-color: #000;
+							background-image: url(images/bg.gif);
+							background-repeat: no-repeat;
+							background-position: top right;
+							/* peut être remplacé par */
+							background: #000 url(images/bg.gif) no-repeat top right;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
+					</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							background-color: #000;
+							background-image: url(images/bg.gif);
+							background-repeat: no-repeat;
+							background-position: top right;
+							/* peut être remplacé par */
+							background: #000 url(images/bg.gif) no-repeat top right;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
+					</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							background: #000 url(images/bg.gif) no-repeat top right;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>La version CSS 3 :
+					</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							background-image: url("content.jpg") ;
+							background-position: left top;
+							background-size: 200px 70px;
+							background-repeat: no-repeat;
+							background-attachment: scroll;
+							background-clip: content-box;
+							background-origin: content-box;
+							background-color: white;
+						}
+					</code></pre>
+				</section>
+				<section data-auto-animate>
+					<h2>Propriétés raccourcies</h2>
+					<p>La version CSS 3 :
+					</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						{
+							background:  url("content.jpg") 
+							left top / 200px 70px
+							no-repeat
+							scroll
+							content-box content-box
+							white;
+						}
+					</code></pre>
+					<a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies" rel="noopener noreferrer">Ressources</a>
+				</section>
+			</section>
+
+
+
+
+
+
+
+
+
+			<!-- slides basics -->
+
+			<section>
 				<h2>Slides</h2>
 				<p>
 					Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out
