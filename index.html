@@ -57,18 +57,21 @@
             <br />Le HTML est né en 1991, et <strong>CSS en 1996</strong>.
             <br />Durant ce laps de temps, <br /> les styles disponibles étaient très limités.
           </p>
-          <p>On utilisait des styles via des balises HTML dédiées 
-            <br />à la mise en forme, telles que 
-            <pre><code class="hljs" data-trim>&lt;font color="#aab1c3"&gt;text&lt;/font&gt;</code></pre>
-            par exemple, permettant de définir la couleur du texte.
-          </p>
+          <div class="fragment">
+            <p>On utilisait des styles via des balises HTML dédiées 
+              <br />à la mise en forme, telles que 
+            </p>
+            <pre><code class="hljs" data-trim data-line-numbers>&lt;font color="#aab1c3"&gt;text&lt;/font&gt;</code></pre>
+            <p>par exemple, permettant de définir la couleur du texte.</p>
+          </div>
+          
         </section>
         <section>
           <h2>Histoire du CSS</h2>
           <p>
             Cependant, les contenus HTML commençant à devenir plus <strong>complexes</strong>, internet est rapidement devenu un joyeux mélange entre le fond et la forme, rendant la mise à jour des pages web de plus en plus compliquées.
           </p>
-          <p>C'est suite à ce constat qu’ont été créées les CSS, permettant de <strong>séparer la forme du fond</strong> et rendre ainsi le HTML plus clair.
+          <p class="fragment">C'est suite à ce constat qu’ont été créées les CSS, permettant de <strong>séparer la forme du fond</strong> et rendre ainsi le HTML plus clair.
           </p>
         </section>
       </section>
@@ -80,7 +83,7 @@
             Comme son nom l’indique <em>(Cascading Style Sheet)</em>, une CSS est une <strong>fiche listant des règles de styles appliquées “en cascade” 
               <br />à des éléments HTML</strong>.
           </p>
-          <p>
+          <p class="fragment">
             C’est à dire que certains styles appliqués à un élément <strong>seront appliqués à sa descendance par principe d'héritage</strong>. 
             <br />Cela concerne notamment la taille de police, la couleur de texte, l’interlignage, etc.
 
@@ -91,7 +94,7 @@
           <p>
             L’avantage évident est qu’il n’est pas nécessaire d’appliquer des styles à chaque élément d’une page web, mais d’appliquer les styles les plus <strong>génériques</strong> aux éléments les plus hauts de l'arborescence HTML.
           </p>
-          <p>
+          <p class="fragment">
             C’est d’ailleurs généralement sur la balise <em>&lt;html&gt;</em> et/ou <em>&lt;body&gt;</em> que l’on applique généralement les styles plus courants.
           </p>
         </section>
@@ -110,33 +113,31 @@
           <p>
             L’évolution des CSS est régie par un consortium international (W3C), via lequel chaque règle et version de CSS y est rendue officielle.
           </p>
-          <p>
-            CSS en est actuellement à sa version 3, sortie en 2005.
-          </p>
+          <p class="fragment">CSS en est actuellement à sa version 3, sortie en 2005.</p>
         </section>
         <section>
           <h2>Compatibilité des Navigateurs</h2>
           <p>
             Quand une fonctionnalité n’est pas officielle, celle-ci reste un certain temps à l’état de brouillon, mais peut être implémentée de différentes façons par les différents navigateurs (préfixe propriétaire, affichage/comportement propre, valeurs propres).
           </p>
-          <p>Ce n’est que quand elle est suffisamment mature et fait consensus qu’elle est rendue officielle.</p>
+          <p class="fragment">Ce n’est que quand elle est suffisamment mature et fait consensus qu’elle est rendue officielle.</p>
         </section>
         <section>
           <h2>Compatibilité des Navigateurs</h2>
           <p>
             Par exemple, le système de en <em>Grid Layout</em> permettant de gérer la mise en page web, n’a été officialisée qu’après de nombreuses années de travail commun et de validations diverses.
           </p>
-          <p>Pendant tout ce temps, la syntaxe a évolué, et les développeurs impatients ont certainement dû suivre ces changements.</p>
+          <p class="fragment">Pendant tout ce temps, la syntaxe a évolué, et les développeurs impatients ont certainement dû suivre ces changements.</p>
         </section>
         <section>
           <h2>Compatibilité des Navigateurs</h2>
           <p>
-            Les CSS sont en évolution permanente et il est difficile de profiter des dernières fonctionnalités tout en restant compatible avec les navigateurs plus anciens. 
+            Les CSS sont en évolution permanente et il est difficile de profiter des dernières fonctionnalités tout en restant <strong>compatible</strong> avec les navigateurs plus anciens. 
           </p>
-          <p>Il est donc bon de les utiliser en fonction de leur compatibilité,
-            <br />et en connaissance de cause.
+          <p class="fragment">Il est donc bon de les utiliser en fonction de leur compatibilité,
+            <br />et <strong>en connaissance de cause</strong>.
           </p>
-          <p>Si vous avez besoin de vérifier la compatibilité de propriétés, utilisez <a rel="noopener noreferrer" target="_blank" href="http://www.caniuse.com">www.caniuse.com</a>
+          <p class="fragment">Si vous avez besoin de vérifier la compatibilité de propriétés, utilisez <a rel="noopener noreferrer" target="_blank" href="http://www.caniuse.com">www.caniuse.com</a>
           </p>
         </section>
       </section>
@@ -144,53 +145,42 @@
       <section>
         <section data-auto-animate>
           <h2>Anatomie d'une règle CSS</h2>
+          <p>Une règle CSS est avant tout constituée d'un <strong>sélecteur</strong>, 
+            <br />servant à cibler un ou plusieurs éléments
+            <br />sur lesquels appliquer des styles...          
+          </p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            sélecteur {
-              déclaration;
-            }
-          </code></pre>
-        </section>
-        <section data-auto-animate>
-          <h2>Anatomie d'une règle CSS</h2>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
-            sélecteur {
-              déclaration;
-            }
-          </code></pre>
-        </section>
-        <section data-auto-animate>
-          <h2>Anatomie d'une règle CSS</h2>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
-            sélecteur {
-              déclaration;
-            }
-          </code></pre>
+            selecteur {
 
+            }
+          </code></pre>
         </section>
         <section data-auto-animate>
           <h2>Anatomie d'une règle CSS</h2>
+          <p>...contenant une ou plusieurs <strong>déclarations...</strong></p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|2">
+            selecteur {
+              déclaration;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Anatomie d'une règle CSS</h2>
+          <p>....elles-mêmes constituées de <strong>paire(s) de propriété/valeur</strong>
+          </p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
-            sélecteur {
+            selecteur {
               propriété: valeur;
             }
           </code></pre>
-        </section>
-        <section data-auto-animate>
-          <h2>Anatomie d'une règle CSS</h2>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
-            p {
-              propriété: valeur;
-            }
-          </code></pre>
-        </section>
-        <section data-auto-animate>
-          <h2>Anatomie d'une règle CSS</h2>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
-            p {
-              color: red;
-            }
-          </code></pre>
-
+          <div class="fragment">
+            <p>Ce qui donne concrètement :</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              p {
+                color: red;
+              }
+            </code></pre>
+          </div>
         </section>
       </section>
 
@@ -204,8 +194,7 @@
             body {
               font-size: 16px;
               font-family: "Times", serif;
-            }
-            
+            }            
           </code></pre>
         </section>
         <section data-auto-animate>
@@ -338,20 +327,23 @@
         <section data-auto-animate>
           <h2>Unités absolues</h2>
           <p>
-            Pour ne citer que la plus usitée : <strong>px</strong> pour pixels. 
+            Pour ne citer que la plus usitée : <strong>px</strong> <em>(pixels)</em>. 
           </p>
-          <p>
+          <p class="fragment">
             Comme elle le laisse entendre, 
-            <br />cette unité permet d’appliquer des valeurs en pixels.            
+            <br />cette unité permet d’appliquer des valeurs fixes en pixels.            
           </p>
-          <p>Pour des raisons d’<strong>accessibilité et d’adaptativité</strong> de l’interface, cette unité doit être utilisée avec parcimonie, 
+          <p class="fragment">Pour des raisons d’<strong>accessibilité et d’adaptativité</strong> de l’interface, cette unité doit être utilisée avec parcimonie, 
             <br />
-            et est donc de moins en moins utilisée dans les interfaces web récentes (souvent <em>responsive</em> ).</p>
+            et est donc de moins en moins utilisée dans
+            <br />les interfaces web récentes (souvent <em>responsive</em> ).</p>
         </section>
         <section data-auto-animate>
           <h2>Unités relatives</h2>
           <p><strong>% : le pourcentage</strong></p>
-          <p>Même si elle est évidente, il faut toujours savoir sur quoi elle se base et sur quelle propriété l’appliquer.</p>
+          <p>Même si elle peut paraître évidente,
+            <br />il faut toujours savoir <strong>sur quoi elle se base</strong>
+            <br />et <strong>sur quelle propriété</strong> l’appliquer.</p>
         </section>
         
         <section data-auto-animate>
@@ -359,7 +351,7 @@
           <p><strong>vw et vh</strong></p>
           <p>Respectivement <strong>viewport width</strong> et <strong>viewport height</strong>. 
           </p>
-          <p>Chacune de ces unités correspond à 1% du <em>viewport</em> <br />(portion visible de la page).</p>
+          <p class="fragment">Chacune de ces unités correspond à 1% du <em>viewport</em> <br />(portion visible de la page).</p>
         </section>
         <section data-auto-animate>
           <h2>Unités relatives</h2>
@@ -368,7 +360,7 @@
             <br /><strong>appliquée au parent d’un élément</strong>, 
             <br />ou l’élément lui-même pour d’autres propriétés.            
           </p>
-          <p>Ex : pour un élément ayant une <em>font-size</em> de <strong>12px</strong>,
+          <p class="fragment">Ex : pour un élément ayant une <em>font-size</em> de <strong>12px</strong>,
             <br />un élément enfant avec une <em>font-size</em> de <strong>2em</strong> fera <strong>24px</strong>.
           </p>
         </section>
@@ -378,10 +370,10 @@
           <p>Correspond à la <em>font-size</em> de l’élément “root”,
             <br />généralement appliqué sur la balise <em>HTML</em> ou <em>BODY</em>.            
           </p>
-          <p>Ex : si une page web a une <em>font-size</em> globale de <strong>16px</strong>,
+          <p class="fragment">Ex : si une page web a une <em>font-size</em> globale de <strong>16px</strong>,
             <br />un élément enfant avec une <em>font-size</em> de <strong>2.5rem</strong> fera <strong>40px</strong>.
           </p>
-          <p><strong>C’est l’unité par excellence à appliquer aux font-size.</strong></p>
+          <p class="fragment"><strong>C’est l’unité par excellence à appliquer aux font-size.</strong></p>
         </section>
         <section data-auto-animate>
           <h2>Autres unités</h2>
@@ -518,7 +510,7 @@
           <h2>Propriétés raccourcies</h2>
           <p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
           </p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|8">
             {
               background-color: #000;
               background-image: url(images/bg.gif);
@@ -530,22 +522,7 @@
             }
           </code></pre>
         </section>
-        <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
-          </p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="8">
-            {
-              background-color: #000;
-              background-image: url(images/bg.gif);
-              background-repeat: no-repeat;
-              background-position: top right;
-
-              /* peut être remplacé par */
-              background: #000 url(images/bg.gif) no-repeat top right;
-            }
-          </code></pre>
-        </section>
+        
         <section data-auto-animate>
           <h2>Propriétés raccourcies</h2>
           <p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
@@ -597,14 +574,14 @@
           <h2>Sélecteurs CSS</h2>
           <p>C'est bien joli, toutes ces propriétés et ces styles, <br />mais ils ne servent à rien sans les <strong>sélecteurs</strong>.
           </p>
-          <p>Ce sont eux qui vont nous permettre de <strong>cibler un ou plusieurs éléments</strong> pour y appliquer les styles.
+          <p class="fragment">Ce sont eux qui vont nous permettre de <strong>cibler un ou plusieurs éléments</strong> pour y appliquer les styles.
           </p>
         </section>
         <section data-auto-animate>
           <h2>Sélecteurs CSS</h2>
           <h4>Sélecteur universel</h4>
           <p>Cible <strong>tous</strong> les éléments HTML</p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             * {
               color: black;
             }
@@ -614,7 +591,7 @@
           <h2>Sélecteurs CSS</h2>
           <h4>Sélecteur de <em>tag/balise</em> HTML</h4>
           <p>Cible <strong>tous</strong> les éléments HTML de type <em>&lt;p&gt;</em></p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             p {
               color: black;
             }
@@ -627,7 +604,7 @@
           <h2>Sélecteurs CSS</h2>
           <h4>Sélecteur de <em>classe</em> CSS</h4>
           <p>Cible <strong>tous</strong> les éléments HTML portant la classe CSS correspondante :</p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             .ma-classe {
               color: black;
             }
@@ -640,7 +617,7 @@
           <h2>Sélecteurs CSS</h2>
           <h4>Sélecteur d'<em>ID</em></h4>
           <p>Cible l'élément (unique) portant un attribut <em>id</em> avec la valeur correspondante :</p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             #id-unique {
               color: black;
             }
@@ -655,7 +632,7 @@
           <h4>Sélecteur d'<em>attribut</em></h4>
           <p>Cible les éléments portant un attribut avec une valeur spécifique :</p>
 
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             a[target="_blank"] {
               color: black;
             }
@@ -671,7 +648,7 @@
           <p>Autre exemple ciblant les éléments portant l'attribut spécifié,
             <br />qu'elle ait une valeur ou non</p>
 
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             div[style] {
               color: black;
             }
@@ -686,7 +663,7 @@
           <h4>Sélecteur d'<em>état</em></h4>
           <p>Cible un élément en fonction de son état (survol, focus, etc)</p>
 
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             button:focus {
               color: black;
             }
@@ -705,7 +682,7 @@
           <h4>Sélecteur de classes cumulées</h4>
           <p>Cible les éléments portant les classes indiquées</p>
 
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             .ma-classe-1.ma-classe-2 {
               color: black;
             }
@@ -720,7 +697,7 @@
           <h4>Sélecteur multiple</h4>
           <p>Cible les éléments correspondant à l'un des sélecteurs</p>
 
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             .ma-classe-1, .ma-classe-2, quote, a[target="_blank"] {
               color: black;
             }
@@ -738,12 +715,12 @@
           <h4>Sélecteur de descendance</h4>
           <p>Cible les éléments enfant d'autres éléments spécifiques</p>
 
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             section p {
               color: black;
             }
           </code></pre>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2,4">            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|2,4">            
             <section>
               <p></p>
               <div>
@@ -759,12 +736,12 @@
           <h4>Sélecteur d'enfant direct</h4>
           <p>Cible les éléments enfants <strong>directs</strong> d'éléments spécifiques</p>
 
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             section > p {
               color: black;
             }
           </code></pre>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|2">            
             <section>
               <p></p>
               <div>
@@ -780,13 +757,13 @@
           <h4>Sélecteur d'adjacence directe</h4>
           <p>Cible les éléments suivant <strong>directement</strong> d'autres éléments</p>
 
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2,4">
             // tous les paragraphes qui en suivent directement un autre           
             p + p {
               color: black;
             }
           </code></pre>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2,3,4">            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|2,3,4">            
             <p></p>
             <p></p>
             <p></p>
@@ -799,13 +776,13 @@
           <h4>Sélecteur d'adjacence indirecte</h4>
           <p>Cible les éléments suivant <strong>indirectement</strong> d'autres éléments</p>
 
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2,4">
             // tous les paragraphes qui en suivent indirectement un autre           
             p ~ p {
               color: black;
             }
           </code></pre>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="3,5,7">            
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|3,5,7">            
             <p></p>
             <div></div>
             <p></p>
@@ -854,10 +831,12 @@
               input::placeholder {}
               ...
             </code></pre>
-            <p>A noter que la plupart de ces pseudo éléments sont aussi accessible via un seul <strong>“:”</strong>, par souci de rétro-compatibilité, car historiquement, la distinction n’a pas toujours été faite avec les pseudo-classes.</p>
+            <div class="fragment">
+              <p>A noter que la plupart de ces pseudo éléments sont aussi accessible via un seul <strong>“:”</strong>, par souci de rétro-compatibilité, car historiquement, la distinction n’a pas toujours été faite avec les pseudo-classes.</p>
             <p>
               <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments#Liste_des_pseudo-%C3%A9l%C3%A9ments">Liste complète</a>
             </p>
+            </div>
         </section>
       </section>
 
