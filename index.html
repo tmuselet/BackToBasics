@@ -2,1038 +2,1291 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 
-	<title>Back To Basics - CSS #1</title>
+  <title>Back To Basics - CSS #1</title>
 
-	<meta name="description" content="A presentation to get back to the basics of CSS">
-	<meta name="author" content="Samuel Delaporte & Tanguy Muselet">
+  <meta name="description" content="A presentation to get back to the basics of CSS">
+  <meta name="author" content="Samuel Delaporte & Tanguy Muselet">
 
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="dist/reset.css">
-	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/decathlon.css" id="theme">
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/decathlon.css" id="theme">
 
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 </head>
 
 <body>
 
-	<div class="reveal">
+  <div class="reveal">
 
-		<!-- Any section element inside of this container is displayed as a slide -->
-		<div class="slides">
-			<section>
-				
-				<img src="./public/decathlon-logo.png" alt="decathlon logo"
-					style="height: 180px; margin: 0 auto 1rem auto; background: transparent;" class="demo-logo">
-				
-				<h4>Back To Basics Series</h4>
-				<h3>CSS #1</h3>
-				<div class="authors">
-					<span>By&nbsp;</span>
-					<a rel="noopener noreferrer" target="_blank" href="https://github.com/samueldelaporte">
-						<img class="authors__avatar" alt="" src="https://avatars3.githubusercontent.com/u/10155958?v=4">
-						<span>Samuel Delaporte</span>
-					</a>
-					<span>&nbsp;and&nbsp;</span>
-					<a rel="noopener noreferrer" target="_blank" href="https://github.com/tmuselet">
-						<img class="authors__avatar" alt="" src="https://avatars3.githubusercontent.com/u/9084993?v=4" />
-						<span>Tanguy Muselet</span>
-					</a>
-				</div>
-			</section>
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        
+        <img src="./public/decathlon-logo.png" alt="decathlon logo"
+          style="height: 180px; margin: 0 auto 1rem auto; background: transparent;" class="demo-logo">
+        
+        <h4>Back To Basics Series</h4>
+        <h3>CSS #1</h3>
+        <div class="authors">
+          <span>By&nbsp;</span>
+          <a rel="noopener noreferrer" target="_blank" href="https://github.com/samueldelaporte">
+            <img class="authors__avatar" alt="" src="https://avatars3.githubusercontent.com/u/10155958?u=39b4cceea9796d1b8803ce52cfaa87291bf866da&v=4">
+            <span>Samuel Delaporte</span>
+          </a>
+          <span>&nbsp;and&nbsp;</span>
+          <a rel="noopener noreferrer" target="_blank" href="https://github.com/tmuselet">
+            <img class="authors__avatar" alt="" src="https://avatars3.githubusercontent.com/u/9084993?v=4" />
+            <span>Tanguy Muselet</span>
+          </a>
+        </div>
+      </section>
 
-			<section>
-				<section>
-					<h2>Histoire du CSS</h2>
-					<p>
-						Il faut savoir qu'aux débuts du Web, CSS n'existait pas. Le HTML est né en 1991, et CSS en 1996. Durant ce laps de temps, les styles disponibles étaient très limités. On utilisait des styles via des balises HTML dédiées à la mise en forme, telles que 
-						&lt;font color="#aab1c3"&gt; , par exemple, qui permettait de définir la couleur du texte.
-					</p>
-				</section>
-				<section>
-					<h2>Histoire du CSS</h2>
-					<p>
-						Cependant, les contenus HTML commençant à devenir plus complexes, internet est rapidement devenu un joyeux mélange entre le fond et la forme, rendant la mise à jour des pages web de plus en plus compliquées. C'est suite à ce constat qu’ont été créées les CSS, permettant de séparer la forme du fond et rendre ainsi le HTML plus clair.
-					</p>
-				</section>
-			</section>
-			
-			<section>
-				<section>
-					<h2>Principe de cascade et d’héritage</h2>
-					<p>
-						Comme son nom l’indique (Cascading Style Sheet), une CSS est une fiche listant des règles de styles appliquées “en cascade” à des éléments HTML.
-						C’est à dire que certains styles appliqués à un élément seront appliqués à sa descendance par héritage. Cela concerne notamment la taille de police, la couleur de texte, l’interlignage, etc.
+      <section>
+        <section>
+          <h2>Histoire du CSS</h2>
+          <p>
+            Aux débuts du Web, CSS n'existait pas. 
+            <br />Le HTML est né en 1991, et <strong>CSS en 1996</strong>.
+            <br />Durant ce laps de temps, <br /> les styles disponibles étaient très limités.
+          </p>
+          <p>On utilisait des styles via des balises HTML dédiées 
+            <br />à la mise en forme, telles que 
+            <pre><code class="hljs" data-trim>&lt;font color="#aab1c3"&gt;text&lt;/font&gt;</code></pre>
+            par exemple, permettant de définir la couleur du texte.
+          </p>
+        </section>
+        <section>
+          <h2>Histoire du CSS</h2>
+          <p>
+            Cependant, les contenus HTML commençant à devenir plus <strong>complexes</strong>, internet est rapidement devenu un joyeux mélange entre le fond et la forme, rendant la mise à jour des pages web de plus en plus compliquées.
+          </p>
+          <p>C'est suite à ce constat qu’ont été créées les CSS, permettant de <strong>séparer la forme du fond</strong> et rendre ainsi le HTML plus clair.
+          </p>
+        </section>
+      </section>
+      
+      <section>
+        <section>
+          <h2>Principe de cascade et d’héritage</h2>
+          <p>
+            Comme son nom l’indique <em>(Cascading Style Sheet)</em>, une CSS est une <strong>fiche listant des règles de styles appliquées “en cascade” 
+              <br />à des éléments HTML</strong>.
+          </p>
+          <p>
+            C’est à dire que certains styles appliqués à un élément <strong>seront appliqués à sa descendance par principe d'héritage</strong>. 
+            <br />Cela concerne notamment la taille de police, la couleur de texte, l’interlignage, etc.
 
-					</p>
-				</section>
-				<section>
-					<h2>Principe de cascade et d’héritage</h2>
-					<p>
-						L’avantage évident est qu’il n’est pas nécessaire d’appliquer des styles à chaque élément d’une page web, mais d’appliquer les styles les plus génériques aux éléments les plus haut de la hiérarchie html.
-						C’est d’ailleurs généralement sur la balise &lt;html&gt; et/ou &lt;body&gt; que l’on applique généralement les styles plus courants.
-					</p>
-				</section>
-				<section>
-					<h2>Principe de cascade et d’héritage</h2>
-					<p>
-						Chaque élément peut ensuite être doté de styles plus spécifiques, qui remplacent ou complètent ceux dont il hérite.<br/><br/>
-						<a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS ">Ressources</a>
-					</p>
-				</section>
-			</section>
-			
-			<section>
-				<section>
-					<h2>Compatibilité des Navigateurs</h2>
-					<p>
-						L’évolution des CSS est régie par un consortium international (W3C), via lequel chaque règle et version de CSS y est rendue officielle.
-						CSS en est actuellement à sa version 3, sortie en 2005.
-					</p>
-				</section>
-				<section>
-					<h2>Compatibilité des Navigateurs</h2>
-					<p>
-						Quand une fonctionnalité n’est pas officielle, celle-ci reste un certain temps à l’état de brouillon, mais peut être implémentée de différentes façon par les différents navigateurs (préfixe propriétaire, affichage/comportement propre, valeurs propres). Ce n’est que quand elle est suffisamment mature et adoptée consensuellement qu’elle est rendue officielle.
-					</p>
-				</section>
-				<section>
-					<h2>Compatibilité des Navigateurs</h2>
-					<p>
-						Par exemple, le système de “Grid Layout” permettant de gérer la mise en page web, n’a été officialisée qu’au bout de 14 ans de travail commun et de validations diverses. Pendant tout ce temps, la syntaxe a évolué, et les développeurs impatients ont certainement dû suivre ces changements.
-					</p>
-				</section>
-				<section>
-					<h2>Compatibilité des Navigateurs</h2>
-					<p>
-						Les CSS sont en évolution permanente et il est difficile de profiter des dernières fonctionnalités tout en restant compatible avec les navigateurs plus anciens. Il est donc bon de les utiliser en fonction de leur compatibilité, et en connaissance de cause.
-						Si vous avez besoin de vérifier la compatibilité de propriétés, utilisez <a rel="noopener noreferrer" target="_blank" href="http://www.caniuse.com">www.caniuse.com</a> 
-					</p>
-				</section>
-			</section>
+          </p>
+        </section>
+        <section>
+          <h2>Principe de cascade et d’héritage</h2>
+          <p>
+            L’avantage évident est qu’il n’est pas nécessaire d’appliquer des styles à chaque élément d’une page web, mais d’appliquer les styles les plus <strong>génériques</strong> aux éléments les plus hauts de l'arborescence HTML.
+          </p>
+          <p>
+            C’est d’ailleurs généralement sur la balise <em>&lt;html&gt;</em> et/ou <em>&lt;body&gt;</em> que l’on applique généralement les styles plus courants.
+          </p>
+        </section>
+        <section>
+          <h2>Principe de cascade et d’héritage</h2>
+          <p>
+            Chaque élément peut ensuite être doté de styles plus spécifiques, qui remplacent ou complètent ceux dont il hérite.<br/><br/>
+            <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS ">Ressources</a>
+          </p>
+        </section>
+      </section>
+      
+      <section>
+        <section>
+          <h2>Compatibilité des Navigateurs</h2>
+          <p>
+            L’évolution des CSS est régie par un consortium international (W3C), via lequel chaque règle et version de CSS y est rendue officielle.
+          </p>
+          <p>
+            CSS en est actuellement à sa version 3, sortie en 2005.
+          </p>
+        </section>
+        <section>
+          <h2>Compatibilité des Navigateurs</h2>
+          <p>
+            Quand une fonctionnalité n’est pas officielle, celle-ci reste un certain temps à l’état de brouillon, mais peut être implémentée de différentes façons par les différents navigateurs (préfixe propriétaire, affichage/comportement propre, valeurs propres).
+          </p>
+          <p>Ce n’est que quand elle est suffisamment mature et fait consensus qu’elle est rendue officielle.</p>
+        </section>
+        <section>
+          <h2>Compatibilité des Navigateurs</h2>
+          <p>
+            Par exemple, le système de en <em>Grid Layout</em> permettant de gérer la mise en page web, n’a été officialisée qu’après de nombreuses années de travail commun et de validations diverses.
+          </p>
+          <p>Pendant tout ce temps, la syntaxe a évolué, et les développeurs impatients ont certainement dû suivre ces changements.</p>
+        </section>
+        <section>
+          <h2>Compatibilité des Navigateurs</h2>
+          <p>
+            Les CSS sont en évolution permanente et il est difficile de profiter des dernières fonctionnalités tout en restant compatible avec les navigateurs plus anciens. 
+          </p>
+          <p>Il est donc bon de les utiliser en fonction de leur compatibilité,
+            <br />et en connaissance de cause.
+          </p>
+          <p>Si vous avez besoin de vérifier la compatibilité de propriétés, utilisez <a rel="noopener noreferrer" target="_blank" href="http://www.caniuse.com">www.caniuse.com</a>
+          </p>
+        </section>
+      </section>
 
-			<section>
-				<section data-auto-animate>
-					<h2>Anatomie d'une règle CSS</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						sélecteur{
-							déclaration;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Anatomie d'une règle CSS</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1">
-						sélecteur{
-							déclaration;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Anatomie d'une règle CSS</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1">
-						p{
-							déclaration;
-						}
-					</code></pre>
+      <section>
+        <section data-auto-animate>
+          <h2>Anatomie d'une règle CSS</h2>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            sélecteur {
+              déclaration;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Anatomie d'une règle CSS</h2>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
+            sélecteur {
+              déclaration;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Anatomie d'une règle CSS</h2>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
+            sélecteur {
+              déclaration;
+            }
+          </code></pre>
 
-				</section>
-				<section data-auto-animate>
-					<h2>Anatomie d'une règle CSS</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						p{
-							déclaration;
-						}
-					</code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Anatomie d'une règle CSS</h2>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
+            sélecteur {
+              propriété: valeur;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Anatomie d'une règle CSS</h2>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
+            p {
+              propriété: valeur;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Anatomie d'une règle CSS</h2>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
+            p {
+              color: red;
+            }
+          </code></pre>
 
-				</section>
-				<section data-auto-animate>
-					<h2>Anatomie d'une règle CSS</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						p{
-							propriété: valeur;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Anatomie d'une règle CSS</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
-						p{
-							propriété: valeur;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Anatomie d'une règle CSS</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
-						p{
-							color: red;
-						}
-					</code></pre>
-
-				</section>
-				<section data-auto-animate>
-					<h2>Anatomie d'une règle CSS</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						p{
-							color: red;
-						}
-					</code></pre>
-
-				</section>
-			</section>
-
-
-			<!-- Example of nested vertical slides -->
-			<section>
-				<section data-auto-animate>
-					<h2>Quelques exemples</h2>
-
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						body {
-							font-size: 16px;
-							font-family: "Times", serif;
-						}
-						
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Quelques exemples</h2>
-
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						body {
-							font-size: 16px;
-							font-family: "Times", serif;
-						}
-						
-						.main-section {
-							position: relative;
-							padding: 1rem 0;
-							border-top: 1px solid #ccc;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Quelques exemples</h2>
-
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						body {
-							font-size: 16px;
-							font-family: "Times", serif;
-						}
-						
-						.main-section {
-							position: relative;
-							padding: 1rem 0;
-							border-top: 1px solid #ccc;
-						}
-						
-						.main-section > p {
-							/* marge externe de 16px en haut et en bas, et centrage horizontal */
-							margin: 1rem auto; 
-							width: 600px;
-							/* 100% largeur du viewport - 24px (16px de chaque côté) */
-							max-width: calc(100vw - 2rem); 
-							font-style: italic;
-							font-size: 1.25rem; /* 20px */
-						}
-						
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Quelques exemples</h2>
-
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						body {
-							font-size: 16px;
-							font-family: "Times", serif;
-						}
-						
-						.main-section {
-							position: relative;
-							padding: 1rem 0;
-							border-top: 1px solid #ccc;
-						}
-						
-						.main-section > p {
-							/* marge externe de 16px en haut et en bas, et centrage horizontal */
-							margin: 1rem auto; 
-							width: 600px;
-							/* 100% largeur du viewport - 24px (16px de chaque côté) */
-							max-width: calc(100vw - 2rem); 
-							font-style: italic;
-							font-size: 1.25rem; /* 20px */
-						}
-						
-						/* ne cible que la première lettre de chaque paragraphe de la section */
-						.main-section > p::first-letter {
-							/* interlettrage réduit de 8% de 20px */
-							letter-spacing: -0.08em;
-							/* en majuscule */
-							text-transform: uppercase; 
-							font-size: 3em; /* 3 x 20px = 60px */
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Quelques exemples</h2>
-
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						body {
-							font-size: 16px;
-							font-family: "Times", serif;
-						}
-						
-						.main-section {
-							position: relative;
-							padding: 1rem 0;
-							border-top: 1px solid #ccc;
-						}
-						
-						.main-section > p {
-							/* marge externe de 16px en haut et en bas, et centrage horizontal */
-							margin: 1rem auto; 
-							width: 600px;
-							/* 100% largeur du viewport - 24px (16px de chaque côté) */
-							max-width: calc(100vw - 2rem); 
-							font-style: italic;
-							font-size: 1.25rem; /* 20px */
-						}
-						
-						/* ne cible que la première lettre de chaque paragraphe de la section */
-						.main-section > p::first-letter {
-							/* interlettrage réduit de 8% de 20px */
-							letter-spacing: -0.08em;
-							/* en majuscule */
-							text-transform: uppercase; 
-							font-size: 3em; /* 3 x 20px = 60px */
-						}
-						
-						.main-section > p strong {
-							color: #007dbc;
-						}
-					</code></pre>
-				</section>
-				
-			</section>
-
-			<section>
-				<section data-auto-animate>
-					<h2>Unités et valeurs</h2>
-					<p>Certaines propriété attendent des valeurs avec unités, absolues ou relatives.
-						Pour ne citer que les plus courantes :
-						
-						Unités absolues : cm, mm in, pc, pt, px.
-						</p>
-				</section>
-				<section data-auto-animate>
-					<h2>Unités et valeurs</h2>
-					<p>
-						Pour ne citer que la plus usitée : px pour pixels. 
-Comme elle le laisse entendre, cette unité permet d’appliquer des valeurs en pixels.
-Pour des raisons d’accessibilité et d’adaptativité de l’interface (responsive), cette unité doit être utilisée avec parcimonie, et est donc de moins en moins utilisée dans les interfaces web récentes.
-					</p>
-				</section>
-				<section data-auto-animate>
-					<h2>Unités relatives</h2>
-					<p>% : le pourcentage. Même si elle est évidente, il faut toujours savoir sur quoi elle se base et sur quelle propriété l’appliquer.</p>
-				</section>
-				
-				<section data-auto-animate>
-					<h2>Unités relatives</h2>
-					<p>vw et vh : respectivement viewport width et viewport height. Chacune de ces unités correspond à 1% du viewport (portion visible de la page).
-					</p>
-				</section>
-				<section data-auto-animate>
-					<h2>Unités relatives</h2>
-					<p>em : correspond à la font-size appliquée au parent d’un un élément, ou l’élément lui-même pour d’autres propriétés. 
-						Ex, pour un élément ayant une font-size de 12px, si un élément enfant a une font-size de 2em, il fera 24px.
-						</p>
-				</section>
-				<section data-auto-animate>
-					<h2>Unités relatives</h2>
-					<p>rem (root em) : correspond à la font-size de l’élément “root”, généralement appliqué sur la balise html ou body.
-						C’est l’unité par excellence à appliquer aux font-size
-						</p>
-				</section>
-				<section data-auto-animate>
-					<h2>Autres unités</h2>
-					<p>Il en existe d’autres, plus marginales, telles que ex, ch, lh, vmin, vmax
-					</p>
-					<a href="https://developer.mozilla.org/fr/docs/Apprendre/CSS/Building_blocks/Values_and_units " target="_blank" rel="noopener noreferrer">Ressources</a>
-				</section>
-			</section>
-
-			<section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Certaines propriétés, telles que font, padding, margin, background, entre autres, peuvent être raccourcies :
-					</p>
-				</section>
-				
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Par exemple :
-						Pour ajouter des marges à un élément, la règle :						
-					</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						.element {
-							margin-top: 1rem;
-							margin-right: 0;
-							margin-bottom: 1rem;
-							margin-left: 0;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Peut être simplifiée comme suit :</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						.element {
-							/* suivant l’ordre top > right > bottom > left */
-							margin: 1rem 0 1rem 0; 
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Ou bien :</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						.element {
-							/* suivant l’ordre top > right/left > bottom */
-							margin: 1rem 0 1rem; 
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Ou encore :</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						.element {
-							/* suivant l’ordre top/bottom > right/left */
-							margin: 1rem 0; 
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Rien n’empêche aussi d’appliquer une marge globale :</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						.element {
-							/* s'applique à top, right, bottom et left */
-							margin: 1rem; 
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Pour la propriété font, les propriétés :</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						{
-							font-style: italic;
-							font-weight: bold;
-							font-size: 1.2em;
-							line-height: 1.5;
-							font-family: Arial, sans-serif;
-						}						  
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>peuvent être raccourcie comme suit :</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						{
-							font: italic bold 1.2em/1.5 Arial, sans-serif;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Une autre propriété souvent utilisée sous forme raccourcie est “border” :</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						{
-							border-width: 1px;
-							border-style: solid;
-							border-color: #000;
-						}						  
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Une autre propriété souvent utilisée sous forme raccourcie est “border” :</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						{
-							border: 1px solid #000;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<div class="r-hstack">
-						<div>
-							<img src="./public/margin.png" alt="margin scheme"
-							style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
-							<p>&nbsp;&nbsp;Margin/Padding&nbsp;&nbsp;&nbsp;</p> 
-						</div>
-						<div>
-							<img src="./public/border.png" alt="border scheme" 
-							style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
-							<p>&nbsp;&nbsp;&nbsp;Border radius&nbsp;&nbsp;</p> 
-						</div>
-					</div>
-					<a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies" rel="noopener noreferrer">Ressources</a>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
-					</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						{
-							background-color: #000;
-							background-image: url(images/bg.gif);
-							background-repeat: no-repeat;
-							background-position: top right;
-							/* peut être remplacé par */
-							background: #000 url(images/bg.gif) no-repeat top right;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
-					</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						{
-							background-color: #000;
-							background-image: url(images/bg.gif);
-							background-repeat: no-repeat;
-							background-position: top right;
-							/* peut être remplacé par */
-							background: #000 url(images/bg.gif) no-repeat top right;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
-					</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						{
-							background: #000 url(images/bg.gif) no-repeat top right;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>La version CSS 3 :
-					</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						{
-							background-image: url("content.jpg") ;
-							background-position: left top;
-							background-size: 200px 70px;
-							background-repeat: no-repeat;
-							background-attachment: scroll;
-							background-clip: content-box;
-							background-origin: content-box;
-							background-color: white;
-						}
-					</code></pre>
-				</section>
-				<section data-auto-animate>
-					<h2>Propriétés raccourcies</h2>
-					<p>La version CSS 3 :
-					</p>
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						{
-							background:  url("content.jpg") 
-							left top / 200px 70px
-							no-repeat
-							scroll
-							content-box content-box
-							white;
-						}
-					</code></pre>
-					<a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies" rel="noopener noreferrer">Ressources</a>
-				</section>
-			</section>
+        </section>
+      </section>
 
 
+      <!-- Example of nested vertical slides -->
+      <section>
+        <section data-auto-animate>
+          <h2>Quelques exemples</h2>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            body {
+              font-size: 16px;
+              font-family: "Times", serif;
+            }
+            
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Quelques exemples</h2>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            body {
+              font-size: 16px;
+              font-family: "Times", serif;
+            }
+            
+            .main-section {
+              position: relative;
+              padding: 1rem 0;
+              border-top: 1px solid #ccc;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Quelques exemples</h2>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            body {
+              font-size: 16px;
+              font-family: "Times", serif;
+            }
+            
+            .main-section {
+              position: relative;
+              padding: 1rem 0;
+              border-top: 1px solid #ccc;
+            }
+            
+            .main-section > p {
+              /* marge externe de 16px en haut et en bas, et centrage horizontal */
+              margin: 1rem auto; 
+              width: 600px;
+              /* 100% largeur du viewport - 24px (16px de chaque côté) */
+              max-width: calc(100vw - 2rem); 
+              font-style: italic;
+              font-size: 1.25rem; /* 20px */
+            }
+            
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Quelques exemples</h2>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            body {
+              font-size: 16px;
+              font-family: "Times", serif;
+            }
+            
+            .main-section {
+              position: relative;
+              padding: 1rem 0;
+              border-top: 1px solid #ccc;
+            }
+            
+            .main-section > p {
+              /* marge externe de 16px en haut et en bas, et centrage horizontal */
+              margin: 1rem auto; 
+              width: 600px;
+              /* 100% largeur du viewport - 24px (16px de chaque côté) */
+              max-width: calc(100vw - 2rem); 
+              font-style: italic;
+              font-size: 1.25rem; /* 20px */
+            }
+            
+            /* ne cible que la première lettre de chaque paragraphe de la section */
+            .main-section > p::first-letter {
+              /* interlettrage réduit de 8% de 20px */
+              letter-spacing: -0.08em;
+              /* en majuscule */
+              text-transform: uppercase; 
+              font-size: 3em; /* 3 x 20px = 60px */
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Quelques exemples</h2>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            body {
+              font-size: 16px;
+              font-family: "Times", serif;
+            }
+            
+            .main-section {
+              position: relative;
+              padding: 1rem 0;
+              border-top: 1px solid #ccc;
+            }
+            
+            .main-section > p {
+              /* marge externe de 16px en haut et en bas, et centrage horizontal */
+              margin: 1rem auto; 
+              width: 600px;
+              /* 100% largeur du viewport - 24px (16px de chaque côté) */
+              max-width: calc(100vw - 2rem); 
+              font-style: italic;
+              font-size: 1.25rem; /* 20px */
+            }
+            
+            /* ne cible que la première lettre de chaque paragraphe de la section */
+            .main-section > p::first-letter {
+              /* interlettrage réduit de 8% de 20px */
+              letter-spacing: -0.08em;
+              /* en majuscule */
+              text-transform: uppercase; 
+              font-size: 3em; /* 3 x 20px = 60px */
+            }
+            
+            .main-section > p strong {
+              color: #007dbc;
+            }
+          </code></pre>
+        </section>
+        
+      </section>
+
+      <section>
+        <section data-auto-animate>
+          <h2>Unités et valeurs</h2>
+          <p>Certaines propriété attendent des valeurs avec unités, 
+            <br /><strong>absolues</strong> ou <strong>relatives</strong>.
+          </p>
+        </section>
+        <section data-auto-animate>
+          <h2>Unités absolues</h2>
+          <p>
+            Pour ne citer que la plus usitée : <strong>px</strong> pour pixels. 
+          </p>
+          <p>
+            Comme elle le laisse entendre, 
+            <br />cette unité permet d’appliquer des valeurs en pixels.            
+          </p>
+          <p>Pour des raisons d’<strong>accessibilité et d’adaptativité</strong> de l’interface, cette unité doit être utilisée avec parcimonie, 
+            <br />
+            et est donc de moins en moins utilisée dans les interfaces web récentes (souvent <em>responsive</em> ).</p>
+        </section>
+        <section data-auto-animate>
+          <h2>Unités relatives</h2>
+          <p><strong>% : le pourcentage</strong></p>
+          <p>Même si elle est évidente, il faut toujours savoir sur quoi elle se base et sur quelle propriété l’appliquer.</p>
+        </section>
+        
+        <section data-auto-animate>
+          <h2>Unités relatives</h2>
+          <p><strong>vw et vh</strong></p>
+          <p>Respectivement <strong>viewport width</strong> et <strong>viewport height</strong>. 
+          </p>
+          <p>Chacune de ces unités correspond à 1% du <em>viewport</em> <br />(portion visible de la page).</p>
+        </section>
+        <section data-auto-animate>
+          <h2>Unités relatives</h2>
+          <p><strong>em</strong></p>
+          <p>Correspond à la taille de police (<em>font-size</em>) 
+            <br /><strong>appliquée au parent d’un élément</strong>, 
+            <br />ou l’élément lui-même pour d’autres propriétés.            
+          </p>
+          <p>Ex : pour un élément ayant une <em>font-size</em> de <strong>12px</strong>,
+            <br />un élément enfant avec une <em>font-size</em> de <strong>2em</strong> fera <strong>24px</strong>.
+          </p>
+        </section>
+        <section data-auto-animate>
+          <h2>Unités relatives</h2>
+          <p><strong>rem (root em)</strong></p>
+          <p>Correspond à la <em>font-size</em> de l’élément “root”,
+            <br />généralement appliqué sur la balise <em>HTML</em> ou <em>BODY</em>.            
+          </p>
+          <p>Ex : si une page web a une <em>font-size</em> globale de <strong>16px</strong>,
+            <br />un élément enfant avec une <em>font-size</em> de <strong>2.5rem</strong> fera <strong>40px</strong>.
+          </p>
+          <p><strong>C’est l’unité par excellence à appliquer aux font-size.</strong></p>
+        </section>
+        <section data-auto-animate>
+          <h2>Autres unités</h2>
+          <p>Il en existe d’autres, plus marginales,
+            <br />telles que ex, ch, lh, vmin, vmax,
+            <br />ou encore pt (point) et cm, plutôt dédiées à l'impression
+          </p>
+          <a href="https://developer.mozilla.org/fr/docs/Apprendre/CSS/Building_blocks/Values_and_units " target="_blank" rel="noopener noreferrer">Ressources</a>
+        </section>
+      </section>
+
+      <section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Certaines propriétés, 
+            <br />telles que <strong>font</strong>, <strong>padding</strong>, <strong>margin</strong>, <strong>background</strong>, 
+            <br />entre autres, peuvent être raccourcies :
+          </p>
+        </section>
+        
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Par exemple :
+            Pour ajouter des marges à un élément, la règle :						
+          </p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .element {
+              margin-top: 1rem;
+              margin-right: 0;
+              margin-bottom: 1rem;
+              margin-left: 0;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Peut être simplifiée comme suit :</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .element {
+              /* suivant l’ordre top > right > bottom > left */
+              margin: 1rem 0 1rem 0; 
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Ou bien :</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .element {
+              /* suivant l’ordre top > right/left > bottom */
+              margin: 1rem 0 1rem; 
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Ou encore :</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .element {
+              /* suivant l’ordre top/bottom > right/left */
+              margin: 1rem 0; 
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Rien n’empêche aussi d’appliquer une marge globale :</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .element {
+              /* s'applique à top, right, bottom et left */
+              margin: 1rem; 
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Pour la propriété <em>font</em>, les propriétés :</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            {
+              font-style: italic;
+              font-weight: bold;
+              font-size: 1.2em;
+              line-height: 1.5;
+              font-family: Arial, sans-serif;
+            }						  
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>peuvent être raccourcie comme suit :</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            {
+              font: italic bold 1.2em/1.5 Arial, sans-serif;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Une autre propriété souvent utilisée sous forme raccourcie est <em>border</em> :</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            {
+              border-width: 1px;
+              border-style: solid;
+              border-color: #000;
+            }						  
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>et peut être raccourcie comme suit :</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            {
+              border: 1px solid #000;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <div class="r-hstack">
+            <div>
+              <img src="./public/margin.png" alt="margin scheme"
+              style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
+              <p>&nbsp;&nbsp;Margin/Padding&nbsp;&nbsp;&nbsp;</p> 
+            </div>
+            <div>
+              <img src="./public/border.png" alt="border scheme" 
+              style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
+              <p>&nbsp;&nbsp;&nbsp;Border radius&nbsp;&nbsp;</p> 
+            </div>
+          </div>
+          <a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies" rel="noopener noreferrer">Ressources</a>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
+          </p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            {
+              background-color: #000;
+              background-image: url(images/bg.gif);
+              background-repeat: no-repeat;
+              background-position: top right;
+
+              /* peut être remplacé par */
+              background: #000 url(images/bg.gif) no-repeat top right;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
+          </p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="8">
+            {
+              background-color: #000;
+              background-image: url(images/bg.gif);
+              background-repeat: no-repeat;
+              background-position: top right;
+
+              /* peut être remplacé par */
+              background: #000 url(images/bg.gif) no-repeat top right;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>Pour les images de fond, avec la propriété “background”, la version raccourcie diffère entre CSS2 et CSS3, mais la version CSS2 fonctionne toujours, ignorant les propriétés CSS3 :
+          </p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            {
+              background: #000 url(images/bg.gif) no-repeat top right;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>La version CSS 3 :
+          </p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            {
+              background-image: url("content.jpg");
+              background-position: left top;
+              background-size: 200px 70px;
+              background-repeat: no-repeat;
+              background-attachment: scroll;
+              background-clip: content-box;
+              background-origin: content-box;
+              background-color: white;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Propriétés raccourcies</h2>
+          <p>La version CSS 3 :
+          </p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            {
+              background: url("content.jpg") 
+                          left top / 200px 70px
+                          no-repeat
+                          scroll
+                          content-box content-box
+                          white;
+            }
+          </code></pre>
+          <a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies" rel="noopener noreferrer">Ressources</a>
+        </section>
+      </section>
 
 
+      <section>
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS</h2>
+          <p>C'est bien joli, toutes ces propriétés et ces styles, <br />mais ils ne servent à rien sans les <strong>sélecteurs</strong>.
+          </p>
+          <p>Ce sont eux qui vont nous permettre de <strong>cibler un ou plusieurs éléments</strong> pour y appliquer les styles.
+          </p>
+        </section>
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS</h2>
+          <h4>Sélecteur universel</h4>
+          <p>Cible <strong>tous</strong> les éléments HTML</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            * {
+              color: black;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS</h2>
+          <h4>Sélecteur de <em>tag/balise</em> HTML</h4>
+          <p>Cible <strong>tous</strong> les éléments HTML de type <em>&lt;p&gt;</em></p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            p {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            <p></p>
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS</h2>
+          <h4>Sélecteur de <em>classe</em> CSS</h4>
+          <p>Cible <strong>tous</strong> les éléments HTML portant la classe CSS correspondante :</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .ma-classe {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            <div class="ma-classe"></div>
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS</h2>
+          <h4>Sélecteur d'<em>ID</em></h4>
+          <p>Cible l'élément (unique) portant un attribut <em>id</em> avec la valeur correspondante :</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            #id-unique {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            <div id="id-unique"></div>
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS</h2>
+          <h4>Sélecteur d'<em>attribut</em></h4>
+          <p>Cible les éléments portant un attribut avec une valeur spécifique :</p>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            a[target="_blank"] {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            <a target="_blank"></a>
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS</h2>
+          <h4>Sélecteur d'<em>attribut</em></h4>
+          <p>Autre exemple ciblant les éléments portant l'attribut spécifié,
+            <br />qu'elle ait une valeur ou non</p>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            div[style] {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            <div style="color: white;"></div>
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS</h2>
+          <h4>Sélecteur d'<em>état</em></h4>
+          <p>Cible un élément en fonction de son état (survol, focus, etc)</p>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            button:focus {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            <button></button>
+          </code></pre>
+          <p><small>Ne s'applique que lorsque l'élément est en "focus"</small></p>
+        </section>
+      </section>
 
 
+      <section>
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS complexes</h2>
+          <h4>Sélecteur de classes cumulées</h4>
+          <p>Cible les éléments portant les classes indiquées</p>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            .ma-classe-1.ma-classe-2 {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            <div class="ma-classe-1 ma-classe-2"></div>
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS complexes</h2>
+          <h4>Sélecteur multiple</h4>
+          <p>Cible les éléments correspondant à l'un des sélecteurs</p>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            .ma-classe-1, .ma-classe-2, quote, a[target="_blank"] {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            <div class="ma-classe-1"></div>
+            <div class="ma-classe-2"></div>
+            <quote></quote>
+            <a target="_blank"></a>
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS complexes</h2>
+          <h4>Sélecteur de descendance</h4>
+          <p>Cible les éléments enfant d'autres éléments spécifiques</p>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            section p {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2,4">            
+            <section>
+              <p></p>
+              <div>
+                <p></p>
+              </div>              
+            </section>
+            <p></p>
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS complexes</h2>
+          <h4>Sélecteur d'enfant direct</h4>
+          <p>Cible les éléments enfants <strong>directs</strong> d'éléments spécifiques</p>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            section > p {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">            
+            <section>
+              <p></p>
+              <div>
+                <p></p>
+              </div>              
+            </section>
+            <p></p>
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS complexes</h2>
+          <h4>Sélecteur d'adjacence directe</h4>
+          <p>Cible les éléments suivant <strong>directement</strong> d'autres éléments</p>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            // tous les paragraphes qui en suivent directement un autre           
+            p + p {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2,3,4">            
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS complexes</h2>
+          <h4>Sélecteur d'adjacence indirecte</h4>
+          <p>Cible les éléments suivant <strong>indirectement</strong> d'autres éléments</p>
+
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            // tous les paragraphes qui en suivent indirectement un autre           
+            p ~ p {
+              color: black;
+            }
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="3,5,7">            
+            <p></p>
+            <div></div>
+            <p></p>
+            <div></div>
+            <p></p>
+            <div></div>
+            <p></p> 
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Sélecteurs CSS complexes</h2>
+          <p>Il en existe encore de nombreux, <br />et il est également possible de les combiner.</p>
+          <p>
+            <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">Liste exhaustive</a>
+          </p>
+        </section>
+      </section>
 
 
+      <!-- slides basics -->
 
-			<!-- slides basics -->
+      <section>
+        <h2>Slides</h2>
+        <p>
+          Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out
+          at <a href="https://slides.com" target="_blank">https://slides.com</a>.
+        </p>
+      </section>
 
-			<section>
-				<h2>Slides</h2>
-				<p>
-					Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out
-					at <a href="https://slides.com" target="_blank">https://slides.com</a>.
-				</p>
-			</section>
+      <section data-visibility="hidden">
+        <h2>Hidden Slides</h2>
+        <p>
+          This slide is visible in the source, but hidden when the presentation is viewed. You can show all
+          hidden slides by setting the `showHiddenSlides` config option to `true`.
+        </p>
+      </section>
 
-			<section data-visibility="hidden">
-				<h2>Hidden Slides</h2>
-				<p>
-					This slide is visible in the source, but hidden when the presentation is viewed. You can show all
-					hidden slides by setting the `showHiddenSlides` config option to `true`.
-				</p>
-			</section>
+      <section data-auto-animate>
+        <h2 data-id="code-title">Pretty Code</h2>
+        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            import React, { useState } from 'react';
 
-			<section data-auto-animate>
-				<h2 data-id="code-title">Pretty Code</h2>
-				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-						import React, { useState } from 'react';
+            function Example() {
+              const [count, setCount] = useState(0);
 
-						function Example() {
-						  const [count, setCount] = useState(0);
+              return (
+                ...
+              );
+            }
+          </code></pre>
+        <p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>
+      </section>
 
-						  return (
-						    ...
-						  );
-						}
-					</code></pre>
-				<p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>
-			</section>
+      <section data-auto-animate>
+        <h2 data-id="code-title">With animations</h2>
+        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|4,8-11|17|22-24"><script type="text/template">
+            import React, { useState } from 'react';
 
-			<section data-auto-animate>
-				<h2 data-id="code-title">With animations</h2>
-				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|4,8-11|17|22-24"><script type="text/template">
-						import React, { useState } from 'react';
+            function Example() {
+              const [count, setCount] = useState(0);
 
-						function Example() {
-						  const [count, setCount] = useState(0);
+              return (
+                <div>
+                  <p>You clicked {count} times</p>
+                  <button onClick={() => setCount(count + 1)}>
+                    Click me
+                  </button>
+                </div>
+              );
+            }
 
-						  return (
-						    <div>
-						      <p>You clicked {count} times</p>
-						      <button onClick={() => setCount(count + 1)}>
-						        Click me
-						      </button>
-						    </div>
-						  );
-						}
+            function SecondExample() {
+              const [count, setCount] = useState(0);
 
-						function SecondExample() {
-						  const [count, setCount] = useState(0);
+              return (
+                <div>
+                  <p>You clicked {count} times</p>
+                  <button onClick={() => setCount(count + 1)}>
+                    Click me
+                  </button>
+                </div>
+              );
+            }
+          </script></code></pre>
+      </section>
 
-						  return (
-						    <div>
-						      <p>You clicked {count} times</p>
-						      <button onClick={() => setCount(count + 1)}>
-						        Click me
-						      </button>
-						    </div>
-						  );
-						}
-					</script></code></pre>
-			</section>
+      <section>
+        <h2>Point of View</h2>
+        <p>
+          Press <strong>ESC</strong> to enter the slide overview.
+        </p>
+        <p>
+          Hold down the <strong>alt</strong> key (<strong>ctrl</strong> in Linux) and click on any element to
+          zoom towards it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Click again to zoom back
+          out.
+        </p>
+        <p>
+          (NOTE: Use ctrl + click in Linux.)
+        </p>
+      </section>
 
-			<section>
-				<h2>Point of View</h2>
-				<p>
-					Press <strong>ESC</strong> to enter the slide overview.
-				</p>
-				<p>
-					Hold down the <strong>alt</strong> key (<strong>ctrl</strong> in Linux) and click on any element to
-					zoom towards it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Click again to zoom back
-					out.
-				</p>
-				<p>
-					(NOTE: Use ctrl + click in Linux.)
-				</p>
-			</section>
+      <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+        <h2>Auto-Animate</h2>
+        <p>Automatically animate matching elements across slides with <a
+            href="https://revealjs.com/auto-animate/">Auto-Animate</a>.</p>
+        <div class="r-hstack justify-center">
+          <div data-id="box1"
+            style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+          <div data-id="box2"
+            style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+          <div data-id="box3"
+            style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+        </div>
+      </section>
+      <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+        <div class="r-hstack justify-center">
+          <div data-id="box1" data-auto-animate-delay="0"
+            style="background: cyan; width: 150px; height: 100px; margin: 10px;"></div>
+          <div data-id="box2" data-auto-animate-delay="0.1"
+            style="background: magenta; width: 150px; height: 100px; margin: 10px;"></div>
+          <div data-id="box3" data-auto-animate-delay="0.2"
+            style="background: yellow; width: 150px; height: 100px; margin: 10px;"></div>
+        </div>
+        <h2 style="margin-top: 20px;">Auto-Animate</h2>
+      </section>
+      <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+        <div class="r-stack">
+          <div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;">
+          </div>
+          <div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;">
+          </div>
+          <div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;">
+          </div>
+        </div>
+        <h2 style="margin-top: 20px;">Auto-Animate</h2>
+      </section>
 
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-				<h2>Auto-Animate</h2>
-				<p>Automatically animate matching elements across slides with <a
-						href="https://revealjs.com/auto-animate/">Auto-Animate</a>.</p>
-				<div class="r-hstack justify-center">
-					<div data-id="box1"
-						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-					<div data-id="box2"
-						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-					<div data-id="box3"
-						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
-				</div>
-			</section>
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-				<div class="r-hstack justify-center">
-					<div data-id="box1" data-auto-animate-delay="0"
-						style="background: cyan; width: 150px; height: 100px; margin: 10px;"></div>
-					<div data-id="box2" data-auto-animate-delay="0.1"
-						style="background: magenta; width: 150px; height: 100px; margin: 10px;"></div>
-					<div data-id="box3" data-auto-animate-delay="0.2"
-						style="background: yellow; width: 150px; height: 100px; margin: 10px;"></div>
-				</div>
-				<h2 style="margin-top: 20px;">Auto-Animate</h2>
-			</section>
-			<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-				<div class="r-stack">
-					<div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;">
-					</div>
-					<div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;">
-					</div>
-					<div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;">
-					</div>
-				</div>
-				<h2 style="margin-top: 20px;">Auto-Animate</h2>
-			</section>
+      <section>
+        <h2>Touch Optimized</h2>
+        <p>
+          Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your
+          slides.
+        </p>
+      </section>
 
-			<section>
-				<h2>Touch Optimized</h2>
-				<p>
-					Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your
-					slides.
-				</p>
-			</section>
+      <section data-markdown>
+        <script type="text/template">
+            ## Markdown support
 
-			<section data-markdown>
-				<script type="text/template">
-						## Markdown support
+            Write content using inline or external Markdown.
+            Instructions and more info available in the [docs](https://revealjs.com/markdown/).
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+            ```[]
+            <section data-markdown>
+              ## Markdown support
 
-						```[]
-						<section data-markdown>
-						  ## Markdown support
+              Write content using inline or external Markdown.
+              Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+            </section>
+            ```
+          </script>
+      </section>
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [docs](https://revealjs.com/markdown/).
-						</section>
-						```
-					</script>
-			</section>
+      <section>
+        <p>Add the <code>r-fit-text</code> class to auto-size text</p>
+        <h2 class="r-fit-text">FIT TEXT</h2>
+      </section>
 
-			<section>
-				<p>Add the <code>r-fit-text</code> class to auto-size text</p>
-				<h2 class="r-fit-text">FIT TEXT</h2>
-			</section>
+      <section>
+        <section id="fragments">
+          <h2>Fragments</h2>
+          <p>Hit the next arrow...</p>
+          <p class="fragment">... to step through ...</p>
+          <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span
+              class="fragment">slide.</span></p>
 
-			<section>
-				<section id="fragments">
-					<h2>Fragments</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span
-							class="fragment">slide.</span></p>
+          <aside class="notes">
+            This slide has fragments which are also stepped through in the notes window.
+          </aside>
+        </section>
+        <section>
+          <h2>Fragment Styles</h2>
+          <p>There's different types of fragments, like:</p>
+          <p class="fragment grow">grow</p>
+          <p class="fragment shrink">shrink</p>
+          <p class="fragment fade-out">fade-out</p>
+          <p>
+            <span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
+            <span style="display: inline-block;" class="fragment fade-up">up, </span>
+            <span style="display: inline-block;" class="fragment fade-down">down, </span>
+            <span style="display: inline-block;" class="fragment fade-left">left</span>
+          </p>
+          <p class="fragment fade-in-then-out">fade-in-then-out</p>
+          <p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
+          <p>Highlight <span class="fragment highlight-red">red</span> <span
+              class="fragment highlight-blue">blue</span> <span
+              class="fragment highlight-green">green</span></p>
+        </section>
+      </section>
 
-					<aside class="notes">
-						This slide has fragments which are also stepped through in the notes window.
-					</aside>
-				</section>
-				<section>
-					<h2>Fragment Styles</h2>
-					<p>There's different types of fragments, like:</p>
-					<p class="fragment grow">grow</p>
-					<p class="fragment shrink">shrink</p>
-					<p class="fragment fade-out">fade-out</p>
-					<p>
-						<span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
-						<span style="display: inline-block;" class="fragment fade-up">up, </span>
-						<span style="display: inline-block;" class="fragment fade-down">down, </span>
-						<span style="display: inline-block;" class="fragment fade-left">left</span>
-					</p>
-					<p class="fragment fade-in-then-out">fade-in-then-out</p>
-					<p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
-					<p>Highlight <span class="fragment highlight-red">red</span> <span
-							class="fragment highlight-blue">blue</span> <span
-							class="fragment highlight-green">green</span></p>
-				</section>
-			</section>
+      <section id="transitions">
+        <h2>Transition Styles</h2>
+        <p>
+          You can select from different transitions, like: <br>
+          <a href="?transition=none#/transitions">None</a> -
+          <a href="?transition=fade#/transitions">Fade</a> -
+          <a href="?transition=slide#/transitions">Slide</a> -
+          <a href="?transition=convex#/transitions">Convex</a> -
+          <a href="?transition=concave#/transitions">Concave</a> -
+          <a href="?transition=zoom#/transitions">Zoom</a>
+        </p>
+      </section>
 
-			<section id="transitions">
-				<h2>Transition Styles</h2>
-				<p>
-					You can select from different transitions, like: <br>
-					<a href="?transition=none#/transitions">None</a> -
-					<a href="?transition=fade#/transitions">Fade</a> -
-					<a href="?transition=slide#/transitions">Slide</a> -
-					<a href="?transition=convex#/transitions">Convex</a> -
-					<a href="?transition=concave#/transitions">Concave</a> -
-					<a href="?transition=zoom#/transitions">Zoom</a>
-				</p>
-			</section>
+      <section id="themes">
+        <h2>Themes</h2>
+        <p>
+          reveal.js comes with a few themes built in: <br>
+          <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black
+            (default)</a> -
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a>
+          -
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a>
+          -
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a>
+          -
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a>
+          -
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a>
+          <br>
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a>
+          -
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a>
+          -
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a>
+          -
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a>
+          -
+          <a href="#"
+            onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+        </p>
+      </section>
 
-			<section id="themes">
-				<h2>Themes</h2>
-				<p>
-					reveal.js comes with a few themes built in: <br>
-					<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black
-						(default)</a> -
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a>
-					-
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a>
-					-
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a>
-					-
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a>
-					-
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a>
-					<br>
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a>
-					-
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a>
-					-
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a>
-					-
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a>
-					-
-					<a href="#"
-						onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-				</p>
-			</section>
+      <section>
+        <section data-background="#dddddd">
+          <h2>Slide Backgrounds</h2>
+          <p>
+            Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS
+            color formats are supported.
+          </p>
+          <a href="#" class="navigate-down">
+            <img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238"
+              data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
+          </a>
+        </section>
+        <section data-background="https://static.slid.es/reveal/image-placeholder.png">
+          <h2>Image Backgrounds</h2>
+          <pre><code class="hljs html">&lt;section data-background="image.png"&gt;</code></pre>
+        </section>
+        <section data-background="https://static.slid.es/reveal/image-placeholder.png"
+          data-background-repeat="repeat" data-background-size="100px">
+          <h2>Tiled Backgrounds</h2>
+          <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+        </section>
+        <section
+          data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
+          data-background-color="#000000">
+          <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+            <h2>Video Backgrounds</h2>
+            <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+          </div>
+        </section>
+        <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+          <h2>... and GIFs!</h2>
+        </section>
+      </section>
 
-			<section>
-				<section data-background="#dddddd">
-					<h2>Slide Backgrounds</h2>
-					<p>
-						Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS
-						color formats are supported.
-					</p>
-					<a href="#" class="navigate-down">
-						<img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238"
-							data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
-					</a>
-				</section>
-				<section data-background="https://static.slid.es/reveal/image-placeholder.png">
-					<h2>Image Backgrounds</h2>
-					<pre><code class="hljs html">&lt;section data-background="image.png"&gt;</code></pre>
-				</section>
-				<section data-background="https://static.slid.es/reveal/image-placeholder.png"
-					data-background-repeat="repeat" data-background-size="100px">
-					<h2>Tiled Backgrounds</h2>
-					<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-				</section>
-				<section
-					data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
-					data-background-color="#000000">
-					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-						<h2>Video Backgrounds</h2>
-						<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-					</div>
-				</section>
-				<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-					<h2>... and GIFs!</h2>
-				</section>
-			</section>
+      <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+        <h2>Background Transitions</h2>
+        <p>
+          Different background transitions are available via the backgroundTransition option. This one's
+          called "zoom".
+        </p>
+        <pre><code class="hljs javascript">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+      </section>
 
-			<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-				<h2>Background Transitions</h2>
-				<p>
-					Different background transitions are available via the backgroundTransition option. This one's
-					called "zoom".
-				</p>
-				<pre><code class="hljs javascript">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-			</section>
+      <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+        <h2>Background Transitions</h2>
+        <p>
+          You can override background transitions per-slide.
+        </p>
+        <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+      </section>
 
-			<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-				<h2>Background Transitions</h2>
-				<p>
-					You can override background transitions per-slide.
-				</p>
-				<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-			</section>
+      <section data-background-iframe="https://hakim.se" data-background-interactive>
+        <div
+          style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+          <h2>Iframe Backgrounds</h2>
+          <p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the
+            page in the background.</p>
+        </div>
+      </section>
 
-			<section data-background-iframe="https://hakim.se" data-background-interactive>
-				<div
-					style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-					<h2>Iframe Backgrounds</h2>
-					<p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the
-						page in the background.</p>
-				</div>
-			</section>
+      <section>
+        <h2>Marvelous List</h2>
+        <ul>
+          <li>No order here</li>
+          <li>Or here</li>
+          <li>Or here</li>
+          <li>Or here</li>
+        </ul>
+      </section>
 
-			<section>
-				<h2>Marvelous List</h2>
-				<ul>
-					<li>No order here</li>
-					<li>Or here</li>
-					<li>Or here</li>
-					<li>Or here</li>
-				</ul>
-			</section>
+      <section>
+        <h2>Fantastic Ordered List</h2>
+        <ol>
+          <li>One is smaller than...</li>
+          <li>Two is smaller than...</li>
+          <li>Three!</li>
+        </ol>
+      </section>
 
-			<section>
-				<h2>Fantastic Ordered List</h2>
-				<ol>
-					<li>One is smaller than...</li>
-					<li>Two is smaller than...</li>
-					<li>Three!</li>
-				</ol>
-			</section>
+      <section>
+        <h2>Tabular Tables</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Value</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Apples</td>
+              <td>$1</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Lemonade</td>
+              <td>$2</td>
+              <td>18</td>
+            </tr>
+            <tr>
+              <td>Bread</td>
+              <td>$3</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-			<section>
-				<h2>Tabular Tables</h2>
-				<table>
-					<thead>
-						<tr>
-							<th>Item</th>
-							<th>Value</th>
-							<th>Quantity</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Apples</td>
-							<td>$1</td>
-							<td>7</td>
-						</tr>
-						<tr>
-							<td>Lemonade</td>
-							<td>$2</td>
-							<td>18</td>
-						</tr>
-						<tr>
-							<td>Bread</td>
-							<td>$3</td>
-							<td>2</td>
-						</tr>
-					</tbody>
-				</table>
-			</section>
+      <section>
+        <h2>Clever Quotes</h2>
+        <p>
+          These guys come in two forms, inline: <q
+            cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The
+            nice thing about standards is that there are so many to choose from</q> and block:
+        </p>
+        <blockquote
+          cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+          &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of
+          typewriters would
+          reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+        </blockquote>
+      </section>
 
-			<section>
-				<h2>Clever Quotes</h2>
-				<p>
-					These guys come in two forms, inline: <q
-						cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The
-						nice thing about standards is that there are so many to choose from</q> and block:
-				</p>
-				<blockquote
-					cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-					&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of
-					typewriters would
-					reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-				</blockquote>
-			</section>
+      <section>
+        <h2>Intergalactic Interconnections</h2>
+        <p>
+          You can link between slides internally,
+          <a href="#/2/3">like this</a>.
+        </p>
+      </section>
 
-			<section>
-				<h2>Intergalactic Interconnections</h2>
-				<p>
-					You can link between slides internally,
-					<a href="#/2/3">like this</a>.
-				</p>
-			</section>
+      <section>
+        <h2>Speaker View</h2>
+        <p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview
+          of the upcoming slide as well as your speaker notes.</p>
+        <p>Press the <em>S</em> key to try it out.</p>
 
-			<section>
-				<h2>Speaker View</h2>
-				<p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview
-					of the upcoming slide as well as your speaker notes.</p>
-				<p>Press the <em>S</em> key to try it out.</p>
+        <aside class="notes">
+          Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you
+          open the speaker notes window (hit 's' on your keyboard).
+        </aside>
+      </section>
 
-				<aside class="notes">
-					Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you
-					open the speaker notes window (hit 's' on your keyboard).
-				</aside>
-			</section>
+      <section>
+        <h2>Export to PDF</h2>
+        <p>Presentations can be <a href="https://revealjs.com/pdf-export/">exported to PDF</a>, here's an
+          example:</p>
+        <iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355"
+          frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+          style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+      </section>
 
-			<section>
-				<h2>Export to PDF</h2>
-				<p>Presentations can be <a href="https://revealjs.com/pdf-export/">exported to PDF</a>, here's an
-					example:</p>
-				<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355"
-					frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-					style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-			</section>
+      <section>
+        <h2>Global State</h2>
+        <p>
+          Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+          will be added as a class to the document element when the slide is open. This lets you
+          apply broader style changes, like switching the page background.
+        </p>
+      </section>
 
-			<section>
-				<h2>Global State</h2>
-				<p>
-					Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-					will be added as a class to the document element when the slide is open. This lets you
-					apply broader style changes, like switching the page background.
-				</p>
-			</section>
-
-			<section data-state="customevent">
-				<h2>State Events</h2>
-				<p>
-					Additionally custom events can be triggered on a per slide basis by binding to the
-					<code>data-state</code> name.
-				</p>
-				<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+      <section data-state="customevent">
+        <h2>State Events</h2>
+        <p>
+          Additionally custom events can be triggered on a per slide basis by binding to the
+          <code>data-state</code> name.
+        </p>
+        <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 Reveal.on( 'customevent', function() {
-	console.log( '"customevent" has fired' );
+  console.log( '"customevent" has fired' );
 } );
-					</code></pre>
-			</section>
+          </code></pre>
+      </section>
 
-			<section>
-				<h2>Take a Moment</h2>
-				<p>
-					Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and
-					want to take distracting slides off the screen.
-				</p>
-			</section>
+      <section>
+        <h2>Take a Moment</h2>
+        <p>
+          Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and
+          want to take distracting slides off the screen.
+        </p>
+      </section>
 
-			<section>
-				<h2>Much more</h2>
-				<ul>
-					<li>Right-to-left support</li>
-					<li><a href="https://revealjs.com/api/">Extensive JavaScript API</a></li>
-					<li><a href="https://revealjs.com/auto-slide/">Auto-progression</a></li>
-					<li><a href="https://revealjs.com/backgrounds/#parallax-background">Parallax backgrounds</a></li>
-					<li><a href="https://revealjs.com/keyboard/">Custom keyboard bindings</a></li>
-				</ul>
-			</section>
+      <section>
+        <h2>Much more</h2>
+        <ul>
+          <li>Right-to-left support</li>
+          <li><a href="https://revealjs.com/api/">Extensive JavaScript API</a></li>
+          <li><a href="https://revealjs.com/auto-slide/">Auto-progression</a></li>
+          <li><a href="https://revealjs.com/backgrounds/#parallax-background">Parallax backgrounds</a></li>
+          <li><a href="https://revealjs.com/keyboard/">Custom keyboard bindings</a></li>
+        </ul>
+      </section>
 
-			<section style="text-align: left;">
-				<h1>THE END</h1>
-				<p>
-					- <a href="https://slides.com">Try the online editor</a> <br>
-					- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-				</p>
-			</section>
+      <section style="text-align: left;">
+        <h1>THE END</h1>
+        <p>
+          - <a href="https://slides.com">Try the online editor</a> <br>
+          - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+        </p>
+      </section>
 
-		</div>
+    </div>
 
-	</div>
+  </div>
 
-	<script src="dist/reveal.js"></script>
-	<script src="plugin/zoom/zoom.js"></script>
-	<script src="plugin/notes/notes.js"></script>
-	<script src="plugin/search/search.js"></script>
-	<script src="plugin/markdown/markdown.js"></script>
-	<script src="plugin/highlight/highlight.js"></script>
-	<script>
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/zoom/zoom.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/search/search.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
 
-		// Also available as an ES module, see:
-		// https://revealjs.com/initialization/
-		Reveal.initialize({
-			controls: true,
-			progress: true,
-			center: true,
-			hash: true,
+    // Also available as an ES module, see:
+    // https://revealjs.com/initialization/
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
 
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
-		});
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+    });
 
-	</script>
+  </script>
 
 </body>
 

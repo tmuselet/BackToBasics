@@ -14,19 +14,20 @@
 
 // Include theme-specific fonts
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: var(--vtmn-color_white);
 
-$mainColor: var(--vtmn-color_brand-digital);
+$mainColor: var(--vtmn-color_grey-dark-2);
 $headingColor: var(--vtmn-color_brand-digital);
 
-$mainFontSize: 42px;
-$mainFont: "Source Sans Pro", Helvetica, sans-serif;
-$headingFont: "Source Sans Pro", Helvetica, sans-serif;
+$mainFontSize: 32px;
+$mainFont: "Roboto", "Source Sans Pro", Helvetica, sans-serif;
+$headingFont: "Roboto Condensed", "Source Sans Pro", Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
+$headingTextTransform: none;
 $headingFontWeight: 600;
 $linkColor: var(--vtmn-color_orange);
 $linkColorHover: var(--vtmn-color_orange-light-1);
