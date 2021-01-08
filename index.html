@@ -102,7 +102,7 @@
           <h2>Principe de cascade et d’héritage</h2>
           <p>
             Chaque élément peut ensuite être doté de styles plus spécifiques, qui remplacent ou complètent ceux dont il hérite.<br/><br/>
-            <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS ">Ressources</a>
+            <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS">Ressources</a>
           </p>
         </section>
       </section>
@@ -381,7 +381,7 @@
             <br />telles que ex, ch, lh, vmin, vmax,
             <br />ou encore pt (point) et cm, plutôt dédiées à l'impression
           </p>
-          <a href="https://developer.mozilla.org/fr/docs/Apprendre/CSS/Building_blocks/Values_and_units " target="_blank" rel="noopener noreferrer">Ressources</a>
+          <a href="https://developer.mozilla.org/fr/docs/Apprendre/CSS/Building_blocks/Values_and_units" target="_blank" rel="noopener noreferrer">Ressources</a>
         </section>
       </section>
 
@@ -973,8 +973,104 @@
         </section>
       </section>
 
+      <section>
+        <section data-auto-animate>
+          <h2>Style natif des navigateurs</h2>
+          <p>
+            Pour obtenir un <strong>rendu minimal</strong> d’une page web en l’absence de CSS, chaque navigateur applique des <strong>styles par défaut</strong>.
+          </p>
+          <div class="fragment">
+            <p>
+              Selon la nature d’un élément
+              <br />(<code>&lt;p&gt;, &lt;a&gt;, &lt;ul&gt;, &lt;strong&gt;</code>, ...), 
+              <br />un type de <code>display</code> spécifique est appliqué
+              <br />(<code>block, inline</code>, entre autres),
+              <br />ainsi que des couleurs, bordures, fonds de couleurs, 
+              <br />soulignement, etc, selon les balises.
+            </p>
+            <p>
+              <a rel="noopener noreferrer" target="_blank" href="https://www.alsacreations.com/article/lire/585-Le-rendu-par-defaut-des-elements-HTML.html
+              https://browserdefaultstyles.com/">Ressources</a>         
+            </p>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h2>Style natif des navigateurs</h2>
+            <div>
+              <img src="./public/native-styles.png" alt="margin scheme"
+              style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
+              <p>Exemple Decathlon.fr sans CSS</p> 
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h2>Style natif des navigateurs</h2>
+          <p>            
+            En ce qui concerne les éléments plus intrinsèquement liés 
+            <br />à leur navigateur/os, tels que les <strong>champs de formulaires</strong>
+            <br />(<code>checkbox, radio, range</code>, etc) ou la <code>scrollbar</code>,
+            <br />des différences de rendus sont plus notables,
+            <br />et il a été difficile jusqu'à maintenant de les personnaliser
+            <br />sans appliquer de fastidieux bricolages.
+          </p>
+          <div class="fragment">
+            <p>
+              Il existe une propriété <code>appearance</code>, 
+              <br />permettant de <strong>supprimer ces rendus par défaut</strong>
+              <br />afin de les personnaliser, mais elle n’est pas encore officielle,
+              <br />et sa compatibilité n’est pas encore tout à fait au vert : 
+              <a rel="noopener noreferrer" target="_blank" href="https://caniuse.com/?search=appearance">Caniuse</a> 
+            </p>
+          </div>
+          <p class="fragment">
+            <a rel="noopener noreferrer" target="_blank" href="https://www.alsacreations.com/astuce/lire/1750-appearance-au-service-de-nos-formulaires.html">Ressources</a>           
+          </p>
+        </section>
+      </section>
 
+      <section>
+        <section data-auto-animate>
+          <h2>Mode d'affichage (<code>display</code>)</h2>
+          <p>
+            L’attribut <code>display</code>, appliqué par défaut selon la nature d’un élément, peut être modifié au besoin.
+            <br />Il s’agit du type d’affichage utilisé pour le rendu d’un élément.
+          </p>
+          <div class="fragment">
+            <h4>Les valeurs les plus courantes sont : </h4>
+            <ul class="fragment">
+              <li>
+                <strong><code>inline</code> :</strong> 
+                <br />appliquée par défaut aux éléments “en ligne” ; comme les balises de formatage de texte (<code>strong</code>, <code>em</code>, <code>span</code>, etc)
+              </li>
+              <li class="fragment">
+                <strong><code>block</code> :</strong> 
+                <br />appliquée par défaut aux éléments tels que les paragraphes  (p), les boîtes génériques (div), listes (<code>ul</code>, <code>li</code>), etc
+              </li>
+              <li class="fragment">
+                <strong><code>inline-block</code> :</strong> 
+                <br />appliqué entre autres sur les balises <code>img</code>, <code>input</code>, <code>button</code>
+              </li>
+            </ul>            
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h2>Mode d'affichage (<code>display</code>)</h2>
+          <p>
+            Il existe évidemment de nombreuses autres valeurs, 
+            <br />souvent liées à des types d’éléments, 
+            <br />  telles que <code>table</code>, <code>table-cell</code>, <code>list-item</code>, etc.
+          </p>
+          <p class="fragment">
+            Depuis la sortie de <em>flexbox</em>, et <em>grid layout</em>,
+            <br />qui servent à la gestion de boîtes flexibles et de mise en page,
+            <br />la liste s’est ettoffée, avec notamment :
+            <br /><code>flex</code>, <code>inline-flex</code>, <code>grid</code>, <code>inline-grid</code>, etc...
+          </p>
+          <p class="fragment">
+            <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/display">Ressources</a>           
+          </p>
+        </section>
 
+      </section>
 
 
       <!-- slides basics -->
