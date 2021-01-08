@@ -46,7 +46,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal {
   font-family: "Lato", sans-serif;
   font-size: 40px;
-  font-weight: normal;
+  font-weight: 300;
   color: #000; }
 
 .reveal ::selection {

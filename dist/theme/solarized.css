@@ -47,7 +47,7 @@ html * {
 .reveal {
   font-family: "Lato", sans-serif;
   font-size: 40px;
-  font-weight: normal;
+  font-weight: 300;
   color: #657b83; }
 
 .reveal ::selection {
