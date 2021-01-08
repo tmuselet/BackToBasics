@@ -843,8 +843,9 @@
       <section>
         <section data-auto-animate>
           <h2>Préséance des sélecteurs</h2>
-          <p><strong>Note préalable :</strong> les styles appliqués <strong>directement</strong> aux balises HTML
-            <br />via l’attribut <em>“style”</em> ont toujours la <strong>priorité</strong> sur les CSS.
+          <p><strong>Note préalable :</strong>
+            <br />Les styles appliqués <strong>directement</strong> aux balises HTML
+            <br />via l’attribut <code>style</code> ont toujours la <strong>priorité</strong> sur les CSS.
           </p>
           <p class="fragment">
             Ceci étant dit : <strong>les sélecteurs ont une priorité</strong>.
@@ -869,9 +870,9 @@
             <br />selon la <strong>nature</strong> du sélecteur et ce qu’il <strong>cumule</strong> :
           </p>
           <ul class="fragment">
-            <li><strong>Niveau 1 :</strong> sélecteur de <strong>type</strong> et <strong>pseudo-élément</strong> <br />(p, div, ::before, etc)</li>
-            <li class="fragment"><strong>Niveau 2 :</strong> sélecteur de <strong>classe</strong> <em>(Ex : .ma-classe)</em></li>
-            <li class="fragment"><strong>Niveau 3 :</strong> sélecteur d’<strong>ID</strong> <em>Ex : (#mon-id)</em></li>
+            <li><strong>Niveau 1 :</strong> sélecteur de <strong>type</strong> et <strong>pseudo-élément</strong> <br />(<code>p, div, ::before</code>, etc)</li>
+            <li class="fragment"><strong>Niveau 2 :</strong> sélecteur de <strong>classe</strong> (<code>.ma-classe</code>)</li>
+            <li class="fragment"><strong>Niveau 3 :</strong> sélecteur d’<strong>ID</strong> (<code>#mon-id</code>)</li>
           </ul>
         </section>
         <section>
@@ -890,7 +891,8 @@
           <p><a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Ressources</a>             
           </p>
         </section>
-        <section>
+        <section data-auto-animate>
+          <h2>Préséance des sélecteurs</h2>
           <p>
             Note : <strong>attention à la surenchère !</strong></p>
           <div class="fragment">
@@ -906,6 +908,74 @@
           </p>
         </section>
       </section>
+
+      <section>
+        <section data-auto-animate>
+          <h2>La gestion d’exception avec <code>!important</code></h2>
+          <p>En cas de <strong>force majeure</strong>, il est possible d’ajouter 
+            <br /><code>!important</code> à la valeur d'une déclaration :
+          </p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+            p { color: red !important; }
+          </code></pre>            
+          <p class="fragment">            
+            Cela prend la <strong>priorité absolue</strong> 
+            <br />sur <strong>tout type de spécification/poids de sélecteur</strong>.
+          </p>
+        </section>
+        <section data-auto-animate>
+          <h2>La gestion d’exception avec <code>!important</code></h2>
+          <p>
+            Il permet également de prendre la <strong>priorité sur un style appliqué directement</strong> sur une balise HTML.
+          </p>
+          <div class="fragment">
+            <p>Dans l’exemple suivant, le rouge sera appliqué.</p>       
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+              <p style=color:blue;>...</p>
+            </code></pre>      
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
+              p {color: red !important;}
+            </code></pre>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h2>La gestion d’exception avec <code>!important</code></h2>
+          <p>Si deux déclarations portant un <code>!important</code> <strong>sont en conflit</strong>, <br />la priorité se fera dans la même logique que pour les CSS.
+          </p>
+          <div class="fragment">
+            <p>
+              C'est à dire qu'à <strong>poids de sélecteur égal</strong>, 
+              <br />c’est l’<strong>ordre qui primera</strong> (le dernier arrivé gagne...) :
+            </p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|2">            
+              p {color: blue !important;}
+              p {color: red !important;}
+            </code></pre>
+          </div>
+          <div class="fragment">
+            <p>Sinon, le <strong>sélecteur le plus spécifique</strong> prend le dessus :</p>
+              <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|1">              
+              p.blue {color: blue !important;}
+              p {color: red !important;}
+            </code></pre>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h2>La gestion d’exception avec <code>!important</code></h2>
+            <p>
+              Considéré comme une <strong>mauvaise pratique</strong>
+              <br />ou au mieux une <strong>solution de dernière mesure</strong>,
+              <br />il peut s’avérer utile dans un seul cas :
+            </p>
+            <p class="fragment">Par exemple, si des styles sont <strong>appliqués à même les balises HTML</strong>, via <em>javascript</em>, notamment,
+              <br />et qu’aucune <strong>spécification</strong> CSS ne suffit.
+            </p>
+        </section>
+      </section>
+
+
+
+
 
       <!-- slides basics -->
 
