@@ -38,32 +38,51 @@ $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1em;
 
-.authors{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
-    & > *{
-        -webkit-align-self: center;
-        -moz-align-self: center;
-        -ms-flex-item-align: center;
-        align-self: center;
-        font-size: 0.7em;
-    }
-    img.authors__avatar{
-        border-radius: 100%;
-        width:80px;
-        height:80px;
-        margin:10px;
-    }
-    a{
+.reveal {
+    .authors {
+        position: relative;
         display: flex;
+        justify-content: center;
+        margin-top: 1em;
 
         & > * {
             -webkit-align-self: center;
             -moz-align-self: center;
             -ms-flex-item-align: center;
             align-self: center;
+            font-size: 0.7em;
+        }
+
+        &__avatar{
+            border-radius: 100%;
+            width:80px;
+            height:80px;
+            margin:10px;
+        }
+
+        a {
+            display: flex;
+
+            & > * {
+                -webkit-align-self: center;
+                -moz-align-self: center;
+                -ms-flex-item-align: center;
+                align-self: center;
+            }
+        }
+    }
+
+    .sticker {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40px;
+        
+        &__avatar {
+            margin: 0;
+            border-radius: 50%;
+            max-width: 100%;
+            height: auto;
         }
     }
 }

@@ -8,29 +8,40 @@
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url(../index.css);
-.authors {
+.reveal .authors {
   position: relative;
   display: flex;
   justify-content: center;
   margin-top: 1em; }
-  .authors > * {
+  .reveal .authors > * {
     -webkit-align-self: center;
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
     font-size: 0.7em; }
-  .authors img.authors__avatar {
+  .reveal .authors__avatar {
     border-radius: 100%;
     width: 80px;
     height: 80px;
     margin: 10px; }
-  .authors a {
+  .reveal .authors a {
     display: flex; }
-    .authors a > * {
+    .reveal .authors a > * {
       -webkit-align-self: center;
       -moz-align-self: center;
       -ms-flex-item-align: center;
       align-self: center; }
+
+.reveal .sticker {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40px; }
+  .reveal .sticker__avatar {
+    margin: 0;
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto; }
 
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: var(--vtmn-color_grey-dark-3); }
