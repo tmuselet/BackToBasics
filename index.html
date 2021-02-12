@@ -20,6 +20,18 @@
 
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+  <style>
+    .pseudo-examples q::before {
+      content: "«";
+      color: blue;
+    }
+    .pseudo-examples q::after {
+      content: '»';
+      color: red;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -47,6 +59,24 @@
             <span>Tanguy Muselet</span>
           </a>
         </div>
+      </section>
+      <section data-auto-animate>
+        <section data-auto-animate>
+          <h2>Structure d'une page web</h2>
+            <div>
+              <img src="./public/native-styles.png" alt="margin scheme"
+              style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
+              <p>Exemple Decathlon.fr sans CSS</p> 
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h2>Structure d'une page web</h2>
+            <div>
+              <img src="./public/Decathlon-fr_with-css.png" alt="margin scheme"
+              style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
+              <p>Exemple Decathlon.fr avec CSS</p> 
+          </div>
+        </section>
       </section>
 
       <section>
@@ -881,6 +911,47 @@
             </p>
             </div>
         </section>
+        <section data-auto-animate>
+          <h2>Pseudo éléments</h2>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers> 
+          <q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Pseudo éléments</h2>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers> 
+          <q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            q::before {
+              content: "«";
+              color: blue;
+            }
+            q::after {
+              content: "»";
+              color: red;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Pseudo éléments</h2>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers> 
+          <q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
+          </code></pre>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            q::before {
+              content: "«";
+              color: blue;
+            }
+            q::after {
+              content: "»";
+              color: red;
+            }
+          </code></pre>
+          <div class="pseudo-examples">
+            <q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
+          </div>
+        </section>
       </section>
 
       <section>
@@ -1087,8 +1158,7 @@
               https://browserdefaultstyles.com/">Ressources</a>         
             </p>
           </div>
-        </section>
-        <section data-auto-animate>
+        </section><section data-auto-animate>
           <h2>Styles natifs des navigateurs</h2>
             <div>
               <img src="./public/native-styles.png" alt="margin scheme"
