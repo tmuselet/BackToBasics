@@ -34,7 +34,7 @@
 
 .reveal .sticker {
   position: fixed;
-  top: 0;
+  top: 10px;
   right: 0;
   width: 40px; }
   .reveal .sticker__avatar {
