@@ -7,7 +7,7 @@ Anyone can use this project and create a new section with a new BackToBasics on 
 This project was made thanks to the core files and demo of reveal.js
 For more informations on reveal.js features, see [Credits](#credits) .
 
-## How to use ?
+## How to use
 The public folder is for any asset you will use in an html page.
 The Series folder is for any new html page regarding a BackToBasics topic.
 
@@ -20,6 +20,15 @@ To create a new template or update the current one, update the `.scss` files in 
 
 Grunt will generate the css files you can import in your `.html` files.
 
+## How to launch
+To launch the project, run :
+
+        npm start
+
+This will launch your presentation on `http://0.0.0.0:9999`and show the demo html file.
+To see your own presentation, just browse through your folders matching the pattern in [How to use](#how-to-use)
+
+Example : `http://0.0.0.0:9999/Series/CSS/1/index.html`
 
 ## Credits
 ### REVEAL.JS
