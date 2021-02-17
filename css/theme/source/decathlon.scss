@@ -1,0 +1,95 @@
+/**
+ * Decathlon theme for presentation
+ * Based on Hakim El Hattab, http://hakim.se reveal.js theme.
+ *
+ * Customized with Decathlon Vitamin
+ */
+
+@import "../index.css";
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: var(--vtmn-color_white);
+
+$mainColor: var(--vtmn-color_grey-dark-2);
+$headingColor: var(--vtmn-color_brand-digital);
+
+$mainFontSize: 32px;
+$mainFont: "Roboto", "Source Sans Pro", Helvetica, sans-serif;
+$headingFont: "Roboto Condensed", "Source Sans Pro", Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: var(--vtmn-color_orange);
+$linkColorHover: var(--vtmn-color_orange-light-1);
+$selectionBackgroundColor: var(--vtmn-color_orange-light-2);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1em;
+
+.reveal {
+    .authors {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+
+        & > * {
+            -webkit-align-self: center;
+            -moz-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center;
+            font-size: 0.7em;
+        }
+
+        &__avatar{
+            border-radius: 100%;
+            width:80px;
+            height:80px;
+            margin:10px;
+        }
+
+        a {
+            display: flex;
+
+            & > * {
+                -webkit-align-self: center;
+                -moz-align-self: center;
+                -ms-flex-item-align: center;
+                align-self: center;
+            }
+        }
+    }
+
+    .sticker {
+        position: fixed;
+        top: 10px;
+        right: 0;
+        width: 40px;
+        
+        &__avatar {
+            margin: 0;
+            border-radius: 50%;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color(var(--vtmn-color_grey-dark-3));
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------

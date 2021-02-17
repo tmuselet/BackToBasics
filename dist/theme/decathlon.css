@@ -1,65 +1,97 @@
 /**
- * Blood theme for reveal.js
- * Author: Walther http://github.com/Walther
+ * Decathlon theme for presentation
+ * Based on Hakim El Hattab, http://hakim.se reveal.js theme.
  *
- * Designed to be used with highlight.js theme
- * "monokai_sublime.css" available from
- * https://github.com/isagalaev/highlight.js/
- *
- * For other themes, change $codeBackground accordingly.
- *
+ * Customized with Decathlon Vitamin
  */
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
 @import url(../index.css);
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url(../index.css);
+.reveal .authors {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em; }
+  .reveal .authors > * {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 0.7em; }
+  .reveal .authors__avatar {
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin: 10px; }
+  .reveal .authors a {
+    display: flex; }
+    .reveal .authors a > * {
+      -webkit-align-self: center;
+      -moz-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center; }
+
+.reveal .sticker {
+  position: fixed;
+  top: 10px;
+  right: 0;
+  width: 40px; }
+  .reveal .sticker__avatar {
+    margin: 0;
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto; }
+
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
-  color: #222; }
+  color: var(--vtmn-color_grey-dark-3); }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --background-color: #222;
-  --main-font: Ubuntu, sans-serif;
-  --main-font-size: 40px;
-  --main-color: #eee;
+  --background-color: var(--vtmn-color_white);
+  --main-font: Roboto, Source Sans Pro, Helvetica, sans-serif;
+  --main-font-size: 32px;
+  --main-color: var(--vtmn-color_grey-dark-2);
   --block-margin: 20px;
   --heading-margin: 0 0 20px 0;
-  --heading-font: Ubuntu, sans-serif;
-  --heading-color: #eee;
+  --heading-font: Roboto Condensed, Source Sans Pro, Helvetica, sans-serif;
+  --heading-color: var(--vtmn-color_brand-digital);
   --heading-line-height: 1.2;
   --heading-letter-spacing: normal;
-  --heading-text-transform: uppercase;
-  --heading-text-shadow: 2px 2px 2px #222;
-  --heading-font-weight: normal;
-  --heading1-text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
-  --heading1-size: 3.77em;
-  --heading2-size: 2.11em;
-  --heading3-size: 1.55em;
+  --heading-text-transform: none;
+  --heading-text-shadow: none;
+  --heading-font-weight: 600;
+  --heading1-text-shadow: none;
+  --heading1-size: 2.5em;
+  --heading2-size: 1.6em;
+  --heading3-size: 1.3em;
   --heading4-size: 1em;
   --code-font: monospace;
-  --link-color: #a23;
-  --link-color-hover: #dd5566;
-  --selection-background-color: #a23;
+  --link-color: var(--vtmn-color_orange);
+  --link-color-hover: var(--vtmn-color_orange-light-1);
+  --selection-background-color: var(--vtmn-color_orange-light-2);
   --selection-color: #fff; }
 
 .reveal-viewport {
-  background: #222;
-  background-color: #222; }
+  background: var(--vtmn-color_white);
+  background-color: var(--vtmn-color_white); }
 
 .reveal {
-  font-family: Ubuntu, "sans-serif";
-  font-size: 40px;
+  font-family: "Roboto", "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 32px;
   font-weight: 300;
-  color: #eee; }
+  color: var(--vtmn-color_grey-dark-2); }
 
 .reveal ::selection {
   color: #fff;
-  background: #a23;
+  background: var(--vtmn-color_orange-light-2);
   text-shadow: none; }
 
 .reveal ::-moz-selection {
   color: #fff;
-  background: #a23;
+  background: var(--vtmn-color_orange-light-2);
   text-shadow: none; }
 
 .reveal .slides section,
@@ -77,29 +109,29 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #eee;
-  font-family: Ubuntu, "sans-serif";
-  font-weight: normal;
+  color: var(--vtmn-color_brand-digital);
+  font-family: "Roboto Condensed", "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 2px #222;
+  text-transform: none;
+  text-shadow: none;
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3.77em; }
+  font-size: 2.5em; }
 
 .reveal h2 {
-  font-size: 2.11em; }
+  font-size: 1.6em; }
 
 .reveal h3 {
-  font-size: 1.55em; }
+  font-size: 1.3em; }
 
 .reveal h4 {
   font-size: 1em; }
 
 .reveal h1 {
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15); }
+  text-shadow: none; }
 
 /*********************************************
  * OTHER
@@ -253,72 +285,49 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * LINKS
  *********************************************/
 .reveal a {
-  color: #a23;
+  color: var(--vtmn-color_orange);
   text-decoration: none;
   transition: color 0.15s ease; }
 
 .reveal a:hover {
-  color: #dd5566;
+  color: var(--vtmn-color_orange-light-1);
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #a23; }
+  background: var(--vtmn-color_orange); }
 
 /*********************************************
  * Frame helper
  *********************************************/
 .reveal .r-frame {
-  border: 4px solid #eee;
+  border: 4px solid var(--vtmn-color_grey-dark-2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a .r-frame {
   transition: all 0.15s linear; }
 
 .reveal a:hover .r-frame {
-  border-color: #a23;
+  border-color: var(--vtmn-color_orange);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #a23; }
+  color: var(--vtmn-color_orange); }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #a23; }
+  color: var(--vtmn-color_orange); }
 
 /*********************************************
  * PRINT BACKGROUND
  *********************************************/
 @media print {
   .backgrounds {
-    background-color: #222; } }
-
-.reveal p {
-  font-weight: 300;
-  text-shadow: 1px 1px #222; }
-
-section.has-light-background p, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4 {
-  text-shadow: none; }
-
-.reveal h1,
-.reveal h2,
-.reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6 {
-  font-weight: 700; }
-
-.reveal p code {
-  background-color: #23241f;
-  display: inline-block;
-  border-radius: 7px; }
-
-.reveal small code {
-  vertical-align: baseline; }
+    background-color: var(--vtmn-color_white); } }

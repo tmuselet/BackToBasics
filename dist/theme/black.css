@@ -4,6 +4,7 @@
  * By Hakim El Hattab, http://hakim.se
  */
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
+@import url(../index.css);
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
@@ -42,7 +43,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 42px;
-  font-weight: normal;
+  font-weight: 300;
   color: #fff; }
 
 .reveal ::selection {
@@ -248,7 +249,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal a {
   color: #42affa;
   text-decoration: none;
-  transition: color .15s ease; }
+  transition: color 0.15s ease; }
 
 .reveal a:hover {
   color: #8dcffc;
@@ -257,7 +258,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
 .reveal .roll span:after {
   color: #fff;
-  background: #068de9; }
+  background: #42affa; }
 
 /*********************************************
  * Frame helper
@@ -267,7 +268,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a .r-frame {
-  transition: all .15s linear; }
+  transition: all 0.15s linear; }
 
 .reveal a:hover .r-frame {
   border-color: #42affa;

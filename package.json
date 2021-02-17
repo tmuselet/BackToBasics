@@ -95,5 +95,9 @@
       "no-eq-null": 2,
       "no-unused-expressions": 0
     }
+  },
+  "dependencies": {
+    "@decathlon/vitamin": "^0.5.2",
+    "gulp-cssimport": "^7.0.0"
   }
 }

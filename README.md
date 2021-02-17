@@ -1,8 +1,37 @@
 # BackToBasics
+## Purpose
+
+We created this project to enable code presentation using [Decathlon Design System Vitamin](https://developers.decathlon.com/design) .
+Anyone can use this project and create a new section with a new BackToBasics on some code topics.
 
 This project was made thanks to the core files and demo of reveal.js
+For more informations on reveal.js features, see [Credits](#credits) .
 
-# REVEAL.JS
+## How to use
+The public folder is for any asset you will use in an html page.
+The Series folder is for any new html page regarding a BackToBasics topic.
+
+Use this template to create a new presentation : `[public/Series]/TOPIC/{number/}index.html`
+Make sure you have the right path for resources, plugins and css files.
+
+To create a new template or update the current one, update the `.scss` files in `css/theme` folder and run :
+
+        grunt
+
+Grunt will generate the css files you can import in your `.html` files.
+
+## How to launch
+To launch the project, run :
+
+        npm start
+
+This will launch your presentation on `http://0.0.0.0:9999`and show the demo html file.
+To see your own presentation, just browse through your folders matching the pattern in [How to use](#how-to-use)
+
+Example : `http://0.0.0.0:9999/Series/CSS/1/index.html`
+
+## Credits
+### REVEAL.JS
 
 <p align="center">
   <a href="https://revealjs.com">
@@ -18,3 +47,7 @@ reveal.js is an open source HTML presentation framework. It enables anyone with 
 The framework comes with a broad range of features including [nested slides](https://revealjs.com/vertical-slides/), [Markdown support](https://revealjs.com/markdown/), [Auto-Animate](https://revealjs.com/auto-animate/), [PDF export](https://revealjs.com/pdf-export/), [speaker notes](https://revealjs.com/speaker-view/), [LaTeX support](https://revealjs.com/math/), [syntax highlighted code](https://revealjs.com/code/) and much more.
 
 The full reveal.js documentation is available at [revealjs.com](https://revealjs.com).
+
+---
+
+Have fun !
