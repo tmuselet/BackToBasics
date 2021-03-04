@@ -1,7 +1,7 @@
 # BackToBasics
 ## Purpose
 
-We created this project to enable code presentation using [Decathlon Design System Vitamin](https://developers.decathlon.com/design) .
+We created this project to enable code presentation using [Vitamin (Decathlon Design System)](https://decathlon.design) .
 Anyone can use this project and create a new section with a new BackToBasics on some code topics.
 
 This project was made thanks to the core files and demo of reveal.js
