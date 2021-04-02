@@ -8,10 +8,15 @@ This project was made thanks to the core files and demo of reveal.js
 For more informations on reveal.js features, see [Credits](#credits) .
 
 ## How to use
+You only need to create an html file to create your BackToBasic topic.
+
 The public folder is for any asset you will use in an html page.
 The Series folder is for any new html page regarding a BackToBasics topic.
 
-Use this template to create a new presentation : `[public/Series]/TOPIC/{number/}index.html`
+Use this template to create a new presentation : 
+For your html file : `/Series/{YOUR_TOPIC}/{NUMBER}/index.html`
+For your images : `/public/{YOUR_TOPIC}/{NUMBER}/***.jpg|png`
+
 Make sure you have the right path for resources, plugins and css files.
 
 To create a new template or update the current one, update the `.scss` files in `css/theme` folder and run :
