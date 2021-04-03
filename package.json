@@ -97,7 +97,7 @@
     }
   },
   "dependencies": {
-    "@decathlon/vitamin": "^0.5.2",
+    "@vtmn/css": "^0.2.6",
     "gulp-cssimport": "^7.0.0"
   }
 }
