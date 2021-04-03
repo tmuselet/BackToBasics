@@ -35,6 +35,11 @@ To see your own presentation, just browse through your folders matching the patt
 
 Example : `http://0.0.0.0:9999/Series/CSS/1/index.html`
 
+## Live
+
+You can see the projet online thanks to GitHub Pages at this url :
+https://tmuselet.github.io/BackToBasics/
+
 ## Credits
 ### REVEAL.JS
 
