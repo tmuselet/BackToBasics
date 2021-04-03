@@ -156,7 +156,7 @@ gulp.task('plugins', () => {
     } ));
 })
 
-gulp.task('css-vitamin', () => gulp.src(['./node_modules/@decathlon/vitamin/dist/index.css'])
+gulp.task('css-vitamin', () => gulp.src(['./node_modules/@vtmn/css/dist/index.css'])
         .pipe(sass())
         .pipe(gulp.dest('./dist')))
 

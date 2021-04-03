@@ -21,9 +21,9 @@ Make sure you have the right path for resources, plugins and css files.
 
 To create a new template or update the current one, update the `.scss` files in `css/theme` folder and run :
 
-        grunt
+        gulp
 
-Grunt will generate the css files you can import in your `.html` files.
+Gulp will generate the css files you can import in your `.html` files.
 
 ## How to launch
 To launch the project, run :
