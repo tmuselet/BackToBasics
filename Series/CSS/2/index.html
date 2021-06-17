@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Back To Basics - CSS #2</title>
+
+  <meta name="description" content="A presentation to get back to the basics of CSS">
+  <meta name="author" content="Thierry Saint-Maxent">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../../dist/reset.css">
+  <link rel="stylesheet" href="../../../dist/reveal.css">
+  <link rel="stylesheet" href="../../../dist/theme/decathlon.css" id="theme">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="../../../plugin/highlight/monokai.css" id="highlight-theme">
+
+  <style>
+    .pseudo-examples q::before {
+      content: "«";
+      color: blue;
+    }
+    .pseudo-examples q::after {
+      content: "»";
+      color: red;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section> 
+        <img src="../../../public/decathlon-logo.png" alt="decathlon logo"
+          style="height: 180px; margin: 0 auto 1rem auto; background: transparent;" class="demo-logo">
+        
+        <h4>Back To Basics Series</h4>
+        <h3>CSS #2</h3>
+        <div class="authors">
+          <span>By&nbsp;</span>
+          <a rel="noopener noreferrer" target="_blank" href="https://github.com/tsaint31">
+            <img class="authors__avatar" alt="" src="https://avatars.githubusercontent.com/u/31928789?v=4">
+            <span>Thierry Saint-Maxent</span>
+          </a>
+        </div>
+      </section>
+      <section>
+        <section>
+        <h2>Back to Basics CSS #1 Recall</h2>
+        <ul>What have been seen in the first part of the back to basis CSS :
+          <li>Structure of a web page</li>
+          <li>CSS History</li>
+          <li>Cascading Style Sheet</li>
+          <li>Web Browser compatibility</li>
+          <li>CSS Rule Anatomy</li>
+          <li>Units and Values</li>
+          <li>Shortened Properties</li>
+          <li>CSS Selectors</li>
+        </ul>
+        </section>
+        <section>
+          <h2>Back to Basics CSS #1 Recall</h2>
+          <ul>What have been seen in the first part of the back to basis CSS :
+            <li>Pseudo Classes</li>
+            <li>Selectors Priorities</li>
+            <li>Display Attribute</li>
+            <li>Native Style of Web Browser</li>
+            <li>Position Attribute</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+          <h2>Grid</h2>
+          <p>
+            CSS Grid Layout is a two-dimensional grid-based layout system 
+          </p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .container {
+              display: grid;
+            }
+          </code></pre>
+          <img src="../../../public/CSS/2/grid.png" alt="grid"
+          style="height: 30vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .container {
+              grid-template-columns: 40px 50px auto 50px 40px;
+              grid-template-rows: 25% 100px auto;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Grid</h2>
+          <p>
+            Once you have defined the container, you can set the item in it
+          </p>
+          <img src="../../../public/CSS/2/grid-item.png" alt="grid item"
+          style="height: 30vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .item-a {
+              grid-column-start: 2;
+              grid-column-end: 5;
+              grid-row-start: 1;
+              grid-row-end: 3;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Grid</h2>
+          <p>
+            Inside a block of a container, you can also set the item
+          </p>
+          <img src="../../../public/CSS/2/grid-justify-align.png" alt="grid justify"
+          style="height: 30vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .item-a {
+              justify-self: center;
+              align-self: center;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Grid</h2>
+          <p>
+            There are many shortened properties for grid system <strong>grid-column,
+              grid-row, grid-area, grid-template, grid-gap, place-self...</strong> you can discover them in the following site
+          </p>
+          <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" rel="noopener noreferrer">Ressources</a>
+        </section>
+      </section>
+      <section>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+          <h2>Flexbox</h2>
+          <p>
+            The Flexible Box Layout Module make easier to design flexible responsive layout structure.
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .container {
+              display: flexbox;
+            }
+          </code></pre>
+          <p>The basic difference between CSS Grid Layout and CSS Flexbox Layout is that <strong>flexbox was designed for layout in one dimension</strong>.</p>
+          <img src="../../../public/CSS/2/flex-direction.png" alt="flex direction"
+          style="height: 20vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <p>The flexbox-direction attibute allows us to set the item direction.</p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .container {
+              flex-direction: row | row-reverse | column | column-reverse;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Flexbox</h2>
+          <p>
+            To set the space used by an item, you can use flex-grow
+          </p>
+          <img src="../../../public/CSS/2/flex-grow.png" alt="flex grow"
+          style="height: 10vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .item-a {
+              flex-grow: 2;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Flexbox</h2>
+          <p>
+            You can also define the way the items are justified and aligned
+          </p>
+          justify-content<img src="../../../public/CSS/2/justify-content.png" alt="justify content"
+          style="height: 10vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          align-items<img src="../../../public/CSS/2/align-items.png" alt="align items"
+          style="height: 10vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .item-a {
+              justify-content: flex-start | flex-end | center | space-between | ...;
+              align-items:  flex-start | flex-end | center | baseline | stretch | ...;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Flexbox</h2>
+          <p>
+            To make Flexbox a two dimension layout. You can use flex-wrap 
+          </p>
+          flex-wrap<img src="../../../public/CSS/2/wrap.png" alt="flex wrap"
+          style="height: 20vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .container {
+              flex-wrap: nowrap | wrap | wrap-reverse;
+            }
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Flexbox</h2>
+          <p>
+            You can discover on the console the parameter values and render.
+          </p>
+          <img src="../../../public/CSS/2/flex_console.png" alt="flex console"
+          style="height: 40vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <p>
+            There are many other and shortened properties for flexbox system <strong>flex,
+              flex-shrink, order, flex-wrap, flex-basis, flex-flow, align-self, align-content...</strong> you can discover them in the following site
+          </p>
+          <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener noreferrer">Ressources</a>
+        </section>
+      </section>
+      <section data-auto-animate>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+        <h2>QUESTION</h2>
+        <p>
+          When do you use Grid or Flexbox ?
+        </p>
+        <img src="../../../public/CSS/2/grid.png" alt="grid"
+        style="height: 30vh; margin: 0 auto 1rem auto; background: transparent;"/>
+        <img src="../../../public/CSS/2/flex-direction.png" alt="flex direction"
+        style="height: 20vh; margin: 0 auto 1rem auto; background: transparent;"/>
+        </section>
+        <section data-auto-animate>
+          <h2>QUESTION</h2>
+          <img src="../../../public/CSS/2/gridflexbox.png" alt="grid flexbox"
+          style="height: 40vh; margin: 0 auto 1rem auto; background: transparent;"/>
+        </section>
+        <section data-auto-animate>
+          <h2>QUESTION</h2>
+          <p>
+            Grid for the construction of the principal containers (yellow zones)
+          </p>
+          <img src="../../../public/CSS/2/grid1.png" alt="grid"
+          style="height: 30vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <p>
+            Flexbox for the internal components (green zones)
+          </p>
+          <img src="../../../public/CSS/2/flexbox1.png" alt="flexbox"
+          style="height: 30vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <a href="https://www.alsacreations.com/article/lire/1794-flexbox-ou-grid-layout.html" target="_blank" rel="noopener noreferrer">Ressources</a>
+        </section>
+      </section>
+      <section data-auto-animate>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+        <h2>Training Flexbox Grid</h2>
+        <a href="https://mastery.games/flexboxzombies/" target="_blank" rel="noopener noreferrer">https://mastery.games/flexboxzombies/</a>
+        <img src="../../../public/CSS/2/zombie.png" alt="zombie"
+        style="height: 20vh; margin: 0 auto 1rem auto; background: transparent;"/>
+        <a href="https://cssgridgarden.com/" target="_blank" rel="noopener noreferrer">https://cssgridgarden.com/</a>
+        <img src="../../../public/CSS/2/garden.png" alt="garden"
+        style="height: 20vh; margin: 0 auto 1rem auto; background: transparent;"/>
+        </section>
+      </section>
+      <section>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+          <h2>Use of Media Queries</h2>
+          <p>By using the @media attribute on particular criterias,
+            <br />You can apply specific styles to make responsive web site regarding your media.  
+          </p>
+          <img src="../../../public/CSS/2/desktop.png" alt="desktop"
+          style="height: 20vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            @media (max-width: 600px) {
+              flex-direction: column;
+            }
+          </code></pre>
+          <img src="../../../public/CSS/2/mobile.png" alt="mobile"
+          style="height: 20vh; margin: 0 auto 1rem auto; background: transparent;"/>
+        </section>
+        <section>
+          <h2>Use of Media Queries</h2>
+          <ul>Here are the criterias you can use :
+            <li><strong>width, height</strong>: dimension of the screen</li>
+            <li><strong>device-weight, device-height</strong>: dimension of the device</li>
+            <li><strong>orientation</strong>: landscape, portrait</li>
+            <li><strong>resolution</strong>: resolution in dpi, dpcm, dppx</li>
+            <li><strong>color</strong>: color management in bits, pixel</li>
+            <li><strong>aspect-ratio</strong>: ratio of the device (for instance : 16/9) </li>
+          </ul>
+          <p>
+          Note : you can also set the list of device to support the rules : screen, print, projection, tv, speech, ...
+          By default, it is all.
+          </p>
+        </section>
+      </section>
+      <section data-auto-animate>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+        <h2>QUESTION</h2>
+        <p>
+          How to define the common range of screen sizes for Media queries ?
+        </p>
+        <a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank" rel="noopener noreferrer">Ressources</a>
+        </section>
+      </section>
+      <section>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+          <h2>Transformations</h2>
+          <p>It allows to make creative web page by allowing to <strong> rotate, translate, transpose, zoom </strong>items only with CSS.
+          </p>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .item {
+              transform: rotate(15deg)
+            }
+          </code></pre>
+          <p>For instance a card flip, can be done easily with transformation.</p> 
+          <img src="../../../public/CSS/2/cardFlip.gif" alt="card flip"
+          style="height: 20vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <a href="https://www.w3schools.com/howto/howto_css_flip_card.asp" target="_blank" rel="noopener noreferrer">Ressources</a>
+        </section>
+        <section>
+          <h2>Transformations</h2>
+          <ul>Here are the transformations you can use :
+            <li><strong>rotate</strong>: rotation of the items</li>
+            <li><strong>scale, scaleX, scaleY</strong>: zoom of the item</li>
+            <li><strong>translate, translateX, translateY</strong>: translation</li>
+            <li><strong>skewX, skewY</strong>: Deformation</li>
+            <li><strong>matrix</strong>: mathematical transformation</li>
+          </ul>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .item:hover {
+              transform: scale(1.10)
+            }
+          </code></pre>
+          <p>Note1 : do a search on "Do a barell roll" or "askew" in google and see the effects.</p>
+          <p>Note2 : There is also possibility to make 3D transformation.</p>
+          <a href="https://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank" rel="noopener noreferrer">Ressources</a>
+        </section>
+      </section>
+      <section>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+          <h2>Transitions</h2>
+          <p>When a CSS property is modified, the transition allow to make this modification not abrupt but animate. 
+          </p>
+          <img src="../../../public/CSS/2/transition.gif" alt="transition"
+          style="height: 10vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .item {
+              transition: color 1s ease-in,
+              width 500ms,
+            }
+          </code></pre>
+          <p>The properties that can be animated are all numerical properties <strong>width, height, margin, padding, font-weight... </strong>
+          </p>
+        </section>
+        <section data-auto-animate>
+          <h2>Transitions</h2>
+          <ul>We use for this, the <strong>transition</strong> property which groups :
+            <li><strong>transition-property</strong>: property to animate</li>
+            <li><strong>transition-duration</strong>: duration</li>
+            <li><strong>translate-timing-function</strong>: animation type</li>
+            <li><strong>transition-delay</strong>: delay before animation</li>
+          </ul>
+          <br/>
+          <a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank" rel="noopener noreferrer">Ressources</a>
+          <p>The translate-timing-function can be very funny</p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function" target="_blank" rel="noopener noreferrer">Ressources</a>
+          <br/>
+        </section>
+      </section>
+      <section>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+            <h2>Animations</h2>
+            <p>Animations are closed to transition but offer more controls.</p>
+            <img src="../../../public/CSS/2/animations.gif" alt="animations"
+            style="height: 10vh; margin: 0 auto 1rem auto; background: transparent;"/>
+            <p>We define the animation code by using the keyframes properties.</p>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+              @keyframes animation-opacity {
+                from {opacity: 0.5;}
+                to {opacity: 1;}
+              }
+            </code></pre>
+          </section>
+          <section data-auto-animate>
+          <h2>Animations</h2>
+          <ul>Then we define the element to apply the animation to :
+            <li><strong>animation-name</strong>: property to animate</li>
+            <li><strong>animation-duration</strong>: duration</li>
+            <li><strong>animation-timing-function</strong>: animation type</li>
+            <li><strong>animation-iteration-count</strong>: number of iteration</li>
+            <li><strong>animation-direction</strong>: direction</li>
+            <li><strong>animation-play-state</strong>: state of animation</li>
+            <li><strong>animation-delay</strong>: delay before animation</li>
+            <li><strong>animation-fill-mode</strong>: state after execution </li>
+          </ul>
+          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            .element:hover {
+              animation: animation-opacity 750ms ease-in-out 1 0,1s;
+            }
+          </code></pre>
+          <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank" rel="noopener noreferrer">Ressources</a>
+        </section>
+      </section>
+      <section data-auto-animate>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+        <h2>QUESTION</h2>
+        <p>
+          Do you use Transformations, Transitions or Animations in your application?
+        </p>
+        <img src="../../../public/CSS/2/email.gif" alt="email"
+        style="height: 40vh; margin: 0 auto 1rem auto; background: transparent;"/>
+        <p>
+          It can be part of the user experience !!!
+        </p>
+        </section>
+      </section>
+      <section>
+        <div class="sticker"><img class="sticker__avatar" alt="tsaint31" src="https://avatars.githubusercontent.com/u/31928789?v=4" /></div>
+        <section data-auto-animate>
+          <h2>Ready to play</h2>
+          <p>The way to define if your are CSS ready:</p>
+          <p>Can you go from this without CSS</p>
+          <img src="../../../public/CSS/2/withoutCSS.png" alt="without css"
+          style="height: 10vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <p>To this in Desktop and Mobile</p>
+          <img src="../../../public/CSS/2/withCSSDesktop.png" alt="with css"
+          style="height: 10vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <img src="../../../public/CSS/2/withCSSMobile.png" alt="css mobile"
+          style="height: 10vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          to do that add your css in the following html page : 
+          <a href="../../../public/CSS/2/csstest.html" target="_blank" rel="noopener noreferrer">File</a>
+
+        </section>
+        <section data-auto-animate>
+          <br/>
+          <p>In Desktop: picture and form are displayed in row, CSS expert rotate on itself, blue color is #0082C3</p>
+          <img src="../../../public/CSS/2/withCSSDesktop.png" alt="css desktop"
+          style="height: 30vh; margin: 0 auto 1rem auto; background: transparent;"/>
+          <p>In Mobile: picture and form are displayed in column, no label for the menu,</p>
+          <img src="../../../public/CSS/2/withCSSMobile.png" alt="css mobile"
+          style="height: 30vh; margin: 0 auto 1rem auto; background: transparent;"/>
+        </section>
+      </section>
+      <section> 
+        <img src="../../../public/decathlon-logo.png" alt="decathlon logo"
+          style="height: 180px; margin: 0 auto 1rem auto; background: transparent;" class="demo-logo">
+        
+        <h4>Back To Basics Series</h4>
+        <h3>CSS #2</h3>
+        <div class="authors">
+          <span>By&nbsp;</span>
+          <a rel="noopener noreferrer" target="_blank" href="https://github.com/tsaint31">
+            <img class="authors__avatar" alt="" src="https://avatars.githubusercontent.com/u/31928789?v=4">
+            <span>Thierry Saint-Maxent</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="../../../dist/reveal.js"></script>
+  <script src="../../../plugin/zoom/zoom.js"></script>
+  <script src="../../../plugin/notes/notes.js"></script>
+  <script src="../../../plugin/search/search.js"></script>
+  <script src="../../../plugin/markdown/markdown.js"></script>
+  <script src="../../../plugin/highlight/highlight.js"></script>
+  <script>
+
+    // Also available as an ES module, see:
+    // https://revealjs.com/initialization/
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+    });
+
+  </script>
+
+</body>
+
+</html>
