@@ -62,19 +62,19 @@
       </section>
       <section data-auto-animate>
         <section data-auto-animate>
-          <h2>Structure d'une page web</h2>
+          <h2>Web page structure</h2>
             <div>
               <img src="../../../public/CSS/1/native-styles.png" alt="margin scheme"
               style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
-              <p>Exemple Decathlon.fr sans CSS</p> 
+              <p>Example Decathlon.fr without CSS</p> 
           </div>
         </section>
         <section data-auto-animate>
-          <h2>Structure d'une page web</h2>
+          <h2>Web page structure</h2>
             <div>
               <img src="../../../public/CSS/1/Decathlon-fr_with-css.png" alt="margin scheme"
               style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
-              <p>Exemple Decathlon.fr avec CSS</p> 
+              <p>Example Decathlon.fr with CSS</p> 
           </div>
         </section>
       </section>
@@ -82,35 +82,33 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Tanguy Muselet" src="https://avatars3.githubusercontent.com/u/9084993?v=4" /></div>
         <section>
-          <h2>Histoire du CSS</h2>
+          <h2>The CSS Story</h2>
           <p>
-            Aux débuts du Web, CSS n'existait pas. 
-            <br />Le HTML est né en 1991, et <strong>CSS en 1996</strong>.
+            At the beginning of the web, css didn't exist.
+            <br />HTML was born in 1991, and <strong>CSS in 1996</strong>.
           </p>
           <p>
-            Durant ce laps de temps, <br /> les styles disponibles étaient très limités.
+            At this time, <br /> available styles were really limited.
           </p>
           <div class="fragment">
-            <p>Il était possible d'utiliser des styles via des balises HTML dédiées 
-              <br />à la mise en forme, telles que 
+            <p>
+              It was possible to use dedicated tags styles, through, like :
             </p>
             <pre><code class="hljs" data-trim data-line-numbers>&lt;font color="#aab1c3"&gt;text&lt;/font&gt;</code></pre>
-            <p>par exemple, permettant de définir la couleur du texte.
-              <br />Mais les possibilités étaient très limitées.
+            <p>
+              Allowing to define text color.
             </p>
           </div>
           
         </section>
         <section>
-          <h2>Histoire du CSS</h2>
+          <h2>The CSS Story</h2>
           <p>
-            Cependant, les contenus HTML commençant 
-            <br />à devenir plus <strong>complexes</strong>, internet est rapidement devenu 
-            <br />un joyeux mélange entre le fond et la forme, 
-            <br />rendant la mise à jour des pages web 
-            <br />de plus en plus compliquées.
+            As people wanted to have more complex displays, the web <br/>
+            became a mix between styles and contents making it <br/>
+            really difficult to understand. 
           </p>
-          <p class="fragment">C'est suite à ce constat qu’ont été créées les CSS, permettant de <strong>séparer la forme du fond</strong> et rendre ainsi le HTML plus clair.
+          <p class="fragment">This is when CSS was created to <strong>split styles and contents</strong> and make it clean.
           </p>
         </section>
       </section>
@@ -118,36 +116,33 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Samuel Delaporte" src="https://avatars3.githubusercontent.com/u/10155958?u=39b4cceea9796d1b8803ce52cfaa87291bf866da&v=4" /></div>
         <section>
-          <h2>Principe de cascade et d’héritage</h2>
+          <h2>Cascading and inheritance</h2>
           <p>
-            Comme son nom l’indique <em>(Cascading Style Sheet)</em>, 
-            <br />une CSS est une <strong>fiche listant des règles de styles 
-              <br />appliquées “en cascade” 
-              <br />à des éléments HTML</strong>.
+            As the name says <em>(Cascading Style Sheet)</em>, 
+            <br />a CSS is a <strong>sheet listing style rules
+              <br />applied in cascade
+              <br />to HTML elements</strong>.
           </p>
           <p class="fragment">
-            C’est à dire que certains styles appliqués à un élément <strong>sont appliqués à sa descendance par principe d'héritage</strong>. 
-            <br />Cela concerne notamment la taille de police, la couleur de texte, l’interlignage, etc.
+            It means that some styles are directly applied to an element and others 
+            <strong>are applied to children by inheritance</strong>. 
+            <br />It is specially relevant for font sizes, text colors, line height ...
           </p>
         </section>
         <section>
-          <h2>Principe de cascade et d’héritage</h2>
+          <h2>Cascading and inheritance</h2>
           <p>
-            L’avantage évident est qu’il n’est pas nécessaire 
-            <br />d’appliquer des styles à chaque élément d’une page web,
-            <br />et qu'il suffit d’appliquer les <strong>styles les plus génériques</strong>
-            <br />aux <strong>éléments les plus hauts</strong> de l'arborescence HTML.
+            The main benefit is that we don't have to apply style rules <br/> to every element, you only have to apply generic styles <br/> on the top elements of the HTML structure
           </p>
           <p class="fragment">
-            C’est d’ailleurs généralement sur la balise <code>&lt;html&gt;</code> et/ou <code>&lt;body&gt;</code>
-            <br />que l’on applique généralement les styles plus courants.
+            This is why we define generic styles on top elements like
+            <code>&lt;html&gt;</code> and/or <code>&lt;body&gt;</code>
           </p>
         </section>
         <section>
-          <h2>Principe de cascade et d’héritage</h2>
+          <h2>Cascading and inheritance</h2>
           <p>
-            Chaque élément peut ensuite être doté de <strong>styles plus spécifiques</strong>, 
-            <br />qui remplacent ou complètent ceux dont il hérite.
+            Then every styles of an element can be overridden or completed by more specific ones breaking inheritance.
           </p>
           <p class="fragment">
             <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS">Ressources</a>            
@@ -158,59 +153,52 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Tanguy Muselet" src="https://avatars3.githubusercontent.com/u/9084993?v=4" /></div>
         <section>
-          <h2>Compatibilité des Navigateurs</h2>
+          <h2>Browsers compatibility</h2>
           <p>
-            L’évolution des CSS est régie par un consortium international
-            <br />(<strong><a rel="noopener noreferrer" target="_blank" href="ttps://www.w3.org/">W3C</a></strong> pour <em>World Wide Web Consortium</em>),
-            <br />via lequel chaque règle et version de CSS, entre autres, 
-            <br />y est rendue officielle.
+            CSS evolution is ruled by W3C (international consortium)
+            <br />(<strong><a rel="noopener noreferrer" target="_blank" href="ttps://www.w3.org/">W3C</a></strong> for <em>World Wide Web Consortium</em>),
+            <br />where every rule and CSS version 
+            <br />is made official
           </p>
-          <p class="fragment">CSS en est actuellement à sa version 3, sortie en 2005.</p>
+          <p class="fragment">CSS is currently in version 3, released in 2005.</p>
         </section>
         <section>
-          <h2>Compatibilité des Navigateurs</h2>
+          <h2>Browsers compatibility</h2>
           <p>
-            Quand une fonctionnalité n’est pas officielle, 
-            <br />celle-ci reste un certain temps à l’état de brouillon, 
-            <br />mais peut être adoptée et implémentée 
-            <br />de différentes façons par les navigateurs 
-            <br />(préfixe propriétaire, affichage/comportement propre, valeurs propres, etc).
+            When a feature is not official, 
+            <br />it stays as a draft for a while, 
+            <br />but can be used and adopted 
+            <br />in many different ways by browsers 
+            <br />(prefixes, special displays and behaviours, ...).
           </p>
           <p class="fragment">
-            Ce n’est que quand elle est suffisamment mature 
-            <br />et fait consensus qu’elle est rendue officielle.
+            It is only when it is mature and used enough 
+            <br />that it is made official.
           </p>
         </section>
         <section>
-          <h2>Compatibilité des Navigateurs</h2>
+          <h2>Browsers compatibility</h2>
           <p>
-            Par exemple, le système de <strong>Grid Layout</strong> 
-            <br />permettant de gérer la mise en page web, 
-            <br />n’a été officialisée qu’après de nombreuses années 
-            <br />de travail commun et de validations diverses.
+            For example, <strong>Grid Layout</strong> 
+            <br />was only made official after many years
+            <br />of discussions and various validations.
           </p>
           <p class="fragment">
-            Pendant tout ce temps, sa syntaxe a évolué, 
-            <br />et la fonctionnalité a pu être utilisée 
-            <br />par les développeurs les plus impatients,
-            <br />au prix de mises à jour pour chacune des ses versions.
+            During this time it evolved and was used
+            <br />by some developers who couldn't wait
+            <br />helping the feature to be better but 
+            <br />costing many updates
           </p>
         </section>
         <section>
-          <h2>Compatibilité des Navigateurs</h2>
+          <h2>Browsers compatibility</h2>
           <p>
-            Les CSS sont en évolution permanente 
-            <br />et il est difficile de profiter 
-            <br />des dernières fonctionnalités 
-            <br />tout en restant <strong>compatible</strong> 
-            <br />avec les navigateurs plus anciens. 
+            As CSS is constantly evolving
+            <br />it is important to know which rules to use
+            <br />depending on browers compatibility
           </p>
-          <p class="fragment">Il est donc bon de les utiliser 
-            <br />en fonction de leur compatibilité,
-            <br />et <strong>en connaissance de cause</strong>.
-          </p>
-          <p class="fragment">Si vous avez besoin de vérifier la compatibilité de propriétés, 
-            <br />utilisez <a rel="noopener noreferrer" target="_blank" href="http://www.caniuse.com">www.caniuse.com</a>
+          <p class="fragment">If you need to check browser compatibilty
+            <br />visit <a rel="noopener noreferrer" target="_blank" href="http://www.caniuse.com">www.caniuse.com</a>
           </p>
         </section>
       </section>
@@ -218,37 +206,37 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Samuel Delaporte" src="https://avatars3.githubusercontent.com/u/10155958?u=39b4cceea9796d1b8803ce52cfaa87291bf866da&v=4" /></div>
         <section data-auto-animate>
-          <h2>Anatomie d'une règle CSS</h2>
-          <p>Une règle CSS est avant tout constituée d'un <strong>sélecteur</strong>, 
-            <br />servant à cibler un ou plusieurs éléments
-            <br />sur lesquels appliquer des styles...          
+          <h2>Anatomy of a CSS rule</h2>
+          <p>A CSS rule is composed of a <strong>selector</strong>, 
+            <br />used for targeting one or many elements
+            <br />on which you want to apply styles          
           </p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            selecteur {
+            selector {
 
             }
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Anatomie d'une règle CSS</h2>
-          <p>...contenant une ou plusieurs <strong>déclarations...</strong></p>
+          <h2>Anatomy of a CSS rule</h2>
+          <p>...containing one or multiple <strong>declarations ...</strong></p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|2">
-            selecteur {
-              déclaration;
+            selector {
+              declaration;
             }
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Anatomie d'une règle CSS</h2>
-          <p>....elles-mêmes constituées de <strong>paire(s) de propriété/valeur</strong>
+          <h2>Anatomy of a CSS rule</h2>
+          <p>Declarations themselves are composed of a <strong>a property/value couple</strong>
           </p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">
-            selecteur {
-              propriété: valeur;
+            selector {
+              property: value;
             }
           </code></pre>
           <div class="fragment">
-            <p>Ce qui donne concrètement :</p>
+            <p>Which gives us :</p>
             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
               p {
                 color: red;
@@ -261,7 +249,7 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Samuel Delaporte" src="https://avatars3.githubusercontent.com/u/10155958?u=39b4cceea9796d1b8803ce52cfaa87291bf866da&v=4" /></div>
         <section data-auto-animate>
-          <h2>Quelques exemples</h2>
+          <h2>Some examples</h2>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             body {
@@ -271,7 +259,7 @@
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Quelques exemples</h2>
+          <h2>Some examples</h2>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             body {
@@ -287,7 +275,7 @@
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Quelques exemples</h2>
+          <h2>Some examples</h2>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             body {
@@ -302,11 +290,9 @@
             }
             
             .main-section > p {
-              /* marge externe de 16px en haut et en bas, et centrage horizontal */
+              /* external margin of 16px top and bottom, and center horizontally */
               margin: 1rem auto; 
               width: 600px;
-              /* 100% largeur du viewport - 24px (16px de chaque côté) */
-              max-width: calc(100vw - 2rem); 
               font-style: italic;
               font-size: 1.25rem; /* 20px */
             }
@@ -314,7 +300,7 @@
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Quelques exemples</h2>
+          <h2>Some examples</h2>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             body {
@@ -329,131 +315,84 @@
             }
             
             .main-section > p {
-              /* marge externe de 16px en haut et en bas, et centrage horizontal */
+              /* external margin of 16px top and bottom, and center horizontally */
               margin: 1rem auto; 
               width: 600px;
-              /* 100% largeur du viewport - 24px (16px de chaque côté) */
-              max-width: calc(100vw - 2rem); 
               font-style: italic;
               font-size: 1.25rem; /* 20px */
             }
             
-            /* ne cible que la première lettre de chaque paragraphe de la section */
+            /* only first letter of every paragraph in main-section */
             .main-section > p::first-letter {
-              /* interlettrage réduit de 8% de 20px */
-              letter-spacing: -0.08em;
-              /* en majuscule */
               text-transform: uppercase; 
               font-size: 3em; /* 3 x 20px = 60px */
             }
           </code></pre>
         </section>
-        <section data-auto-animate>
-          <h2>Quelques exemples</h2>
-
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            body {
-              font-size: 16px;
-              font-family: "Times", serif;
-            }
-            
-            .main-section {
-              position: relative;
-              padding: 1rem 0;
-              border-top: 1px solid #ccc;
-            }
-            
-            .main-section > p {
-              /* marge externe de 16px en haut et en bas, et centrage horizontal */
-              margin: 1rem auto; 
-              width: 600px;
-              /* 100% largeur du viewport - 24px (16px de chaque côté) */
-              max-width: calc(100vw - 2rem); 
-              font-style: italic;
-              font-size: 1.25rem; /* 20px */
-            }
-            
-            /* ne cible que la première lettre de chaque paragraphe de la section */
-            .main-section > p::first-letter {
-              /* interlettrage réduit de 8% de 20px */
-              letter-spacing: -0.08em;
-              /* en majuscule */
-              text-transform: uppercase; 
-              font-size: 3em; /* 3 x 20px = 60px */
-            }
-            
-            .main-section > p strong {
-              color: #007dbc;
-            }
-          </code></pre>
-        </section>
-        
       </section>
 
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Tanguy Muselet" src="https://avatars3.githubusercontent.com/u/9084993?v=4" /></div>
         <section data-auto-animate>
-          <h2>Unités et valeurs</h2>
-          <p>Certaines propriété attendent des valeurs avec unités, 
-            <br /><strong>absolues</strong> ou <strong>relatives</strong>.
+          <h2>Units and values</h2>
+          <p>Some properties expect values with 
+            <br /><strong>absolute</strong> or <strong>relative</strong> units.
           </p>
         </section>
         <section data-auto-animate>
-          <h2>Unités absolues</h2>
+          <h2>Absolute units</h2>
           <p>
-            Pour ne citer que la plus usitée : <strong>px</strong> <em>(pixels)</em>. 
+            The most famous : <strong>px</strong> <em>(pixels)</em>. 
           </p>
           <p class="fragment">
-            Comme elle le laisse entendre, 
-            <br />cette unité permet d’appliquer des <strong>valeurs fixes</strong> en pixels.            
+            As its name suggests, 
+            <br />this unit allow us to apply <strong>fixed values</strong> in pixels.            
           </p>
-          <p class="fragment">Pour des raisons d’<strong>accessibilité et d’adaptativité</strong> de l’interface, 
-            <br />cette unité doit être utilisée avec parcimonie, 
-            <br />et est donc de moins en moins utilisée dans
-            <br />les interfaces web récentes (souvent <em>responsive</em> ).</p>
+          <p class="fragment">For <strong>accessibility and responsive</strong> reasons, 
+            <br />this unit must be used with caution, 
+            <br />and often replaced by others, more <em>responsive</em> .</p>
         </section>
         <section data-auto-animate>
-          <h2>Unités relatives</h2>
-          <p><strong>% : le pourcentage</strong></p>
-          <p>Même si elle peut paraître évidente,
-            <br />il faut toujours savoir <strong>sur quoi elle se base</strong>
-            <br />et <strong>sur quelle propriété</strong> l’appliquer.</p>
+          <h2>Relative units</h2>
+          <p><strong>% : percentage</strong></p>
+          <p>As obvious as it seems,
+            <br />you always need to know <strong>on what it is based</strong>
+            <br />and <strong>on what property</strong> you should apply it.</p>
         </section>
         
         <section data-auto-animate>
-          <h2>Unités relatives</h2>
-          <p><strong>vw et vh</strong></p>
-          <p>Respectivement <strong>viewport width</strong> et <strong>viewport height</strong>. 
+          <h2>Relative units</h2>
+          <p><strong>vw and vh</strong></p>
+          <p>For <strong>viewport width</strong> and <strong>viewport height</strong>. 
           </p>
-          <p class="fragment">Chacune de ces unités correspond à 1% du <em>viewport</em> <br />(portion visible de la page).</p>
+          <p class="fragment">1 unit is 1% of the <em>viewport</em> <br />(visible area of the web page).</p>
         </section>
         <section data-auto-animate>
-          <h2>Unités relatives</h2>
+          <h2>Relative units</h2>
           <p><strong><code>em</code></strong></p>
-          <p>Correspond à la taille de police (<code>font-size</code>) 
-            <br /><strong>appliquée au parent d’un élément</strong>, 
-            <br />ou l’élément lui-même pour d’autres propriétés.            
+          <p>For the (<code>font-size</code>) 
+            <br /><strong>applied to a parent</strong>, 
+            <br />or element itself (as seen previously in cascading).            
           </p>
-          <p class="fragment">Ex : pour un élément ayant une <code>font-size</code> de <strong>12px</strong>,
-            <br />un élément enfant avec une <code>font-size</code> de <strong>2em</strong> fera <strong>24px</strong>.
+          <p class="fragment">Ex : for an element that has a <strong>12px</strong> <code>font-size</code> ,
+            <br />a child element with a <strong>2em</strong> <code>font-size</code> will be <strong>24px</strong>.
           </p>
         </section>
         <section data-auto-animate>
-          <h2>Unités relatives</h2>
+          <h2>Relative units</h2>
           <p><strong><code>rem</code> (root em)</strong></p>
-          <p>Correspond à la <code>font-size</code> de l’élément “root”,
-            <br />généralement appliqué sur la balise <code>&lt;html&gt;</code> ou <code>&lt;body&gt;</code>.            
+          <p>It is the <code>font-size</code> of the “root” element,
+            <br />usually applied on <code>&lt;html&gt;</code> or <code>&lt;body&gt;</code>.            
           </p>
-          <p class="fragment">Ex : si une page web a une <code>font-size</code> globale de <strong>16px</strong>,
-            <br />un élément enfant avec une <code>font-size</code> de <strong>2.5rem</strong> fera <strong>40px</strong>.
+          <p class="fragment">Ex : if a web page has global <code>font-size</code> of <strong>16px</strong>,
+            <br />a child element with <code>font-size</code> of <strong>2.5rem</strong> will be <strong>40px</strong>.
           </p>
-          <p class="fragment"><strong>C’est l’unité par excellence à appliquer aux <code>font-size</code>.</strong></p>
         </section>
         <section data-auto-animate>
-          <h2>Autres unités</h2>
-          <p>Il en existe d’autres, plus marginales,
-            <br />telles que <code>ex</code>, <code>ch</code>, <code>lh</code>, <code>vmin</code>, <code>vmax</code>,
-            <br />ou encore <code>pt</code> (point) et <code>cm</code>, plutôt dédiées à l'impression
+          <h2>Other units</h2>
+          <p>There are many more, some are a bit exotic, like :
+            <br /><code>ex</code>, <code>ch</code>, <code>lh</code>, <code>vmin</code>, <code>vmax</code>,
+            <br />or even <code>pt</code> (point) and <code>cm</code>, for printing purposes
           </p>
           <a href="https://developer.mozilla.org/fr/docs/Apprendre/CSS/Building_blocks/Values_and_units" target="_blank" rel="noopener noreferrer">Ressources</a>
         </section>
@@ -462,17 +401,17 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Samuel Delaporte" src="https://avatars3.githubusercontent.com/u/10155958?u=39b4cceea9796d1b8803ce52cfaa87291bf866da&v=4" /></div>
         <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>Certaines propriétés, 
-            <br />telles que <strong><code>font</code>, <code>padding</code>, <code>margin</code>, <code>background</code></strong>, 
-            <br />entre autres, peuvent être raccourcies :
+          <h2>Short-hand properties</h2>
+          <p>Some properties 
+            <br />such as <strong><code>font</code>, <code>padding</code>, <code>margin</code>, <code>background</code></strong>, 
+            <br />can be shortened
           </p>
         </section>
         
         <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>Par exemple :
-            Pour ajouter des marges à un élément, la règle :						
+          <h2>Short-hand properties</h2>
+          <p>For example :
+            To add margin to an element, the following...						
           </p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             .element {
@@ -484,48 +423,47 @@
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>...peut être simplifiée comme suit :</p>
+          <h2>Short-hand properties</h2>
+          <p>...can be shortened like this :</p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             .element {
-              /* suivant l’ordre top > right > bottom > left */
+              /* following the clock rule top > right > bottom > left */
               margin: 1rem 0 1rem 0; 
             }
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>Ou bien :</p>
+          <h2>Short-hand properties</h2>
+          <p>Or also :</p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             .element {
-              /* suivant l’ordre top > right/left > bottom */
+              /* top > right/left > bottom */
               margin: 1rem 0 1rem; 
             }
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>Ou encore :</p>
+          <h2>Short-hand properties</h2>
+          <p>Or also :</p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             .element {
-              /* suivant l’ordre top/bottom > right/left */
+              /* top/bottom > right/left */
               margin: 1rem 0; 
             }
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>Rien n’empêche aussi d’appliquer une marge globale :</p>
+          <h2>Short-hand properties</h2>
+          <p>Or even, for a global margin :</p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             .element {
-              /* s'applique à top, right, bottom et left */
               margin: 1rem; 
             }
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>Pour la propriété <code>font</code>, les propriétés :</p>
+          <h2>Short-hand properties</h2>
+          <p>An other example with property <code>font</code></p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             {
               font-style: italic;
@@ -537,8 +475,8 @@
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>peuvent être raccourcies comme suit :</p>
+          <h2>Short-hand properties</h2>
+          <p>can be shortened like this :</p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             {
               font: italic bold 1.2em/1.5 Arial, sans-serif;
@@ -546,27 +484,7 @@
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>Une autre propriété souvent utilisée <br />sous forme raccourcie est <code>border</code> :</p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            {
-              border-width: 1px;
-              border-style: solid;
-              border-color: #000;
-            }						  
-          </code></pre>
-        </section>
-        <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>et peut être raccourcie comme suit :</p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            {
-              border: 1px solid #000;
-            }
-          </code></pre>
-        </section>
-        <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
+          <h2>Short-hand properties</h2>
           <div class="r-hstack">
             <div style="padding: 0 1rem;">
               <img src="../../../public/CSS/1/margin.png" alt="margin scheme"
@@ -581,90 +499,19 @@
           </div>
           <a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies" rel="noopener noreferrer">Ressources</a>
         </section>
-        <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>Pour les images de fond, avec la propriété <code>background</code>,
-            <br />la version raccourcie diffère entre CSS2 et CSS3, 
-            <br />mais la version CSS2 fonctionne toujours, 
-            <br />ignorant les propriétés CSS3 :
-          </p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|8">
-            {
-              background-color: #000;
-              background-image: url(images/bg.gif);
-              background-repeat: no-repeat;
-              background-position: top right;
-
-              /* peut être remplacé par */
-              background: #000 url(images/bg.gif) no-repeat top right;
-            }
-          </code></pre>
-        </section>
-        
-        <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>Pour les images de fond, avec la propriété <code>background</code>,
-            <br />la version raccourcie diffère entre CSS2 et CSS3, 
-            <br />mais la version CSS2 fonctionne toujours, 
-            <br />ignorant les propriétés CSS3 :
-          </p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            {
-              background: #000 url(images/bg.gif) no-repeat top right;
-            }
-          </code></pre>
-        </section>
-        <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>La version CSS 3 :
-          </p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            {
-              background-image: url("content.jpg");
-              background-position: left top;
-              background-size: 200px 70px;
-              background-repeat: no-repeat;
-              background-attachment: scroll;
-              background-clip: content-box;
-              background-origin: content-box;
-              background-color: white;
-            }
-          </code></pre>
-        </section>
-        <section data-auto-animate>
-          <h2>Propriétés raccourcies</h2>
-          <p>La version CSS 3 :
-          </p>
-          <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            {
-              background: url("content.jpg") 
-                          left top / 200px 70px
-                          no-repeat
-                          scroll
-                          content-box content-box
-                          white;
-            }
-          </code></pre>
-          <a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies" rel="noopener noreferrer">Ressources</a>
-        </section>
       </section>
-
 
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Tanguy Muselet" src="https://avatars3.githubusercontent.com/u/9084993?v=4" /></div>
         <section data-auto-animate>
-          <h2>Sélecteurs CSS</h2>
-          <p>C'est bien joli, toutes ces propriétés et ces styles, <br />mais ils ne servent à rien sans les <strong>sélecteurs</strong>.
-          </p>
-          <p class="fragment">Ce sont eux qui vont nous permettre de 
-            <br /><strong>cibler un ou plusieurs éléments</strong>
-            <br />pour y appliquer les styles.
+          <h2>CSS Selectors</h2>
+          <p>All of this is very nice but would be totally useless <br/>if we did not have the <strong>selectors</strong>, allowing us to target elements which will receive the styles.
           </p>
         </section>
         <section data-auto-animate>
-          <h2>Sélecteurs CSS</h2>
-          <h4>Sélecteur universel</h4>
-          <p>Cible <strong>tous</strong> les éléments HTML</p>
+          <h2>CSS Selectors</h2>
+          <h4>Universal Selector</h4>
+          <p>Targets <strong>every</strong> HTML elements</p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             * {
               color: black;
@@ -672,9 +519,9 @@
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Sélecteurs CSS</h2>
-          <h4>Sélecteur de <em>tag/balise</em> HTML</h4>
-          <p>Cible <strong>tous</strong> les éléments HTML de type <code>&lt;p&gt;</code></p>
+          <h2>CSS Selectors</h2>
+          <h4>Selector of HTML <em>tag</em></h4>
+          <p>Targets <strong>every</strong> HTML elements of type <code>&lt;p&gt;</code></p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             p {
               color: black;
@@ -685,24 +532,25 @@
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Sélecteurs CSS</h2>
-          <h4>Sélecteur de <em>classe</em> CSS</h4>
-          <p>Cible <strong>tous</strong> les éléments HTML 
-            <br />portant la classe CSS correspondante :</p>
+          <h2>CSS Selectors</h2>
+          <h4>Selectors of <em>class</em></h4>
+          <p>Targets <strong>every</strong> HTML elements
+            <br />that has the matching css class :</p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
-            .ma-classe {
+            .my-class {
               color: black;
             }
           </code></pre>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            <div class="ma-classe"></div>
+            <div class="my-class"></div>
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Sélecteurs CSS</h2>
-          <h4>Sélecteur d'<em>ID</em></h4>
-          <p>Cible l'élément (unique) portant un attribut <code>id</code> 
-            <br />avec la valeur correspondante :</p>
+          <h2>CSS Selectors</h2>
+          <h4>Selector of <em>ID</em></h4>
+          <p>
+            Target the <em>(must-be)</em><strong>unique</strong> element with a matching attribute <code>id</code>
+          </p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             #id-unique {
               color: black;
@@ -714,10 +562,10 @@
         </section>
 
         <section data-auto-animate>
-          <h2>Sélecteurs CSS</h2>
-          <h4>Sélecteur d'<em>attribut</em></h4>
-          <p>Cible les éléments portant un attribut 
-            <br />avec une valeur spécifique :</p>
+          <h2>CSS Selectors</h2>
+          <h4>Selector of <em>attributes</em></h4>
+          <p>Targets elements with attributes that have 
+            <br />a specific value :</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             a[target="_blank"] {
@@ -730,11 +578,12 @@
         </section>
 
         <section data-auto-animate>
-          <h2>Sélecteurs CSS</h2>
-          <h4>Sélecteur d'<em>attribut</em></h4>
-          <p>Autre exemple ciblant les éléments portant l'attribut spécifié,
-            <br />qu'elle ait une valeur ou non</p>
-
+          <h2>CSS Selectors</h2>
+          <h4>Selector of <em>attributes</em></h4>
+          <p>
+            Other example that targets elements with specified attribute, 
+            <br />even if it does not have a defined value
+          </p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             div[style] {
               color: black;
@@ -750,12 +599,12 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Samuel Delaporte" src="https://avatars3.githubusercontent.com/u/10155958?u=39b4cceea9796d1b8803ce52cfaa87291bf866da&v=4" /></div>
         <section data-auto-animate>
-          <h2>Sélecteurs CSS complexes</h2>
-          <h4>Sélecteur de classes cumulées</h4>
-          <p>Cible les éléments portant les classes indiquées</p>
+          <h2>Complex CSS selectors</h2>
+          <h4>Combined selector</h4>
+          <p>Targets elements with all indicated classes</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
-            .ma-classe-1.ma-classe-2 {
+            .my-class-1.my-class-2 {
               color: black;
             }
           </code></pre>
@@ -765,27 +614,27 @@
         </section>
 
         <section data-auto-animate>
-          <h2>Sélecteurs CSS complexes</h2>
-          <h4>Sélecteur multiple</h4>
-          <p>Cible les éléments correspondant à l'un des sélecteurs</p>
+          <h2>Complex CSS selectors</h2>
+          <h4>Multiple selector</h4>
+          <p>Targets elements that match one of the selector</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
-            .ma-classe-1, .ma-classe-2, quote, a[target="_blank"] {
+            .my-class-1, .my-class-2, quote, a[target="_blank"] {
               color: black;
             }
           </code></pre>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
-            <div class="ma-classe-1"></div>
-            <div class="ma-classe-2"></div>
+            <div class="my-class-1"></div>
+            <div class="my-class-2"></div>
             <quote></quote>
             <a target="_blank"></a>
           </code></pre>
         </section>
 
         <section data-auto-animate>
-          <h2>Sélecteurs CSS complexes</h2>
-          <h4>Sélecteur de descendance</h4>
-          <p>Cible les éléments enfant d'autres éléments spécifiques</p>
+          <h2>Complex CSS selectors</h2>
+          <h4>Descendence selector</h4>
+          <p>Targets specific children</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             section p {
@@ -804,9 +653,9 @@
         </section>
 
         <section data-auto-animate>
-          <h2>Sélecteurs CSS complexes</h2>
-          <h4>Sélecteur d'enfant direct</h4>
-          <p>Cible les éléments enfants <strong>directs</strong> d'éléments spécifiques</p>
+          <h2>Complex CSS selectors</h2>
+          <h4>Selector of direct child</h4>
+          <p>Targets <strong>direct</strong> children elements of specific type</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             section > p {
@@ -825,12 +674,12 @@
         </section>
 
         <section data-auto-animate>
-          <h2>Sélecteurs CSS complexes</h2>
-          <h4>Sélecteur d'adjacence directe</h4>
-          <p>Cible les éléments suivant <strong>directement</strong> d'autres éléments</p>
+          <h2>Complex CSS selectors</h2>
+          <h4>Selector of direct adjacency</h4>
+          <p>Targets elements <strong>directly</strong> following other elements</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2,4">
-            // tous les paragraphes qui en suivent directement un autre           
+            // every paragraph following another one           
             p + p {
               color: black;
             }
@@ -844,12 +693,12 @@
         </section>
 
         <section data-auto-animate>
-          <h2>Sélecteurs CSS complexes</h2>
-          <h4>Sélecteur d'adjacence indirecte</h4>
-          <p>Cible les éléments suivant <strong>indirectement</strong> d'autres éléments</p>
+          <h2>Complex CSS selectors</h2>
+          <h4>Selector of indirect adjacency</h4>
+          <p>Targets elements <strong>indirectly</strong> following other elements</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2,4">
-            // tous les paragraphes qui en suivent indirectement un autre           
+            // every paragraph following indirectly another one           
             p ~ p {
               color: black;
             }
@@ -866,10 +715,12 @@
         </section>
 
         <section data-auto-animate>
-          <h2>Sélecteurs CSS complexes</h2>
-          <p>Il en existe encore de nombreux, <br />et il est également possible de les combiner.</p>
+          <h2>Complex CSS selectors</h2>
           <p>
-            <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">Liste exhaustive</a>
+            There are many more, <br />and it's also possible to combine them.
+          </p>
+          <p>
+            <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"> Exhaustive list</a>
           </p>
         </section>
       </section>
@@ -878,10 +729,10 @@
         <div class="sticker"><img class="sticker__avatar" alt="Tanguy Muselet" src="https://avatars3.githubusercontent.com/u/9084993?v=4" /></div>
         <section data-auto-animate>
           <h2>Pseudo classes</h2>
-          <p>Une <strong>pseudo-classe </strong> est un mot-clé pouvant être ajouté à un sélecteur afin d'indiquer l'<strong>état spécifique</strong> 
-            <br />dans lequel l'élément doit être pour être ciblé par la déclaration. 
-            <br/>Ils sont définis via <strong>“:”</strong> <em>(colon)</em>.</p>
-            <p>Exemples :</p>
+          <p>A <strong>pseudo class </strong> is a key word that can be added to a selector to define a <strong>specific state</strong> 
+            <br />that elements must have to be targeted
+            <br/>They are defined with <strong>“:”</strong> <em>(colon)</em>.</p>
+            <p>Examples :</p>
             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
               a:hover {}
               a:active {}
@@ -890,14 +741,14 @@
               ...
             </code></pre>
             <p>
-              <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes#Liste_des_pseudo-classes_standards">Liste complète</a>
+              <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes#Liste_des_pseudo-classes_standards">Complete list</a>
             </p>
         </section>
         <section data-auto-animate>
-          <h2>Pseudo éléments</h2>
-          <p>Un <strong>pseudo-élément </strong> est un mot-clé ajouté à un sélecteur qui permet de mettre en forme certaines parties de l'élément ciblé par la règle. 
-            <br />Ils sont définis via <strong>“::”</strong> <em>(double colon)</em>.</p>
-            <p>Exemples :</p>
+          <h2>Pseudo elements</h2>
+          <p>A <strong>pseudo-element </strong> is a key word that can be added to a selector to define a display of specific parts of an element. 
+            <br />They are defined with <strong>“::”</strong> <em>(double colon)</em>.</p>
+            <p>Examples :</p>
             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
               a::after {}
               a::before {}
@@ -905,22 +756,22 @@
               ...
             </code></pre>
             <div class="fragment">
-              <p><small>A noter que la plupart de ces pseudo éléments sont aussi accessibles via un seul <strong>“:”</strong>, par souci de rétro-compatibilité, car historiquement, la distinction n’a pas toujours été faite avec les pseudo-classes.</small></p>
+              <p><small>Good to know, pseudo elements can also be used with <strong>“:”</strong> because a few years ago, they were not considered different than pseudo classes</small></p>
             <p>
-              <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments#Liste_des_pseudo-%C3%A9l%C3%A9ments">Liste complète</a>
+              <a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments#Liste_des_pseudo-%C3%A9l%C3%A9ments">Complete list</a>
             </p>
             </div>
         </section>
         <section data-auto-animate>
-          <h2>Pseudo éléments</h2>
+          <h2>Pseudo elements</h2>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers> 
-          <q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
+          <q>Some quotes</q>, he says, <q>are better than none</q>
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Pseudo éléments</h2>
+          <h2>Pseudo elements</h2>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers> 
-          <q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
+          <q>Some quotes</q>, he says, <q>are better than none</q>
           </code></pre>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             q::before {
@@ -934,9 +785,9 @@
           </code></pre>
         </section>
         <section data-auto-animate>
-          <h2>Pseudo éléments</h2>
+          <h2>Pseudo elements</h2>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers> 
-          <q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
+          <q>Some quotes</q>, he says, <q>are better than none</q>
           </code></pre>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             q::before {
@@ -949,7 +800,7 @@
             }
           </code></pre>
           <div class="pseudo-examples">
-            <q>Quelques guillemets</q>, dit-il, <q>sont mieux que pas du tout</q>
+            <q>Some quotes</q>, he says, <q>are better than none</q>
           </div>
         </section>
       </section>
@@ -957,47 +808,47 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Samuel Delaporte" src="https://avatars3.githubusercontent.com/u/10155958?u=39b4cceea9796d1b8803ce52cfaa87291bf866da&v=4" /></div>
         <section data-auto-animate>
-          <h2>Préséance des sélecteurs</h2>
-          <p><strong>Note préalable :</strong>
-            <br />Les styles appliqués <strong>directement</strong> aux balises HTML
-            <br />via l’attribut <code>style</code> ont toujours la <strong>priorité</strong> sur les CSS.
+          <h2>Selector priorities</h2>
+          <p><strong>Previous note :</strong>
+            <br />Styles applied <strong>directly</strong> on HTML tags
+            <br />through <code>style</code> attribute always have <strong>priority</strong> over CSS.
           </p>
           <p class="fragment">
-            Ceci étant dit : <strong>les sélecteurs ont une priorité</strong>.
+            After we say this : <strong>selectors do have priorities</strong>.
           </p>
         </section>
         <section>
-          <h2>Préséance des sélecteurs</h2>
+          <h2>Selector priorities</h2>
           <p>            
-            <strong>A priorité égale</strong> de sélecteur, 
-            <br />une déclaration CSS <strong>écrasera</strong> celle qui a été <strong>déclarée avant</strong> :
+            <strong>At equal priority</strong> of selector, 
+            <br />a CSS statement will <strong>overrule</strong> another one  <strong>declared before</strong> :
           </p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2">            
               p { color: blue; }
               p { color: red; }
-              // le rouge écrasera le bleu
+              // red will overrule blue
             </code></pre>
           </section>
           <section>
-            <h2>Préséance des sélecteurs</h2>
+            <h2>Selector priorities</h2>
           <p>
-            Mais il existe une <strong>règle de priorité</strong> calculée 
-            <br />selon la <strong>nature</strong> du sélecteur et ce qu’il <strong>cumule</strong> :
+            But there is a <strong>priority rule</strong> calculated  
+            <br />upon the <strong>nature</strong> of the selector and what it  <strong>combines</strong> :
           </p>
           <ul class="fragment">
-            <li><strong>Niveau 1 :</strong> sélecteur de <strong>type</strong> et <strong>pseudo-élément</strong> <br />(<code>p, div, ::before</code>, etc)</li>
-            <li class="fragment"><strong>Niveau 2 :</strong> sélecteur de <strong>classe</strong> (<code>.ma-classe</code>)</li>
-            <li class="fragment"><strong>Niveau 3 :</strong> sélecteur d’<strong>ID</strong> (<code>#mon-id</code>)</li>
+            <li><strong>Level 1 :</strong> selector of <strong>type</strong> and <strong>pseudo-element</strong> <br />(<code>p, div, ::before</code>, etc)</li>
+            <li class="fragment"><strong>Level 2 :</strong> selector of <strong>class</strong> (<code>.my-class</code>)</li>
+            <li class="fragment"><strong>Level 3 :</strong> selector of <strong>ID</strong> (<code>#my-id</code>)</li>
           </ul>
         </section>
         <section>
-          <h2>Préséance des sélecteurs</h2>
+          <h2>Selector priorities</h2>
           <p>
-            Ainsi, par exemple, pour un paragraphe </p>
+            For example, for a paragraph </p>
             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
               <p class="paragraph">...</p>
             </code></pre>            
-            <p>le bleu gardera la priorité le rouge :
+            <p>Blue will keep priority over red :
               <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1">            
                 .paragraph { color: blue; }
                 p { color: red; } 
@@ -1007,19 +858,19 @@
           </p>
         </section>
         <section data-auto-animate>
-          <h2>Préséance des sélecteurs</h2>
+          <h2>Selector priorities</h2>
           <p>
-            Note : <strong>attention à la surenchère !</strong></p>
+            Note: <strong>careful with overbidding selectors!</strong></p>
           <div class="fragment">
-            <p>Evitez tant que possible des sélecteurs 
-              <br /><strong>trop longs</strong> et <strong>trop spécifiques</strong> :
+            <p>Avoid as much as possible selectors 
+              <br /><strong>too long</strong> or <strong>too complex/specific</strong> :
             </p>
             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
               main#main-section div.scrollable > div > h2 > ul > li + li { ... }
             </code></pre> 
           </div>
-          <p class="fragment">et préférez des sélecteurs <strong>les plus génériques possibles</strong>
-            <br />afin de pouvoir aisément les <strong>surcharger</strong>
+          <p class="fragment">and use selectors <strong>as generic as possible</strong>
+            <br />that you can <strong>overrule</strong> more easily.
           </p>
         </section>
       </section>
@@ -1027,25 +878,25 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Samuel Delaporte" src="https://avatars3.githubusercontent.com/u/10155958?u=39b4cceea9796d1b8803ce52cfaa87291bf866da&v=4" /></div>
         <section data-auto-animate>
-          <h2>La gestion d’exception avec <code>!important</code></h2>
-          <p>En cas de <strong>force majeure</strong>, il est possible d’ajouter 
-            <br /><code>!important</code> à la valeur d'une déclaration :
+          <h2>Exception handling with <code>!important</code></h2>
+          <p>In <strong>last resort</strong>, it is possible to add
+            <br /><code>!important</code> to the declaration's value:
           </p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
             p { color: red !important; }
           </code></pre>            
           <p class="fragment">            
-            Cela prend la <strong>priorité absolue</strong> 
-            <br />sur <strong>tout type de spécification/poids de sélecteur</strong>.
+            That will take <strong>absolute priority</strong> 
+            <br />on <strong>any selector specification</strong>.
           </p>
         </section>
         <section data-auto-animate>
-          <h2>La gestion d’exception avec <code>!important</code></h2>
+          <h2>Exception handling with <code>!important</code></h2>
           <p>
-            Il permet également de prendre la <strong>priorité sur un style appliqué directement</strong> sur une balise HTML.
+            It also takes priority on <strong>styles directly applied</strong> to an HTML element.
           </p>
           <div class="fragment">
-            <p>Dans l’exemple suivant, le rouge sera appliqué.</p>       
+            <p>In the following example, red will be applied.</p>       
             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
               <p style=color:blue;>...</p>
             </code></pre>      
@@ -1055,8 +906,9 @@
           </div>
         </section>
         <section data-auto-animate>
-          <h2>La gestion d’exception avec <code>!important</code></h2>
-          <p>Si deux déclarations portant un <code>!important</code> <strong>sont en conflit</strong>, <br />la priorité se fera dans la même logique que pour les CSS.
+          <h2>Exception handling with <code>!important</code></h2>
+          <p>If two declarations with <code>!important</code> <strong>are in conflict</strong>,
+            <br />priority will be applied in the same manner as any equally specific declarations.
           </p>
           <div class="fragment">
             <p>
@@ -1077,14 +929,14 @@
           </div>
         </section>
         <section data-auto-animate>
-          <h2>La gestion d’exception avec <code>!important</code></h2>
+          <h2>Exception handling with <code>!important</code></h2>
             <p>
-              Considéré comme une <strong>mauvaise pratique</strong>
-              <br />ou au mieux une <strong>solution de dernière mesure</strong>,
-              <br />elle peut s’avérer utile dans un seul cas :
+              Considered as a <strong>bad practice</strong>
+              <br />or at least <strong>a last resort solution</strong>,
+              <br />it can be useful in one use case :
             </p>
-            <p class="fragment">Par exemple, si des styles sont <strong>appliqués à même les balises HTML</strong>, via <em>Javascript</em>, notamment,
-              <br />et qu’aucune <strong>spécification</strong> CSS ne suffit.
+            <p class="fragment">If styles are <strong>applied directly to HTML tags</strong>, with <em>Javascript</em>,
+              <br /> and no <strong>CSS specification</strong> is enough.
             </p>
         </section>
       </section>
@@ -1092,41 +944,41 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Samuel Delaporte" src="https://avatars3.githubusercontent.com/u/10155958?u=39b4cceea9796d1b8803ce52cfaa87291bf866da&v=4" /></div>
         <section data-auto-animate>
-          <h2>Mode d'affichage (<code>display</code>)</h2>
+          <h2>Display</h2>
           <p>
-            L’attribut <code>display</code>, appliqué par défaut 
-            <br />selon la nature d’un élément, peut être modifié au besoin.
-            <br />Il s’agit du type d’affichage utilisé pour le rendu d’un élément.
+            The attribute <code>display</code>, applied by default 
+            <br />according to the nature of the element can be updated
+            <br />
           </p>
           <div class="fragment">
-            <h4>Les valeurs les plus courantes sont : </h4>
+            <h4>Most common values are : </h4>
             <ul class="fragment">
               <li>
                 <strong><code>inline</code> :</strong> 
-                <br />appliqué par défaut aux éléments “en ligne”, comme les balises de formatage de texte (<code>strong</code>, <code>em</code>, <code>span</code>, etc)
+                <br />applied to “inline” elements, such as tags to format text (<code>strong</code>, <code>em</code>, <code>span</code>, etc)
               </li>
               <li class="fragment">
                 <strong><code>block</code> :</strong> 
-                <br />appliqué par défaut aux éléments tels que les paragraphes  (<code>p</code>), les boîtes génériques (<code>div</code>), listes (<code>ul</code>, <code>li</code>), etc
+                <br />applied by default on elements like paragraph  (<code>p</code>), generic boxes (<code>div</code>), or lists (<code>ul</code>, <code>li</code>), etc
               </li>
               <li class="fragment">
                 <strong><code>inline-block</code> :</strong> 
-                <br />appliqué entre autres sur les balises <code>img</code>, <code>input</code>, <code>button</code>
+                <br />applied by default on tags like <code>img</code>, <code>input</code>, <code>button</code>
               </li>
             </ul>            
           </div>
         </section>
         <section data-auto-animate>
-          <h2>Mode d'affichage (<code>display</code>)</h2>
+          <h2>Display</h2>
           <p>
-            Il existe évidemment de nombreuses autres valeurs, 
-            <br />souvent liées à des types d’éléments, 
-            <br />  telles que <code>table</code>, <code>table-cell</code>, <code>list-item</code>, etc.
+            There are many more values
+            <br />Most of the time, they are linked to elements types
+            <br />  like <code>table</code>, <code>table-cell</code>, <code>list-item</code>, etc.
           </p>
           <p class="fragment">
-            Depuis la sortie de <em>flexbox</em>, et <em>grid layout</em>,
-            <br />qui servent à la gestion de boîtes flexibles et de mise en page,
-            <br />la liste s’est ettoffée, avec notamment :
+            Since the release of <em>flexbox</em>, a,d <em>grid layout</em>,
+            <br /> (explained in CSS#2)
+            <br />this list grew with some values like :
             <br /><code>flex</code>, <code>inline-flex</code>, <code>grid</code>, <code>inline-grid</code>, etc...
           </p>
           <p class="fragment">
@@ -1138,20 +990,19 @@
       <section>
         <div class="sticker"><img class="sticker__avatar" alt="Tanguy Muselet" src="https://avatars3.githubusercontent.com/u/9084993?v=4" /></div>
         <section data-auto-animate>
-          <h2>Styles natifs des navigateurs</h2>
+          <h2>Native styles of browsers</h2>
           <p>
-            Pour obtenir un <strong>rendu minimal</strong> d’une page web 
-            <br />en l’absence de CSS, chaque navigateur applique 
-            <br />des <strong>styles par défaut</strong>.
+            To have a <strong>basic render</strong> of a web page 
+            <br />when no CSS is applied, browsers apply
+            <br /><strong>basic styles</strong>.
           </p>
           <div class="fragment">
             <p>
-              Selon la nature d’un élément
+              Based upon the nature of an element
               <br />(<code>&lt;p&gt;, &lt;a&gt;, &lt;ul&gt;, &lt;strong&gt;</code>, ...), 
-              <br />un type de <code>display</code> spécifique est appliqué
-              <br />(<code>block, inline</code>, entre autres),
-              <br />ainsi que des couleurs, bordures, fonds de couleurs, 
-              <br />soulignement, etc, selon les balises.
+              <br />a specific <code>display</code> can be applied
+              <br />(<code>block, inline</code>, among others),
+              <br />and also basic colors, borders, backgrounds, underlines, ...
             </p>
             <p>
               <a rel="noopener noreferrer" target="_blank" href="https://www.alsacreations.com/article/lire/585-Le-rendu-par-defaut-des-elements-HTML.html
@@ -1159,29 +1010,21 @@
             </p>
           </div>
         </section><section data-auto-animate>
-          <h2>Styles natifs des navigateurs</h2>
+          <h2>Native styles of browsers</h2>
             <div>
               <img src="../../../public/CSS/1/native-styles.png" alt="margin scheme"
               style="height: 50vh; margin: 0 auto 1rem auto; background: transparent;"/>
-              <p>Exemple Decathlon.fr sans CSS</p> 
+              <p>Example Decathlon.fr without CSS</p> 
           </div>
         </section>
         <section data-auto-animate>
-          <h2>Styles natifs des navigateurs</h2>
-          <p>            
-            En ce qui concerne les éléments plus intrinsèquement liés 
-            <br />à leur navigateur/os, tels que les <strong>champs de formulaires</strong>
-            <br />(<code>checkbox, radio, range</code>, etc) ou la <code>scrollbar</code>,
-            <br />des différences de rendus sont plus notables,
-            <br />et il a été difficile jusqu'à maintenant de les personnaliser
-            <br />sans appliquer de fastidieux bricolages.
-          </p>
+          <h2>Native styles of browsers</h2>
           <div class="fragment">
             <p>
-              Il existe une propriété <code>appearance</code>, 
-              <br />permettant de <strong>supprimer ces rendus par défaut</strong>
-              <br />afin de les personnaliser, mais elle n’est pas encore officielle,
-              <br />et sa compatibilité n’est pas encore tout à fait au vert : 
+              To get rid of these default native styles, there is the <code>appearance</code> property, 
+              <br /><strong>deleting these styles</strong>
+              <br />You can use it but keep in mind that it was not
+              <br />made official yet and compatibility is not always right
               <a rel="noopener noreferrer" target="_blank" href="https://caniuse.com/?search=appearance">Caniuse</a> 
             </p>
           </div>
@@ -1196,66 +1039,66 @@
           <section data-auto-animate>
             <h2>Positions</h2>
             <p>
-              Par défaut, tout élément est en position dite <strong>“statique”</strong> : 
+              By default, any element is in <strong>“static”</strong> position : 
               <br /><code>position: static</code>.
             </p>
-            <p class="fragment">Un élément devient <strong>“positionné” </strong> dès que sa propriété  
-              <br /><code>position</code> est spécifiée (par une valeur autre que static).</p>
+            <p class="fragment">An element become <strong>“positioned” </strong> as soon as the property 
+              <br /><code>position</code> is specified (by a value different than static).</p>
             <p class="fragment">
-              Dès lors, il est possible d’influencer la position de l’élément via des <strong>propriétés de déplacements</strong> : 
+              As soon as it is positioned, it is possible to move the element by <strong>moving properties</strong> : 
               <code>left</code>, <code>top</code>, <code>right</code>, and <code>bottom</code>.
             </p>
           </section>
           <section data-auto-animate>
             <h2>Positions</h2>
-            <p>L’effet de ces propriétés dépend alors <br />du type de positionnement choisi :</p>
+            <p>Explanations of position values</p>
             <ul>
               <li><strong><code>relative</code> : </strong>
-                <br />l’élément est positionné relativement <strong>par rapport à sa position initiale</strong>. Il est alors visuellement décalé, mais cela n’influence pas la position des éléments qui l’entourent. 
-                <br />Son emplacement initial laisse donc un espace vide si l’élément est décalé.
+                <br />element is positioned relatively <strong>comparing to its initial position</strong>. It appears moved on the screen, but it doesn't impact on other elements next to him. 
+                <br />Its initial position will leave an empty spot if you move it.
               </li>
             </ul>
           </section>
           <section data-auto-animate>
             <h2>Positions</h2>
-            <p>L’effet de ces propriétés dépend alors <br />du type de positionnement choisi :</p>
+            <p>Explanations of position values</p>
             <ul>
               <li><strong><code>absolute</code> : </strong>
-                <br />contrairement à ce qu’elle laisse croire, la position absolue permet de <strong>positionner un élément relativement</strong> à son <strong>plus proche parent positionné</strong>.
-                <br />Si aucun de ses ascendants n’est positionné, le positionnement se fera par rapport au document.
-                <br /><strong>L’élément reste dépendant du scroll.</strong>
+                <br />Unlike it may seems, absolute value allows us to <strong>position an element relatively</strong> to his  <strong>closest parent positioned</strong>.
+                <br />If no parent element is positioned, positioning will be based on the document.
+                <br /><strong>Element stays dependant to scroll</strong>
               </li>
             </ul>
           </section>
           <section data-auto-animate>
             <h2>Positions</h2>
-            <p>L’effet de ces propriétés dépend alors <br />du type de positionnement choisi :</p>
+            <p>Explanations of position values</p>
             <ul>
               <li><strong><code>fixed</code> : </strong>
-                <br />Un élément en position <code>fixed</code> aura une position fixe <strong>par rapport au viewport</strong> (partie visible de la page), indépendamment du niveau du scroll de la page, qu'il ait ou non des parents positionnés.
+                <br />An element in <code>fixed</code> position will be fixed <strong>regarding the viewport</strong> (visible part of the screen), it is not dependant to scroll whether it has positioned parents or not.
               </li>
             </ul>
           </section>
           <section data-auto-animate>
             <h2>Positions</h2>
-            <p>L’effet de ces propriétés dépend alors <br />du type de positionnement choisi :</p>
+            <p>Explanations of position values</p>
             <ul>
               <li><strong><code>sticky</code> :</strong>
-                <br />Plus récent et donc moins compatible (<a rel="noopener noreferrer" target="_blank" href="https://caniuse.com/?search=sticky">Caniuse</a>), la position <code>sticky</code> rend un élément dépendant du scroll, donnant l’impression à l’utilisateur qu’il le suit :
-                <br />L’élément suit le scroll comme un élément statique, mais devient <strong>fixe</strong> quand il censé passer hors du viewport.
+                <br />The most recent so less compatible one (<a rel="noopener noreferrer" target="_blank" href="https://caniuse.com/?search=sticky">Caniuse</a>), position <code>sticky</code> makes an element depending on scroll, giving the impression that the element "follows the user" :
+                <br />The element follows scroll as a static element, but become <strong>fixed</strong> when it reaches the limit of the viewport.
               </li>                  
             </ul>
           </section>
           <section data-auto-animate>
             <h2>Positions</h2>
             <p>
-              <strong>Note :</strong> le positionnement pouvant générer des <strong>chevauchements</strong>,
-              <br />la propriété <code>z-index</code> permet de gérer 
-              <br />le <strong>niveau d’empilement</strong> des éléments,
-              <br />pour les faire passer au-dessous ou en-dessus des autres. 
+              <strong>Note :</strong> positioning can be source of <strong>overlaps</strong>.
+              <br />The <code>z-index</code> property allows to handle 
+              <br /><strong>levels of overlap</strong> for each element,
+              <br />to makes them go "higher" or "lower"
             </p>
-            <p class="fragment">Une valeur <strong>plus haute</strong> fait passer un élément <strong>au-dessus</strong>.
-              <br >Si deux éléments sans <code>z-index</code> spécifié se chevauchent, c’est l’élément se trouvant <strong>en dernier</strong> dans le HTML qui sera <strong>au-dessus</strong>.</p>
+            <p class="fragment">A <strong>higher</strong> value will make an element go <strong>up</strong>.
+              <br >If two elements with no <code>z-index</code>or same level are overlapping, it is the <strong>last one</strong> in the document that will appear on top.
             <p class="fragment">
               <a rel="noopener noreferrer" target="_blank" href="https://www.w3schools.com/css/css_positioning.asp">Ressources</a>           
             </p>
