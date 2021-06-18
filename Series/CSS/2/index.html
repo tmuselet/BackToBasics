@@ -147,7 +147,7 @@
             The Flexible Box Layout Module make easier to design flexible responsive layout structure.
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
             .container {
-              display: flexbox;
+              display: flex;
             }
           </code></pre>
           <p>The basic difference between CSS Grid Layout and CSS Flexbox Layout is that <strong>flexbox was designed for layout in one dimension</strong>.</p>
@@ -347,9 +347,16 @@
           <img src="../../../public/CSS/2/transition.gif" alt="transition"
           style="height: 10vh; margin: 0 auto 1rem auto; background: transparent;"/>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
-            .item {
-              transition: color 1s ease-in,
-              width 500ms,
+            div {
+              width: 100px;
+              height: 100px;
+              background: red;
+              transition: width 2s, height 4s;
+            }
+            
+            div:hover {
+              width: 300px;
+              height: 300px;
             }
           </code></pre>
           <p>The properties that can be animated are all numerical properties <strong>width, height, margin, padding, font-weight... </strong>
