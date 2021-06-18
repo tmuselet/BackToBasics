@@ -120,8 +120,7 @@
           <p>
             As the name says <em>(Cascading Style Sheet)</em>, 
             <br />a CSS is a <strong>sheet listing style rules
-              <br />applied in cascade
-              <br />to HTML elements</strong>.
+              <br />applied in cascade to HTML elements</strong>.
           </p>
           <p class="fragment">
             It means that some styles are directly applied to an element and others 
@@ -156,7 +155,7 @@
           <h2>Browsers compatibility</h2>
           <p>
             CSS evolution is ruled by W3C (international consortium)
-            <br />(<strong><a rel="noopener noreferrer" target="_blank" href="ttps://www.w3.org/">W3C</a></strong> for <em>World Wide Web Consortium</em>),
+            <br />(<strong><a rel="noopener noreferrer" target="_blank" href="https://www.w3.org/">W3C</a></strong> for <em>World Wide Web Consortium</em>),
             <br />where every rule and CSS version 
             <br />is made official
           </p>
@@ -511,7 +510,7 @@
         <section data-auto-animate>
           <h2>CSS Selectors</h2>
           <h4>Universal Selector</h4>
-          <p>Targets <strong>every</strong> HTML elements</p>
+          <p>Target <strong>every</strong> HTML elements</p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             * {
               color: black;
@@ -521,7 +520,7 @@
         <section data-auto-animate>
           <h2>CSS Selectors</h2>
           <h4>Selector of HTML <em>tag</em></h4>
-          <p>Targets <strong>every</strong> HTML elements of type <code>&lt;p&gt;</code></p>
+          <p>Target <strong>every</strong> HTML elements of type <code>&lt;p&gt;</code></p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             p {
               color: black;
@@ -534,8 +533,8 @@
         <section data-auto-animate>
           <h2>CSS Selectors</h2>
           <h4>Selectors of <em>class</em></h4>
-          <p>Targets <strong>every</strong> HTML elements
-            <br />that has the matching css class :</p>
+          <p>Target <strong>every</strong> HTML elements
+            <br />that has the matching CSS class :</p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             .my-class {
               color: black;
@@ -549,7 +548,7 @@
           <h2>CSS Selectors</h2>
           <h4>Selector of <em>ID</em></h4>
           <p>
-            Target the <em>(must-be)</em><strong>unique</strong> element with a matching attribute <code>id</code>
+            Target the <em>(must-be)</em> <strong>unique</strong> element with a matching attribute <code>id</code>
           </p>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">
             #id-unique {
@@ -564,7 +563,7 @@
         <section data-auto-animate>
           <h2>CSS Selectors</h2>
           <h4>Selector of <em>attributes</em></h4>
-          <p>Targets elements with attributes that have 
+          <p>Target elements with attributes that have 
             <br />a specific value :</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
@@ -601,7 +600,7 @@
         <section data-auto-animate>
           <h2>Complex CSS selectors</h2>
           <h4>Combined selector</h4>
-          <p>Targets elements with all indicated classes</p>
+          <p>Target elements with all indicated classes</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             .my-class-1.my-class-2 {
@@ -609,14 +608,14 @@
             }
           </code></pre>
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>            
-            <div class="ma-classe-1 ma-classe-2"></div>
+            <div class="my-class-1 my-class-2"></div>
           </code></pre>
         </section>
 
         <section data-auto-animate>
           <h2>Complex CSS selectors</h2>
           <h4>Multiple selector</h4>
-          <p>Targets elements that match one of the selector</p>
+          <p>Target elements that match one of the selector</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             .my-class-1, .my-class-2, quote, a[target="_blank"] {
@@ -634,7 +633,7 @@
         <section data-auto-animate>
           <h2>Complex CSS selectors</h2>
           <h4>Descendence selector</h4>
-          <p>Targets specific children</p>
+          <p>Target specific children</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             section p {
@@ -655,7 +654,7 @@
         <section data-auto-animate>
           <h2>Complex CSS selectors</h2>
           <h4>Selector of direct child</h4>
-          <p>Targets <strong>direct</strong> children elements of specific type</p>
+          <p>Target <strong>direct</strong> children elements of specific type</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="1,3">            
             section > p {
@@ -676,7 +675,7 @@
         <section data-auto-animate>
           <h2>Complex CSS selectors</h2>
           <h4>Selector of direct adjacency</h4>
-          <p>Targets elements <strong>directly</strong> following other elements</p>
+          <p>Target elements <strong>directly</strong> following other elements</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2,4">
             // every paragraph following another one           
@@ -695,7 +694,7 @@
         <section data-auto-animate>
           <h2>Complex CSS selectors</h2>
           <h4>Selector of indirect adjacency</h4>
-          <p>Targets elements <strong>indirectly</strong> following other elements</p>
+          <p>Target elements <strong>indirectly</strong> following other elements</p>
 
           <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="2,4">
             // every paragraph following indirectly another one           
@@ -1021,8 +1020,7 @@
           <h2>Native styles of browsers</h2>
           <div class="fragment">
             <p>
-              To get rid of these default native styles, there is the <code>appearance</code> property, 
-              <br /><strong>deleting these styles</strong>
+              To get rid of these default native styles, there is the <code>appearance</code> property, <strong>deleting these styles</strong>
               <br />You can use it but keep in mind that it was not
               <br />made official yet and compatibility is not always right
               <a rel="noopener noreferrer" target="_blank" href="https://caniuse.com/?search=appearance">Caniuse</a> 
@@ -1098,7 +1096,7 @@
               <br />to makes them go "higher" or "lower"
             </p>
             <p class="fragment">A <strong>higher</strong> value will make an element go <strong>up</strong>.
-              <br >If two elements with no <code>z-index</code>or same level are overlapping, it is the <strong>last one</strong> in the document that will appear on top.
+              <br >If two elements with no <code>z-index</code> or same level are overlapping, it is the <strong>last one</strong> in the document that will appear on top.
             <p class="fragment">
               <a rel="noopener noreferrer" target="_blank" href="https://www.w3schools.com/css/css_positioning.asp">Ressources</a>           
             </p>
